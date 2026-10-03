@@ -1,0 +1,8 @@
+{
+  "name": "Remix ScriptScan",
+  "description": "Effortlessly digitize, transcribe, and organize your handwritten notes into a searchable, clear digital format.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

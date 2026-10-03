@@ -1,0 +1,3541 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>GSEB ધોરણ 10 ગુજરાતી પ્રથમ ભાષા - સ્માર્ટ રિવિઝન & સરળ વ્યાકરણ માસ્ટર</title>
+  <meta name="description" content="GSEB ધોરણ 10 ગુજરાતી પ્રથમ ભાષા સંપૂર્ણ પ્રકરણવાર વિગતવાર નોટ્સ, સરળ શૉર્ટકટ વ્યાકરણ, કવિ પરિચય, પાત્રાલેખન અને બોર્ડ IMP પ્રશ્નોત્તરી.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0f1d;
+      --surface: #161f36;
+      --surface-hover: #1e294b;
+      --surface-card: #141c33;
+      --border: #263353;
+      --border-accent: #334773;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.15);
+      --purple: #818cf8;
+      --purple-glow: rgba(129, 140, 248, 0.15);
+      --amber: #fbbf24;
+      --amber-glow: rgba(251, 191, 36, 0.15);
+      --rose: #fb7185;
+      --font-gu: 'Noto Sans Gujarati', 'Inter', -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #050811;
+      color: var(--text-main);
+      font-family: var(--font-gu);
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    #app-container {
+      width: 100%;
+      max-width: 480px;
+      background-color: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      box-shadow: 0 0 50px rgba(0,0,0,0.9);
+    }
+
+    /* Top Sticky Header */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(10, 15, 29, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-badge {
+      font-size: 10px;
+      background: var(--accent-glow);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-back:active {
+      transform: scale(0.96);
+      background: var(--surface-hover);
+    }
+
+    .btn-icon {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-icon:active {
+      transform: scale(0.94);
+      border-color: var(--accent);
+    }
+
+    /* Views */
+    .view {
+      display: none;
+      padding: 16px;
+      flex: 1;
+    }
+
+    .view.active {
+      display: block;
+      animation: fadeIn 0.22s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Search Bar */
+    .search-box {
+      position: relative;
+      margin-bottom: 14px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 14px 10px 38px;
+      color: #fff;
+      font-size: 13px;
+      font-family: var(--font-gu);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent-glow);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Category Filter Tabs */
+    .cat-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      scrollbar-width: none;
+    }
+    .cat-tabs::-webkit-scrollbar { display: none; }
+
+    .cat-tab {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      white-space: nowrap;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+
+    .cat-tab.active {
+      background: var(--accent);
+      color: #0a0f1d;
+      border-color: var(--accent);
+      font-weight: 800;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, #1e294b 0%, #161f36 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 100px;
+      height: 100px;
+      background: var(--accent-glow);
+      border-radius: 50%;
+      filter: blur(30px);
+    }
+
+    .hero-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat-box {
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--accent);
+    }
+    .stat-label {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    /* Cards Grid */
+    .chapters-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .chapter-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .chapter-card:hover {
+      border-color: var(--border-accent);
+      background: var(--surface-hover);
+    }
+
+    .chapter-card:active {
+      transform: scale(0.98);
+      border-color: var(--accent);
+    }
+
+    .ch-badge {
+      min-width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .ch-badge.padya {
+      background: rgba(129, 140, 248, 0.12);
+      color: var(--purple);
+      border-color: rgba(129, 140, 248, 0.3);
+    }
+
+    .ch-badge.gadya {
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--emerald);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .ch-badge.vyakaran {
+      background: rgba(251, 191, 36, 0.12);
+      color: var(--amber);
+      border-color: rgba(251, 191, 36, 0.3);
+    }
+
+    .ch-badge.lekhan {
+      background: rgba(251, 113, 133, 0.12);
+      color: var(--rose);
+      border-color: rgba(251, 113, 133, 0.3);
+    }
+
+    .ch-badge .sub-type {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-top: -2px;
+    }
+
+    .ch-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .ch-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .ch-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tag-pill {
+      font-size: 10px;
+      background: rgba(255,255,255,0.06);
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Detail View Styles */
+    .detail-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .detail-tag-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .detail-title {
+      font-size: 20px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .author-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px;
+      margin-top: 12px;
+    }
+
+    .author-item {
+      font-size: 11px;
+    }
+    .author-item-label {
+      color: var(--text-muted);
+      font-size: 10px;
+      display: block;
+    }
+    .author-item-val {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* Segment Navigation Inside Chapter */
+    .seg-tabs {
+      display: flex;
+      overflow-x: auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 3px;
+      margin-bottom: 16px;
+      gap: 4px;
+      scrollbar-width: none;
+    }
+    .seg-tabs::-webkit-scrollbar { display: none; }
+
+    .seg-tab {
+      flex: 1;
+      min-width: 70px;
+      white-space: nowrap;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 8px 6px;
+      border-radius: 9px;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: var(--font-gu);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .seg-tab.active {
+      background: var(--accent);
+      color: #0a0f1d;
+      font-weight: 800;
+    }
+
+    /* Accordion / Content Box */
+    .content-box {
+      display: none;
+      animation: fadeIn 0.2s ease-out;
+    }
+    .content-box.active {
+      display: block;
+    }
+
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .info-card-header {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .info-card-p {
+      font-size: 13px;
+      color: var(--text-main);
+      line-height: 1.75;
+    }
+
+    .bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .bullet-list li {
+      font-size: 13px;
+      color: var(--text-main);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.6;
+    }
+
+    .bullet-list li::before {
+      content: '•';
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    /* Easy Kids-Friendly Trick Card */
+    .trick-box {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px dashed var(--accent);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+
+    .trick-title {
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .trick-desc {
+      font-size: 12px;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Q&A Accordion Item */
+    .qa-item {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .qa-header {
+      padding: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .qa-badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 800;
+      background: var(--emerald-glow);
+      color: var(--emerald);
+      border: 1px solid var(--emerald);
+    }
+
+    .qa-body {
+      padding: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      background: rgba(0,0,0,0.2);
+    }
+
+    /* Audio play button */
+    .btn-audio {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--emerald-glow);
+      color: var(--emerald);
+      border: 1px solid var(--emerald);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    .btn-audio:active {
+      transform: scale(0.96);
+    }
+
+    /* Empty search state */
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Table styles for Literature & Grammar */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    .data-table th {
+      background: rgba(255,255,255,0.05);
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .data-table tr:nth-child(even) {
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* ================== MCQ & Score Calculator Styles ================== */
+    .mcq-scoreboard {
+      background: linear-gradient(135deg, rgba(30, 41, 75, 0.95), rgba(16, 24, 48, 0.95));
+      border: 1px solid var(--accent);
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.12);
+      position: sticky;
+      top: 58px;
+      z-index: 40;
+      backdrop-filter: blur(10px);
+    }
+
+    .mcq-score-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .score-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      text-align: center;
+    }
+
+    .metric-card {
+      background: rgba(0,0,0,0.3);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 6px 4px;
+    }
+
+    .metric-val {
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .metric-label {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    .grade-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--emerald-glow);
+      color: var(--emerald);
+      border: 1px solid var(--emerald);
+    }
+
+    .mcq-progress-bar {
+      width: 100%;
+      height: 6px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 999px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .mcq-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--emerald));
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .mcq-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 14px;
+      transition: all 0.2s;
+    }
+
+    .mcq-card.answered {
+      border-color: var(--border-accent);
+    }
+
+    .mcq-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .mcq-num {
+      background: var(--surface);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .mcq-q-text {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    .mcq-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mcq-opt {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      font-family: var(--font-gu);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      transition: all 0.18s;
+      width: 100%;
+    }
+
+    .mcq-opt:hover:not(:disabled) {
+      border-color: var(--accent);
+      background: var(--surface-hover);
+    }
+
+    .mcq-opt.correct {
+      background: rgba(16, 185, 129, 0.18) !important;
+      border-color: var(--emerald) !important;
+      color: #34d399 !important;
+      font-weight: 700;
+    }
+
+    .mcq-opt.wrong {
+      background: rgba(251, 113, 133, 0.18) !important;
+      border-color: var(--rose) !important;
+      color: #fda4af !important;
+      font-weight: 700;
+    }
+
+    .mcq-opt:disabled {
+      cursor: default;
+    }
+
+    .mcq-explanation {
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: rgba(0,0,0,0.3);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      display: none;
+    }
+
+    .mcq-explanation.show {
+      display: block;
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    .sub-filter-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 12px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .sub-filter-row::-webkit-scrollbar { display: none; }
+
+    .sub-pill {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .sub-pill.active {
+      background: var(--purple-glow);
+      color: var(--purple);
+      border-color: var(--purple);
+    }
+
+    .btn-reset-quiz {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    .btn-reset-quiz:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+<div id="app-container">
+  <!-- Top Navigation Header -->
+  <header class="top-nav">
+    <div id="nav-home-title" class="brand-title">
+      <span>📖 ધોરણ ૧૦ ગુજરાતી</span>
+      <span class="brand-badge">સરળ વ્યાકરણ</span>
+    </div>
+    
+    <div id="nav-detail-bar" style="display: none; align-items: center; justify-content: space-between; width: 100%;">
+      <button class="btn-back" id="btn-back-home">
+        ← પાછા જાઓ
+      </button>
+      <div id="detail-header-title" style="font-size: 13px; font-weight: 800; color: #fff; max-width: 220px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></div>
+      <button class="btn-icon" id="btn-listen-header" title="વાંચી સંભળાવો">
+        🔊
+      </button>
+    </div>
+  </header>
+
+  <!-- HOME DASHBOARD VIEW -->
+  <div id="view-home" class="view active">
+    <!-- Search Bar -->
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="main-search-input" class="search-input" placeholder="પાઠ, કવિ, વ્યાકરણ (સમાસ, સંધિ, છંદ...) શોધો...">
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="cat-tabs" id="cat-tabs-container">
+      <button class="cat-tab active" data-cat="chapters">📚 પ્રકરણો ૧ થી ૨૪</button>
+      <button class="cat-tab" data-cat="mcq">🎯 MCQ ગણતરી & ટેસ્ટ</button>
+      <button class="cat-tab" data-cat="vyakaran">⚡ સંપૂર્ણ વ્યાકરણ</button>
+      <button class="cat-tab" data-cat="lekhan">✍️ લેખન સજ્જતા</button>
+      <button class="cat-tab" data-cat="matrix">📋 કૃતિ-કર્તા કોષ્ટક</button>
+    </div>
+
+    <!-- Sub-Filter Bar (Dynamic) -->
+    <div id="sub-filter-container" class="sub-filter-row">
+      <button class="sub-pill active" onclick="setSubFilter('all')">બધા પ્રકરણો (૧ થી ૨૪)</button>
+      <button class="sub-pill" onclick="setSubFilter('padya')">પદ્ય (કાવ્યો)</button>
+      <button class="sub-pill" onclick="setSubFilter('gadya')">ગદ્ય (પાઠ)</button>
+    </div>
+
+    <!-- Hero Board Stats Banner -->
+    <div class="hero-banner">
+      <div class="hero-title">
+        <span>GSEB બોર્ડ એક્ઝામ ૧૦૦/૧૦૦ ટાર્ગેટ</span>
+      </div>
+      <div class="hero-subtitle">
+        નાના બાળકો પણ સમજી શકે તેવી અતિ સરળ ટ્રીક્સ સાથે સંપૂર્ણ વ્યાકરણ અને પ્રકરણવાર વિગતવાર મોસ્ટ IMP નોટ્સ!
+      </div>
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">૧૫</div>
+          <div class="stat-label">વ્યાકરણ મુદ્દા</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">૨૪</div>
+          <div class="stat-label">પાઠ & કાવ્ય</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">૨૦</div>
+          <div class="stat-label">ગુણ વ્યાકરણ</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">૧૦૦%</div>
+          <div class="stat-label">સરળ સમજૂતી</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dynamic Cards Grid -->
+    <div class="chapters-grid" id="chapters-grid">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+
+  <!-- CHAPTER / TOPIC DETAIL VIEW -->
+  <div id="view-detail" class="view">
+    <div id="detail-container">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+</div>
+
+<script>
+/**
+ * 1. સંપૂર્ણ વ્યાકરણ વિભાગ (Comprehensive 15 Grammar Topics with Child-Friendly Shortcuts)
+ */
+const GRAMMAR_VAULT = [
+  {
+    id: "v-01",
+    cat: "vyakaran",
+    num: "વ્યા ૧",
+    title: "સમાસ ઓળખાવો (વિગ્રહ સહિત)",
+    author: "વિભાગ C (૨ ગુણ)",
+    genre: "પદ રચના",
+    source: "સરળ વ્યાકરણ શૉર્ટકટ",
+    summary: "બે કે તેથી વધુ શબ્દો જોડાઈને એક નાનો અને સુંદર નવો શબ્દ બને તેને સમાસ કહેવાય છે.",
+    intro: "બાળકો માટે સુપર ઈઝી ટ્રીક: શબ્દને છૂટો પાડીને (વિગ્રહ કરીને) વચ્ચે કયો શબ્દ આવે છે તે જોઈને ૨ જ સેકન્ડમાં સમાસ ઓળખી શકાય!",
+    childTrick: "💡 સુપર શોર્ટકટ: \n• વચ્ચે 'અને / કે' આવે ➔ દ્વંદ્વ (મા-બાપ)\n• વચ્ચે 'નો, ની, નું, ના, માં, થી' આવે ➔ તત્પુરુષ (દેશભક્તિ)\n• વચ્ચેથી મોટો શબ્દ ગાયબ થયો હોય ➔ મધ્યમપદલોપી (ઘોડાગાડી)\n• છેલ્લે 'નાર' બોલાય ➔ ઉપપદ (ગોપાળ, પંકજ)\n• પહેલો શબ્દ નંબર/સંખ્યા હોય ➔ દ્વિગુ (ત્રિલોક, નવરાત્રિ)\n• પહેલો શબ્દ બીજાના વખાણ કરતો હોય ➔ કર્મધારય (મહારાજા)\n• કોઈ ત્રીજી જ વ્યક્તિની ઓળખ હોય ➔ બહુવ્રીહિ (ગજાનન = ગણેશજી)",
+    words: [
+      { w: "મા-બાપ", m: "દ્વંદ્વ સમાસ (મા અને બાપ - બંને સરખા મહત્વના)" },
+      { w: "રાત-દિવસ", m: "દ્વંદ્વ સમાસ (રાત અને દિવસ)" },
+      { w: "દેશભક્તિ", m: "તત્પુરુષ સમાસ (દેશ માટે ભક્તિ)" },
+      { w: "રાજકુંવર", m: "તત્પુરુષ સમાસ (રાજાનો કુંવર)" },
+      { w: "વનવાસ", m: "તત્પુરુષ સમાસ (વનમાં વાસ)" },
+      { w: "આગગાડી", m: "મધ્યમપદલોપી (આગ વડે ચાલતી ગાડી)" },
+      { w: "ઘોડાગાડી", m: "મધ્યમપદલોપી (ઘોડા વડે દોડતી ગાડી)" },
+      { w: "સિંહાસન", m: "મધ્યમપદલોપી (સિંહની આકૃતિવાળું આસન)" },
+      { w: "પંકજ", m: "ઉપપદ સમાસ (કાદવમાં જન્મનાર)" },
+      { w: "ગોપાળ", m: "ઉપપદ સમાસ (ગાયોને પાળનાર)" },
+      { w: "મહારાજા", m: "કર્મધારય સમાસ (મહાન એવા રાજા)" },
+      { w: "મુખચંદ્ર", m: "કર્મધારય સમાસ (ચંદ્ર જેવું સુંદર મુખ)" },
+      { w: "ત્રિલોક", m: "દ્વિગુ સમાસ (ત્રણ લોકનો સમૂહ - નંબર)" },
+      { w: "નવરાત્રિ", m: "દ્વિગુ સમાસ (નવ રાત્રિઓનો સમૂહ)" },
+      { w: "ગજાનન", m: "બહુવ્રીહિ સમાસ (જેનું મુખ હાથી જેવું છે તે - ગણેશજી)" },
+      { w: "દશાનન", m: "બહુવ્રીહિ સમાસ (દસ માથાં છે જેને તે - રાવણ)" }
+    ],
+    grammarNotes: [
+      "દ્વંદ્વ = સમાન મોભો ધરાવતી જોડી (અને/કે)",
+      "તત્પુરુષ = વિભક્તિ પ્રત્યયથી જોડાયેલું પદ",
+      "મધ્યમપદલોપી = વચ્ચેથી લુપ્ત થયેલું પદ ઉમેરવું પડે",
+      "ઉપપદ = બીજું પદ ક્રિયા દર્શાવે અને અંતે 'નાર' આવે",
+      "દ્વિગુ = સંખ્યાવાચક વિશેષણ + સમૂહ"
+    ],
+    impQuestions: [
+      { q: "'દેશદાઝ' કયો સમાસ છે?", a: "તત્પુરુષ સમાસ (દેશ પ્રત્યેની દાઝ/લાગણી)." },
+      { q: "'નર્મદા' કયો સમાસ છે?", a: "ઉપપદ સમાસ (આનંદ આપનાર - અંતે 'નાર' આવે છે)." },
+      { q: "'પંચવટી' કયો સમાસ છે?", a: "દ્વિગુ સમાસ (પાંચ વડનો સમૂહ - પ્રથમ પદ સંખ્યા દર્શાવે છે)." }
+    ]
+  },
+  {
+    id: "v-02",
+    cat: "vyakaran",
+    num: "વ્યા ૨",
+    title: "અલંકાર ઓળખાવો (ચમત્કૃતિ)",
+    author: "વિભાગ C (૨ ગુણ)",
+    genre: "કાવ્ય સૌંદર્ય",
+    source: "સરળ વ્યાકરણ શૉર્ટકટ",
+    summary: "જેમ ઘરેણાં પહેરવાથી માણસ સુંદર દેખાય, તેમ ભાષાને સુંદર બનાવવા માટે જે શબ્દો વપરાય તેને અલંકાર કહેવાય છે.",
+    intro: "બાળકો માટે સુપર ઈઝી ટ્રીક: માત્ર એક જ ઓળખ શબ્દ જોઈને અલંકાર પકડી લો!",
+    childTrick: "💡 સુપર શોર્ટકટ: \n• એકનો એક અક્ષર વારંવાર નાચે ➔ વર્ણાનુપ્રાસ ('કા'મીની 'કો'કીલા 'કે'લી...)\n• વચ્ચે 'જેવો, જેવી, જેવું, સરખો' આવે ➔ ઉપમા (મોઢું ચાંદા જેવું છે)\n• સીધું એ જ કહી દો, 'જેવું' ના બોલો ➔ રૂપક (મોઢું જ ચાંદો છે! / બપોર કાળું કૂતરું છે)\n• વાક્યમાં 'જાણે, રખે, શકે' આવે ➔ ઉત્પ્રેક્ષા (હૈયું જાણે હિમાલય!)\n• એના જેવું કોઈ નહિ, એ પોતે જ ➔ અનન્વય (મા તે મા, ગાંધીજી એટલે ગાંધીજી)\n• ઓરિજિનલ કરતાંય ચડિયાતું બતાવો ➔ વ્યતિરેક (મોઢા આગળ ચાંદોય ઝાંખો લાગે)\n• નિર્જીવ ચીજ માણસની જેમ હલે-ચાલે ➔ સજીવારોપણ (પથ્થરો થરથર ધ્રૂજવા લાગ્યા)",
+    words: [
+      { w: "વર્ણાનુપ્રાસ", m: "કાળા કાનજીએ કાળી કામળી ઓઢી ('ક' અક્ષર ૪ વાર)" },
+      { w: "ઉપમા", m: "દમયંતીનું મુખ ચંદ્ર જેવું સુંદર છે ('જેવું' શબ્દ)" },
+      { w: "રૂપક", m: "બપોર એક મોટું કાળું કૂતરું છે (બપોરને કૂતરાનું જ રૂપ આપી દીધું)" },
+      { w: "ઉત્પ્રેક્ષા", m: "હૈયું જાણે હિમાલય! ('જાણે' સંભાવના દર્શાવે છે)" },
+      { w: "અનન્વય", m: "મા તે મા, બીજા બધા વગડાના વા (માતાની સરખામણી માતા સાથે જ)" },
+      { w: "વ્યતિરેક", m: "સુદામાના વૈભવ આગળ કુબેર તે કોણ માત્ર? (ગરીબ સુદામાને કુબેર કરતાં મોટા બતાવ્યા)" },
+      { w: "સજીવારોપણ", m: "ઘડિયાળના કાંટા પર હાંફ્યા કરે છે સમય (સમય હાંફે છે - માનવ ક્રિયા)" }
+    ],
+    grammarNotes: [
+      "ઉપમા ઓળખ: જેવો, જેવી, જેવું, સમો, સરખો, પેઠે",
+      "ઉત્પ્રેક્ષા ઓળખ: જાણે, રખે, શકે",
+      "અનન્વય ઓળખ: ગાંધીજી એટલે ગાંધીજી, હિમાલય તે હિમાલય"
+    ],
+    impQuestions: [
+      { q: "'હૈયું જાણે હિમાલય' માં કયો અલંકાર છે?", a: "ઉત્પ્રેક્ષા અલંકાર ('જાણે' શબ્દ આવ્યો છે)." },
+      { q: "'દમયંતીના મુખ આગળ ચંદ્ર પણ નિસ્તેજ ભાસે' કયો અલંકાર છે?", a: "વ્યતિરેક અલંકાર (ઉપમેયને ઉપમાન કરતાં ચડિયાતું ગણાવ્યું છે)." }
+    ]
+  },
+  {
+    id: "v-03",
+    cat: "vyakaran",
+    num: "વ્યા ૩",
+    title: "છંદ શાસ્ત્ર & બંધારણ (ગણસૂત્ર)",
+    author: "વિભાગ C (૨ ગુણ)",
+    genre: "છંદ ઓળખ",
+    source: "સરળ વ્યાકરણ શૉર્ટકટ",
+    summary: "કાવ્યને સંગીતમય ઢાળમાં ગાવા માટે અક્ષરો કે માત્રાઓની માપણીને છંદ કહે છે.",
+    intro: "બાળકો માટે સુપર ઈઝી ટ્રીક: માત્ર અક્ષરો ગણીને અને પહેલા ૩ અક્ષરો જોઈને છંદ ઓળખી શકાય!",
+    childTrick: "💡 સુપર શોર્ટકટ: \n• ગણસૂત્ર યાદ રાખો: 'ય મા તા રા જ ભા ન સ લ ગા'\n• ૧૭ અક્ષર હોય અને પહેલા ૩ અક્ષર લઘુ-ગુરુ-ગુરુ (U - -) ➔ શિખરિણી (અસત્યો માંહેથી...)\n• ૧૭ અક્ષર હોય અને પહેલા ૩ અક્ષર ગુરુ-ગુરુ-ગુરુ (- - -) ➔ મંદાક્રાન્તા (હા પસ્તાવો વિપુલ...)\n• ૧૭ અક્ષર હોય અને પહેલા ૩ અક્ષર લઘુ-ગુરુ-લઘુ (U - U) ➔ પૃથ્વી (મને શિશુ તણી ગમે...)\n• ૧૯ અક્ષર હોય ➔ શાર્દૂલવિક્રીડિત (ઉગે છે સુરખી ભરી રવિ...)\n• ૧૪ અક્ષર હોય ➔ વસંતતિલકા\n• ૧૫ માત્રા હોય ➔ ચોપાઈ છંદ\n• ૧૩ + ૧૧ માત્રા હોય ➔ દોહરો છંદ",
+    words: [
+      { w: "શિખરિણી (૧૭ અક્ષર)", m: "ય મ ન સ ભ લ ગા (યતિ: ૬, ૧૨મા અક્ષરે)" },
+      { w: "મંદાક્રાન્તા (૧૭ અક્ષર)", m: "મ ભ ન ત ત ગા ગા (યતિ: ૪, ૧૦મા અક્ષરે)" },
+      { w: "પૃથ્વી (૧૭ અક્ષર)", m: "જ સ જ સ ય લ ગા (યતિ: ૮મા અક્ષરે)" },
+      { w: "શાર્દૂલવિક્રીડિત (૧૯)", m: "મ સ જ સ ત ત ગા (યતિ: ૧૨મા અક્ષરે)" },
+      { w: "ચોપાઈ (૧૫ માત્રા)", m: "કાળી ધોળી રાતી ગાય, પીએ પાણી ચરવા જાય" },
+      { w: "દોહરો (૧૩+૧૧)", m: "વિપત પડે ના વલખીએ, વલખે વિપત ન જાય" }
+    ],
+    grammarNotes: [
+      "લઘુ અક્ષર (U) = ૧ માત્રા (અ, ઇ, ઉ, ઋ)",
+      "ગુરુ અક્ષર (-) = ૨ માત્રા (આ, ઈ, ઊ, એ, ઐ, ઓ, ઔ, જોડાક્ષર આગળનો અક્ષર)"
+    ],
+    impQuestions: [
+      { q: "'ય મ ન સ ભ લ ગા' કયા છંદનું બંધારણ છે?", a: "શિખરિણી છંદ (૧૭ અક્ષર)." },
+      { q: "ચોપાઈ છંદના દરેક ચરણમાં કેટલી માત્રા હોય છે?", a: "૧૫ માત્રા." }
+    ]
+  },
+  {
+    id: "v-04",
+    cat: "vyakaran",
+    num: "વ્યા ૪",
+    title: "જોડણીના ૫ સોનેરી નિયમો",
+    author: "વિભાગ C (૨ ગુણ)",
+    genre: "અક્ષર શુદ્ધિ",
+    source: "સરળ વ્યાકરણ શૉર્ટકટ",
+    summary: "શબ્દોમાં હ્રસ્વ (િ, ુ) કે દીર્ઘ (ી, ૂ) ક્યારે મૂકવું તેના સરળ નિયમો.",
+    intro: "બાળકો માટે સુપર ઈઝી ટ્રીક: આ ૫ નિયમો ગોખી લો, પરીક્ષામાં એકપણ માર્ક નહિ કપાય!",
+    childTrick: "💡 સુપર શોર્ટકટ: \n૧. એક જ અક્ષરવાળો શબ્દ હંમેશાં દીર્ઘ (મોટો) થાય ➔ ઘી, સ્ત્રી, લૂ, જૂ, ફી (અપવાદ: હું)\n૨. બે અક્ષરમાં પહેલો અક્ષર દીર્ઘ થાય ➔ દૂધ, ચીજ, ગીધ, મીણ, ફૂલ, ધૂળ\n૩. ત્રણ અક્ષરમાં સામસામે વિરોધી ➔ પહેલો નાનો તો બીજો મોટો (ઇનામ, કિનારો), પહેલો મોટો તો બીજો નાનો (સૂરજ, ધીરજ)\n૪. પાછળ 'ઇક' લાગે તો હ્રસ્વ (નાની િ) થાય ➔ સામાજિક, ધાર્મિક, ઐતિહાસિક\n૫. પાછળ 'ઈય' લાગે તો દીર્ઘ (મોટી ી) થાય ➔ ભારતીય, રાષ્ટ્રીય, નાટકીય",
+    words: [
+      { w: "પરિસ્થિતિ", m: "બંને 'િ' હ્રસ્વ આવે છે (બોર્ડ મોસ્ટ IMP)" },
+      { w: "શારીરિક", m: "પહેલી 'ી' દીર્ઘ, બીજી 'િ' હ્રસ્વ ('ઇક' પ્રત્યય)" },
+      { w: "આશીર્વાદ", m: "'શી' દીર્ઘ અને 'વા' પર રેફ આવે" },
+      { w: "જિજ્ઞાસા", m: "'જિ' હ્રસ્વ આવે" },
+      { w: "ઉજ્જ્વળ", m: "બે અડધા 'જ' અને 'વ' જોડાય" },
+      { w: "યુનિવર્સિટી", m: "યુ હ્રસ્વ, નિ હ્રસ્વ, વર્ પર રેફ, સિ હ્રસ્વ, ટી દીર્ઘ" }
+    ],
+    grammarNotes: [
+      "તીવ્ર અનુસ્વાર પૂર્વેનો સ્વર હ્રસ્વ થાય: બિંદુ, કુંભ",
+      "કોમળ અનુસ્વાર પૂર્વેનો સ્વર દીર્ઘ થાય: ઊંટ, ભીંત, છીંક"
+    ],
+    impQuestions: [
+      { q: "'શારીરિક' શબ્દની સાચી જોડણી કઈ છે?", a: "શારીરિક (પ્રથમ 'ી' દીર્ઘ અને બીજી 'િ' હ્રસ્વ)." },
+      { q: "'પરિસ્થિતિ' શબ્દની સાચી જોડણી કઈ છે?", a: "પરિસ્થિતિ (બંને હ્રસ્વ 'િ')." }
+    ]
+  },
+  {
+    id: "v-05",
+    cat: "vyakaran",
+    num: "વ્યા ૫",
+    title: "સંધિ (જોડો અને છોડો)",
+    author: "વિભાગ C (૨ ગુણ)",
+    genre: "વર્ણ મેળ",
+    source: "સરળ વ્યાકરણ શૉર્ટકટ",
+    summary: "બે શબ્દો ભેગા મળીને એક બને ત્યારે અવાજમાં થતો સ્વાભાવિક ફેરફાર.",
+    intro: "બાળકો માટે સુપર ઈઝી ટ્રીક: ગણિતના સરવાળા જેવી સરળ ફોર્મ્યુલા!",
+    childTrick: "💡 સુપર શોર્ટકટ: \n• અ + અ = આ ➔ સૂર્ય + અસ્ત = સૂર્યાસ્ત, હિમ + આલય = હિમાલય\n• અ + ઉ = ઓ ➔ સૂર્ય + ઉદય = સૂર્યોદય, ચંદ્ર + ઉદય = ચંદ્રોદય\n• ઉ + આ = વા ➔ સુ + આગત = સ્વાગત, સુ + અલ્પ = સ્વલ્પ\n• ત્ + ન = ન્ન ➔ જગત્ + નાથ = જગન્નાથ\n• ત્ + જ = જ્જ ➔ સત્ + જન = સજ્જન\n• નિઃ + ચય = નિશ્ચય, નિઃ + રસ = નીરસ",
+    words: [
+      { w: "સ્વાગત", m: "સુ + આગત (યણ સંધિ)" },
+      { w: "સૂર્યોદય", m: "સૂર્ય + ઉદય (ગુણ સંધિ)" },
+      { w: "જગન્નાથ", m: "જગત્ + નાથ (વ્યંજનસંધિ)" },
+      { w: "સજ્જન", m: "સત્ + જન (વ્યંજનસંધિ)" },
+      { w: "સદૈવ", m: "સદા + એવ (વૃદ્ધિ સંધિ)" },
+      { w: "મનોરથ", m: "મનઃ + રથ (વિસર્ગસંધિ)" }
+    ],
+    grammarNotes: [
+      "વિદ્યા + આલય = વિદ્યાલય",
+      "કવિ + ઈશ્વર = કવીશ્વર",
+      "નિઃ + કપટ = નિષ્કપટ"
+    ],
+    impQuestions: [
+      { q: "'સ્વાગત' શબ્દની સંધિ છોડો.", a: "સુ + આગત = સ્વાગત." },
+      { q: "'જગત્ + નાથ' ની સંધિ જોડો.", a: "જગન્નાથ." }
+    ]
+  },
+  {
+    id: "v-06",
+    cat: "vyakaran",
+    num: "વ્યા ૬",
+    title: "કૃદંત અને તેના ૬ પ્રકારો",
+    author: "વિભાગ C (૧ ગુણ)",
+    genre: "ક્રિયાપદ રૂપ",
+    source: "સરળ વ્યાકરણ શૉર્ટકટ",
+    summary: "ક્રિયા દર્શાવતા હોય પણ વાક્યમાં વિશેષણ કે સંજ્ઞા બનીને આવતા શબ્દો.",
+    intro: "બાળકો માટે સુપર ઈઝી ટ્રીક: માત્ર શબ્દનો છેલ્લો અક્ષર પકડો!",
+    childTrick: "💡 સુપર શોર્ટકટ: \n૧. છેલ્લે 'ત' આવે (રમતો, દોડતી, ચાલતું) ➔ વર્તમાન કૃદંત\n૨. છેલ્લે 'ય' કે 'એલ' આવે (લખેલું, ગયેલો, ખાધું) ➔ ભૂતકૃદંત\n૩. છેલ્લે 'નાર' કે 'વાનો' આવે (આવનાર, જવાનો) ➔ ભવિષ્ય કૃદંત\n૪. છેલ્લે 'વ' કે 'વું' આવે (વાંચવું, દોડવું, બોલવું) ➔ સામાન્ય / વિધ્યર્થ કૃદંત\n૫. છેલ્લે 'વા' કે 'વા માટે' આવે (ભણવા ગયો, મળવા આવ્યો) ➔ હેત્વર્થ કૃદંત\n૬. છેલ્લે 'ઈ' કે 'ઈને' આવે (ખાઈને, વાંચીને, દોડીને) ➔ સંબંધક ભૂતકૃદંત",
+    words: [
+      { w: "રમતો છોકરો", m: "વર્તમાન કૃદંત ('તો' પ્રત્યય)" },
+      { w: "લખેલું પુસ્તક", m: "ભૂતકૃદંત ('એલું' પ્રત્યય)" },
+      { w: "આવનાર મહેમાન", m: "ભવિષ્ય કૃદંત ('નાર' પ્રત્યય)" },
+      { w: "મોટાઓને માન આપવું", m: "સામાન્ય / વિધ્યર્થ કૃદંત ('વું' ફરજ દર્શાવે)" },
+      { w: "તે ભણવા માટે ગયો", m: "હેત્વર્થ કૃદંત ('વા માટે' હેતુ દર્શાવે)" },
+      { w: "તે પાણી પીને ઊંઘ્યો", m: "સંબંધક ભૂતકૃદંત ('ઈને' પ્રત્યય)" }
+    ],
+    grammarNotes: [
+      "ક્રિયા ચાલુ હોય ➔ વર્તમાન",
+      "ક્રિયા પૂરી થઈ ગઈ હોય ➔ ભૂત",
+      "ક્રિયા ભવિષ્યમાં થવાની હોય ➔ ભવિષ્ય",
+      "ફરજ કે કર્તવ્ય હોય ➔ વિધ્યર્થ"
+    ],
+    impQuestions: [
+      { q: "'વિદ્યાર્થીઓએ સવારે વહેલા ઊઠવું જોઈએ' - કૃદંત કયું છે?", a: "સામાન્ય / વિધ્યર્થ કૃદંત ('ઊઠવું' માં 'વું' પ્રત્યય છે)." },
+      { q: "વાક્યમાં ક્રિયા કરવાનો 'હેતુ' દર્શાવવા કયું કૃદંત વપરાય?", a: "હેત્વર્થ કૃદંત (વા, વાને પ્રત્યય)." }
+    ]
+  },
+  {
+    id: "v-07",
+    cat: "vyakaran",
+    num: "વ્યા ૭",
+    title: "નિપાત ઓળખાવો",
+    author: "વિભાગ C (૧ ગુણ)",
+    genre: "અવ્યય પદ",
+    source: "સરળ વ્યાકરણ શૉર્ટકટ",
+    summary: "વાક્યમાં વધારાનું વજન, આદર કે સીમા લાવતા નાનકડા જાદુઈ શબ્દો.",
+    intro: "બાળકો માટે સુપર ઈઝી ટ્રીક: આ શબ્દ વાક્યમાંથી હટાવી દો તોય વાક્યનો અર્થ બદલાતો નથી!",
+    childTrick: "💡 સુપર શોર્ટકટ: \n• વજન આપે ➔ જ, તો, ય, પણ, સુદ્ધાં (તમે 'જ' આ કામ કરશો!)\n• સીમા/હદ બાંધે ➔ ફક્ત, માત્ર, કેવળ (મને 'માત્ર' એક પેન આપો)\n• આદર આપે ➔ જી (ગુરુ'જી' પધાર્યા, બાપુ'જી')\n• પૂછવા કે લટકણિયું ➔ ને, કે (તમે કાલે આવશો 'ને'?)",
+    words: [
+      { w: "તમે જ આવશો", m: "ભારવાચક નિપાત ('જ' પર વજન છે)" },
+      { w: "હું તો ક્યારનો આવ્યો", m: "ભારવાચક નિપાત ('તો')" },
+      { w: "માત્ર પાંચ મિનિટ બેસો", m: "સીમાવાચક નિપાત ('માત્ર' મર્યાદા દર્શાવે)" },
+      { w: "પૂજ્ય દાદાજી પધાર્યા", m: "આદરવાચક નિપાત ('જી')" },
+      { w: "તમે ચા પીશો ને?", m: "પ્રકીર્ણ / લટકણીયારૂપ નિપાત ('ને')" }
+    ],
+    grammarNotes: ["નિપાત વાક્યમાં સંજ્ઞા કે સર્વનામની જોડે આવે છે."],
+    impQuestions: [
+      { q: "'ગાંધીજીએ સત્યનો જ આગ્રહ રાખ્યો' - નિપાત ઓળખાવો.", a: "નિપાત: 'જ' (ભારવાચક નિપાત)." }
+    ]
+  },
+  {
+    id: "v-08",
+    cat: "vyakaran",
+    num: "વ્યા ૮",
+    title: "વાક્ય રૂપાંતર (કર્મણિ, પ્રેરક, ભાવે)",
+    author: "વિભાગ C (૨ ગુણ)",
+    genre: "વાક્ય રચના",
+    source: "સરળ વ્યાકરણ શૉર્ટકટ",
+    summary: "વાક્યમાં કર્તા, કર્મ કે પ્રેરક ભાવ પ્રમાણે વાક્યનું સ્વરૂપ બદલવું.",
+    intro: "બાળકો માટે સુપર ઈઝી ટ્રીક: 'થી' લગાવો અને ક્રિયાપદમાં 'આ' ઉમેરો!",
+    childTrick: "💡 સુપર શોર્ટકટ: \n૧. કર્તરિ (સાદું વાક્ય) ➔ મોહન પત્ર લખે છે.\n૨. કર્મણિ (કર્મ સાથે પેસિવ) ➔ મોહન'થી' પત્ર લખાય છે ('થી' + 'આ').\n૩. ભાવે (કર્મ વગરનું પેસિવ) ➔ મોહન'થી' હસાયું (કર્મ નથી, માત્ર હસવાની ક્રિયા).\n૪. પ્રેરક (બીજા પાસે કામ કરાવો) ➔ શિક્ષક મોહન પાસે પત્ર લખાવે છે ('આવ/ડાવ' પ્રત્યય).",
+    words: [
+      { w: "ગાંધીજીએ સત્ય કહ્યું (કર્તરિ)", m: "ગાંધીજીથી સત્ય કહેવાયું (કર્મણિ)" },
+      { w: "કાળુ હસ્યો (કર્તરિ)", m: "કાળુથી હસાયું (ભાવે વાક્ય - કર્મ વગર)" },
+      { w: "વિનુકાકાએ સૌરભને ભણાવ્યો", m: "વિનુકાકાથી સૌરભને ભણાવાયો (કર્મણિ)" },
+      { w: "વિદ્યાર્થી નિબંધ લખે છે", m: "શિક્ષક વિદ્યાર્થી પાસે નિબંધ લખાવે છે (પ્રેરક)" }
+    ],
+    grammarNotes: [
+      "કર્મણિમાં હંમેશાં કર્મ હાજર હોય",
+      "ભાવે વાક્યમાં ક્યારેય કર્મ હોતું નથી (અકર્મક)"
+    ],
+    impQuestions: [
+      { q: "'રાધા ગીત ગાય છે' નું કર્મણિ વાક્ય બનાવો.", a: "રાધાથી ગીત ગવાય છે." },
+      { q: "'બાળક દૂધ પીએ છે' નું પ્રેરક વાક્ય બનાવો.", a: "માતા બાળકને દૂધ પીવડાવે છે." }
+    ]
+  },
+  {
+    id: "v-09",
+    cat: "vyakaran",
+    num: "વ્યા ૯",
+    title: "વિભક્તિ, અનુગ & નામયોગી",
+    author: "વિભાગ C (૨ ગુણ)",
+    genre: "પદ સંગઠન",
+    source: "સરળ વ્યાકરણ શૉર્ટકટ",
+    summary: "વાક્યમાં શબ્દોને એકબીજા સાથે જોડતાં ચિહ્નો.",
+    intro: "બાળકો માટે સુપર ઈઝી ટ્રીક: અનુગ હંમેશાં શબ્દ સાથે ચોંટેલા હોય અને નામયોગી છૂટા હોય!",
+    childTrick: "💡 સુપર શોર્ટકટ: \n• અનુગ (જોડાઈને રહે) ➔ એ, ને, થી, માં, નો, ની, નું, ના (દા.ત. ઘરમાં, રામે, તેને)\n• નામયોગી (છૂટા રહે) ➔ વડે, દ્વારા, માટે, કાજે, સાથે, લીધે (દા.ત. પેન વડે, મિત્ર સાથે, દેશ માટે)",
+    words: [
+      { w: "ઘરમાં", m: "અનુગ: 'માં' (શબ્દ સાથે જોડાયેલો)" },
+      { w: "પેન વડે", m: "નામયોગી: 'વડે' (શબ્દથી અલગ)" },
+      { w: "દેશ માટે", m: "નામયોગી: 'માટે'" },
+      { w: "તેણે", m: "અનુગ: 'એ' (તે + એ)" }
+    ],
+    grammarNotes: ["અનુગ ક્યારેય શબ્દથી છૂટા લખાતા નથી."],
+    impQuestions: [
+      { q: "નીચેનામાંથી કયો 'અનુગ' છે? (માટે, વડે, માં, દ્વારા)", a: "'માં' અનુગ છે, બાકીના બધા નામયોગી છે." }
+    ]
+  },
+  {
+    id: "v-10",
+    cat: "vyakaran",
+    num: "વ્યા ૧૦",
+    title: "રૂઢિપ્રયોગો અને સાચા અર્થ",
+    author: "વિભાગ C (૨ ગુણ)",
+    genre: "શબ્દ પ્રયોગ",
+    source: "પાઠ્યપુસ્તક આધારિત",
+    summary: "લાંબા સમયથી ચોક્કસ ગૂઢ અર્થમાં રૂઢ થઈ ગયેલા શબ્દપ્રયોગો.",
+    intro: "બોર્ડ પરીક્ષામાં સાચો અર્થ આપી અર્થપૂર્ણ વાક્યમાં પ્રયોગ કરવાનો હોય છે.",
+    childTrick: "💡 યાદ રાખવાની ટ્રીક: સાદો અર્થ નહિ પણ ઊંડો મતલબ સમજવો! વાક્યમાં મૂળ રૂઢિપ્રયોગ જ વપરાવો જોઈએ.",
+    words: [
+      { w: "ઘોડા ઘડવા", m: "મનમાં આયોજન કે તરંગો કરવા (વિનુકાકા મનમાં ઘોડા ઘડતા હતા)" },
+      { w: "ભોંયમાં પેસી જવું", m: "ખૂબ શરમિંદા કે લજ્જિત થવું" },
+      { w: "પગરણ માંડવા", m: "શરૂઆત કરવી, આરંભ કરવો" },
+      { w: "કાળજે કોરાઈ જવું", m: "હૃદયમાં કાયમ યાદ રહી જવું" },
+      { w: "પેટે પાટા બાંધવા", m: "અતિશય ભૂખ્યા રહીને કરકસર કરવી" },
+      { w: "લોહીનું પાણી કરવું", m: "ખૂબ જ સખત પરિશ્રમ કરવો" },
+      { w: "હાથ દેવો", m: "સહારો આપવો, મદદરૂપ થવું" },
+      { w: "માથે હાથ ફેરવવો", m: "આશીર્વાદ આપવા, વહાલ કરવું" }
+    ],
+    grammarNotes: ["વાક્ય પ્રયોગમાં રૂઢિપ્રયોગનો અર્થ નહિ પણ મૂળ શબ્દ જ વાપરવો."],
+    impQuestions: [
+      { q: "'ભોંયમાં પેસી જવું' નો અર્થ આપો.", a: "અત્યંત લજ્જિત કે શરમિંદા થવું." }
+    ]
+  },
+  {
+    id: "v-11",
+    cat: "vyakaran",
+    num: "વ્યા ૧૧",
+    title: "કહેવતો અને તેના સાચા અર્થ",
+    author: "વિભાગ C (૧ ગુણ)",
+    genre: "લોક અનુભવ",
+    source: "પાઠ્યપુસ્તક આધારિત",
+    summary: "પેઢી દર પેઢી લોકજીવનના અનુભવમાંથી ઘડાયેલી સચોટ ઉક્તિઓ.",
+    intro: "કહેવત જીવનનો સાચો બોધ અને શિખામણ આપે છે.",
+    childTrick: "💡 સુપર શોર્ટકટ: \n• મોરના ઈંડાંને ચીતરવાં ન પડે ➔ તેજસ્વી મા-બાપના સંતાનોમાં ગુણ આપોઆપ આવે.\n• ઝાઝા હાથ રળિયામણા ➔ સંપ અને સહકારથી મોટું કામ પણ સરળ બને.\n• બોલે તેનાં બોર વેચાય ➔ રજૂઆત કર્યા વિના કોઈ જરૂરિયાત સમજાતી નથી.\n• ન બોલવામાં નવ ગુણ ➔ વિવાદના સમયે શાંત રહેવામાં જ ભલાઈ છે.\n• ખાડો ખોદે તે પડે ➔ બીજાનું બૂરું કરવા જનાર પોતે જ ખાડામાં પડે.",
+    words: [
+      { w: "મોરના ઈંડાં ચીતરવાં ન પડે", m: "હોશિયાર માતાપિતાના સંતાનોમાં સંસ્કાર જન્મજાત હોય છે" },
+      { w: "ઝાઝા હાથ રળિયામણા", m: "સંપ અને સહકારથી કામ સરળ બને છે" },
+      { w: "પાણી પહેલાં પાળ બાંધવી", m: "મુશ્કેલી આવે તે પહેલાં ચેતી જવું" },
+      { w: "અતિ લોભ તે પાપનું મૂળ", m: "વધારે પડતો લોભ વિનાશ લાવે છે" }
+    ],
+    grammarNotes: ["કહેવત અપરિવર્તનશીલ હોય છે."],
+    impQuestions: [
+      { q: "'મોરના ઈંડાંને ચીતરવાં ન પડે' કહેવતનો અર્થ આપો.", a: "તેજસ્વી માતાપિતાના સંતાનોમાં ગુણ કે સંસ્કારો સ્વાભાવિક રીતે જ હોય છે." }
+    ]
+  },
+  {
+    id: "v-12",
+    cat: "vyakaran",
+    num: "વ્યા ૧૨",
+    title: "શબ્દસમૂહ માટે એક શબ્દ",
+    author: "વિભાગ C (૧ ગુણ)",
+    genre: "શબ્દ સંક્ષેપ",
+    source: "પાઠ્યપુસ્તક આધારિત",
+    summary: "મોટા વાક્ય કે વિચારને એક જ સચોટ શબ્દમાં રજૂ કરવો.",
+    intro: "બોર્ડ પરીક્ષાના તમામ પાઠોમાંથી પૂછાતા મહત્વના શબ્દો.",
+    childTrick: "💡 વારંવાર પૂછાતા શબ્દો ગોખી લો: \n• જમીનનું પાણી પારખનાર ➔ પાણતિયો\n• કાદવમાં જન્મનાર ➔ પંકજ\n• જેને કોઈ મોહ નથી તે ➔ નિર્મોહી\n• બે ખેતર વચ્ચેની હદ ➔ શેઢો\n• અનાજ મફત આપવાની વ્યવસ્થા ➔ સદાવ્રત\n• આકાશ-પૃથ્વી મળતાં દેખાય તે સીમા ➔ ક્ષિતિજ",
+    words: [
+      { w: "પાણતિયો", m: "જમીનની અંદર રહેલું પાણી તપાસનાર વિદ્વાન" },
+      { w: "શેઢો", m: "બે ખેતરો વચ્ચેની માટીની પાળી કે હદ" },
+      { w: "સદાવ્રત", m: "દીન-દુખિયાને મફત અનાજ આપવાની વ્યવસ્થા" },
+      { w: "ક્ષિતિજ", m: "જ્યાં પૃથ્વી અને આકાશ મળતાં દેખાય તે સ્થળ" },
+      { w: "કોતર", m: "નદીના પ્રવાહથી બનેલો ઊંડો ખાડો" },
+      { w: "નિર્મોહી", m: "જેનામાં કોઈ પણ પ્રકારનો મોહ નથી તે" }
+    ],
+    grammarNotes: ["શબ્દસમૂહ માટે એક શબ્દ ભાષાને સુઘડ બનાવે છે."],
+    impQuestions: [
+      { q: "'જમીનનું પાણી પારખનાર' માટે એક શબ્દ આપો.", a: "પાણતિયો." }
+    ]
+  },
+  {
+    id: "v-13",
+    cat: "vyakaran",
+    num: "વ્યા ૧૩",
+    title: "સમાનાર્થી અને વિરોધી શબ્દો",
+    author: "વિભાગ C (૨ ગુણ)",
+    genre: "શબ્દ ભંડોળ",
+    source: "પાઠ્યપુસ્તક આધારિત",
+    summary: "સમાન અર્થ અને સામસામે ઉલટો અર્થ ધરાવતા શબ્દો.",
+    intro: "બોર્ડ પરીક્ષામાં પુસ્તકના સ્વાધ્યાયમાંથી જ શબ્દો પૂછાય છે.",
+    childTrick: "💡 ખાસ વિરોધી શબ્દો: \n• અમીર x ગરીબ (રંક)\n• આદર x અનાદર (તિરસ્કાર)\n• પરાઈ x પોતાની (નિજ)\n• જુદાઈ x મિલન\n• આરોગ્ય x માંદગી / રોગ\n• સ્નેહ x વેર / દ્વેષ",
+    words: [
+      { w: "તૃષ્ણા (સમાનાર્થી)", m: "ઈચ્છા, લાલસા, કામના" },
+      { w: "કંગાળ (સમાનાર્થી)", m: "દરિદ્ર, ગરીબ, નિર્ધન" },
+      { w: "રત્નાકર (સમાનાર્થી)", m: "સમુદ્ર, સાગર, અર્ણવ" },
+      { w: "જનની (સમાનાર્થી)", m: "માતા, માવડી, અંબા" },
+      { w: "પરાઈ (વિરોધી)", m: "પોતાની / નિજ" },
+      { w: "જુદાઈ (વિરોધી)", m: "મિલન / સંગાથ" }
+    ],
+    grammarNotes: ["સમાનાર્થી શબ્દો શબ્દભંડોળ વધારે છે."],
+    impQuestions: [
+      { q: "'તૃષ્ણા' નો સમાનાર્થી શબ્દ આપો.", a: "ઈચ્છા / લાલસા." }
+    ]
+  },
+  {
+    id: "v-14",
+    cat: "vyakaran",
+    num: "વ્યા ૧૪",
+    title: "સંયોજક ઓળખો & વાક્ય શુદ્ધિ",
+    author: "વિભાગ C (૧ ગુણ)",
+    genre: "વાક્ય જોડાણ",
+    source: "સરળ વ્યાકરણ શૉર્ટકટ",
+    summary: "બે વાક્યોને એકબીજા સાથે જોડતા શબ્દોને સંયોજક કહે છે.",
+    intro: "બાળકો માટે સુપર ઈઝી ટ્રીક: વચ્ચે પુલ જેવો શબ્દ શોધો!",
+    childTrick: "💡 સામાન્ય સંયોજકો: \n• અને, ને, પણ, પરંતુ, છતાં, એટલે, કારણ કે, જો...તો, જ્યારે...ત્યારે.\nદા.ત. તે હોશિયાર હતો 'પરંતુ' આળસુ નીકળ્યો. ('પરંતુ' સંયોજક છે)",
+    words: [
+      { w: "અને / ને", m: "ઉમેરો દર્શાવે (રામ અને લક્ષ્મણ ગયા)" },
+      { w: "પરંતુ / પણ", m: "વિરોધ દર્શાવે (મહેનત કરી પણ પાસ ન થયો)" },
+      { w: "કારણ કે", m: "કારણ દર્શાવે (તે મોડો પડ્યો કારણ કે બસ ચૂકી ગયો)" },
+      { w: "જો...તો", m: "શરત દર્શાવે (જો વાંચશો તો પાસ થશો)" }
+    ],
+    grammarNotes: ["સંયોજક કાઢી નાખતાં બે સ્વતંત્ર સાદાં વાક્યો બને છે."],
+    impQuestions: [
+      { q: "'જો તમે મહેનત કરશો તો પાસ થશો' - સંયોજક શોધો.", a: "સંયોજક: 'જો...તો'." }
+    ]
+  },
+  {
+    id: "v-15",
+    cat: "vyakaran",
+    num: "વ્યા ૧૫",
+    title: "કાળ ઓળખો અને પરિવર્તન",
+    author: "વિભાગ C (૧ ગુણ)",
+    genre: "સમય સૂચક ક્રિયા",
+    source: "સરળ વ્યાકરણ શૉર્ટકટ",
+    summary: "ક્રિયા કયા સમયે થઈ રહી છે તે દર્શાવતા ક્રિયાપદના રૂપ.",
+    intro: "વર્તમાનકાળ (અત્યારે), ભૂતકાળ (વીતી ગયેલું), ભવિષ્યકાળ (આવનારું).",
+    childTrick: "💡 સુપર શોર્ટકટ: \n• છે / રમે છે ➔ વર્તમાનકાળ (અત્યારે ચાલુ છે)\n• હતો / ગયો / ખાધું ➔ ભૂતકાળ (પૂરું થઈ ગયું)\n• શે / રમશે / જશે ➔ ભવિષ્યકાળ (હવે થશે)",
+    words: [
+      { w: "રમણ નિબંધ લખે છે", m: "વર્તમાનકાળ (ક્રિયા ચાલુ છે)" },
+      { w: "રમણે નિબંધ લખ્યો હતો", m: "ભૂતકાળ (ક્રિયા પૂરી થઈ ગઈ)" },
+      { w: "રમણ કાલે નિબંધ લખશે", m: "ભવિષ્યકાળ (ક્રિયા હવે પછી થશે)" }
+    ],
+    grammarNotes: ["કાળ પરિવર્તન કરતી વખતે અર્થ બદલાવો ન જોઈએ."],
+    impQuestions: [
+      { q: "'અમે કાલે અમદાવાદ જઈશું' કયો કાળ છે?", a: "ભવિષ્યકાળ ('જઈશું' ભવિષ્ય દર્શાવે છે)." }
+    ]
+  }
+];
+
+/**
+ * 2. Chapters Data with 5 to 6 BIG Rich Sections Added (પરિચય, કથાસાર, પાત્રાલેખન, શબ્દાર્થ, બોર્ડ પ્રશ્નો, વ્યાકરણ વિશેષ)
+ */
+const CHAPTERS_DATA = [
+  // ====================== પદ્ય વિભાગ (Poetry) ======================
+  {
+    id: "padya-01",
+    cat: "padya",
+    num: 1,
+    title: "વૈષ્ણવજન",
+    author: "નરસિંહ મહેતા",
+    genre: "પદ / ભજન (પ્રભાતિયું)",
+    source: "નરસિંહ શ્રેષ્ઠ પદમાળા",
+    summary: "સાચો વૈષ્ણવ પારકાના દુઃખ-દર્દને પોતાનું સમજે છે, કોઈના પર ઉપકાર કરે તોય મનમાં અહંકાર રાખતો નથી. સમગ્ર સૃષ્ટિમાં સૌને વંદન કરે છે અને કોઈની નિંદા કરતો નથી. વાણી, ચારિત્ર્ય અને મન નિર્મળ રાખે છે. પરસ્ત્રીને માતા સમાન ગણે છે, અસત્ય બોલતો નથી અને પારકા ધનને હાથ અડાડતો નથી. મોહ-માયા, કામ-ક્રોધથી મુક્ત આવા સંતના દર્શન માત્રથી ૭૧ પેઢીનો ઉદ્ધાર થાય છે.",
+    intro: "• કવિ: નરસિંહ મહેતા (જન્મ: તળાજા, કર્મભૂમિ: જૂનાગઢ, ૧૫મી સદી).\n• ઉપનામ: 'આદિકવિ' (ગુજરાતી ભાષાના પ્રથમ કવિ).\n• વિશેષતા: ઝૂલણા છંદમાં રચેલાં તેમનાં પ્રભાતિયાં આજે ૬૦૦ વર્ષ પછી પણ ગુજરાતના ઘરેઘરે ગવાય છે.\n• ઐતિહાસિક મહત્વ: આ ભજન રાષ્ટ્રપિતા મહાત્મા ગાંધીજીનું સૌથી પ્રિય ભજન હતું અને સાબરમતી આશ્રમની દૈનિક પ્રાર્થનામાં ગવાતું હતું.",
+    analysis: "• કેન્દ્રીય વિચાર: સાચો ધર્મ કર્મકાંડમાં નથી પણ પરદુઃખભંજક માનવતામાં છે.\n• પંક્તિવાર ચિંતન: \n૧. 'પીડ પરાઈ જાણે રે': સંવેદનશીલ હૃદય.\n૨. 'મન અભિમાન ન આણે રે': નિરહંકાર સેવાભાવ.\n૩. 'પરસ્ત્રી જેને માત રે': ચારિત્ર્યની શુદ્ધતા.\n૪. 'દૃઢ વૈરાગ્ય જેના મનમાં રે': આંતરિક સંયમ.",
+    characterSketch: "• સાચો વૈષ્ણવ (માનવતાની મૂર્તિ):\n- એવો માનવી જે કોઈના પર ઉપકાર કર્યા પછી એનો ઉપકાર નથી ગણાવતો.\n- વાણી, ચારિત્ર્ય અને વિચારમાં કોઈ દંભ નથી.\n- જેને ધન કે લોભ લલચાવી શકતા નથી.",
+    words: [
+      { w: "પીડ", m: "દુઃખ, દર્દ, વેદના" },
+      { w: "પરાઈ", m: "બીજાની, અન્યની (વિરોધી: પોતાની / નિજ)" },
+      { w: "આણે", m: "લાવે, મનમાં ધારણ કરે" },
+      { w: "વાચ", m: "વાણી, બોલી" },
+      { w: "કાછ", m: "કાછડી, ચારિત્ર્ય, શીલ" },
+      { w: "જનની", m: "માતા, જન્મ આપનારી" },
+      { w: "જિહ્વા", m: "જીભ, રસના" },
+      { w: "વણલોભી", m: "લોભ વિનાનો (નિર્લોભી)" }
+    ],
+    grammarNotes: [
+      "વૈષ્ણવજન: તત્પુરુષ સમાસ (વિષ્ણુનો ભક્ત)",
+      "પરસ્ત્રી: કર્મધારય સમાસ (પારકી એવી સ્ત્રી)",
+      "નિર્મોહી: બહુવ્રીહિ સમાસ (નથી મોહ જેનામાં તે)",
+      "વિરોધી: અભિમાન x નમ્રતા, અસત્ય x સત્ય"
+    ],
+    impQuestions: [
+      {
+        q: "નરસિંહ મહેતા વૈષ્ણવજનનાં કયાં કયાં લક્ષણો જણાવે છે? (૪ ગુણ મોસ્ટ IMP)",
+        a: "સાચો વૈષ્ણવ પારકાં દુઃખ સમજી નિઃસ્વાર્થ સેવા કરે છે પણ અહંકાર કરતો નથી. સમગ્ર જગતમાં સૌને વંદન કરે છે, કોઈની નિંદા કરતો નથી. વાણી, ચારિત્ર્ય અને મન શુદ્ધ રાખે છે. સમદ્રષ્ટિ રાખે છે, પરસ્ત્રીને માતા ગણે છે, અસત્ય બોલતો નથી, પારકા ધનને અડતો નથી અને મોહ-માયા, કામ-ક્રોધથી મુક્ત રહે છે."
+      },
+      {
+        q: "'ધન ધન જનની તેની રે' કવિ શા માટે કહે છે? (૨ ગુણ)",
+        a: "જે વૈષ્ણવ પોતાના ચારિત્ર્ય, વાણી અને મનને સદા પવિત્ર રાખી લોકકલ્યાણ કરે છે, તેવા ઉત્તમ પુત્રને જન્મ આપનારી માતા ધન્ય છે."
+      },
+      {
+        q: "વૈષ્ણવજન ભજન કયા રાષ્ટ્રપિતાનું પ્રિય ભજન હતું?",
+        a: "મહાત્મા ગાંધીજીનું પ્રિય ભજન હતું."
+      }
+    ]
+  },
+  {
+    id: "padya-03",
+    cat: "padya",
+    num: 3,
+    title: "શીલવંત સાધુને",
+    author: "ગંગાસતી",
+    genre: "ભજન / પદ",
+    source: "ગંગાસતીની ભજનગંગા",
+    summary: "ચારિત્ર્યવાન સંત પુરુષનું વર્તન પરિસ્થિતિ પ્રમાણે ક્યારેય બદલાતું નથી. જેના મનની વૃત્તિ સદા નિર્મળ હોય, જેને શત્રુ કે મિત્રમાં કોઈ ભેદભાવ ન હોય, જે માત્ર પરમાર્થમાં પ્રીતિ રાખે, મન-વચન-વાણીમાં એકરૂપ હોય અને જે તુરિયા અવસ્થામાં સદા આનંદમય રહેતો હોય તેને વારંવાર નમન કરવાની કવિયત્રી સલાહ આપે છે.",
+    intro: "• કવિયત્રી: ગંગાસતી (ગંગાબા કહળસંગ ગોહિલ, સમઢિયાળા, ભાવનગર).\n• શિષ્યા: પાનબાઈ.\n• વિશેષતા: સમાધિ લેતાં પહેલાં ૫૨ દિવસ સુધી પાનબાઈને આધ્યાત્મિક જ્ઞાનના ૫૨ અમર ભજનો સંભળાવ્યા હતા.",
+    analysis: "• કાવ્યાર્થ: શીલ એટલે સદાચાર. બહારનો ભગવો વેશ ધારણ કરવાથી સાધુ નથી થવાતું, પણ જેનું ચારિત્ર્ય નિર્મળ હોય અને જેને દિવસ-રાતના આઠે પહોર આત્માનંદ મળતો હોય તે જ સાચો સંત છે.",
+    characterSketch: "• સાચો સાધુ:\n- સુખ-દુઃખમાં અડગ રહેનાર.\n- શત્રુ અને મિત્ર પ્રત્યે સમભાવ રાખનાર.\n- પરમાર્થ (લોકસેવા) માં જ પોતાનો સ્વાર્થ જોનાર.",
+    words: [
+      { w: "શીલવંત", m: "ચારિત્ર્યવાન, સદાચારી" },
+      { w: "વર્તમાન", m: "નિયમ, આચરણ, વ્રત" },
+      { w: "તુરિયાનો તાર", m: "ચોથી અવસ્થા (બ્રહ્મજ્ઞાનની દિવ્ય સ્થિતિ)" },
+      { w: "પ્રહર / પહોર", m: "ત્રણ કલાકનો સમયગાળો (દિવસ-રાતના ૮ પહોર)" }
+    ],
+    grammarNotes: [
+      "શીલવંત: શીલ + વંત (પ્રત્યય)",
+      "પરમાર્થ: પરમ + અર્થ (દીર્ઘ સ્વરસંધિ)",
+      "તુરિયાનો તાર જાગવો: રૂઢિપ્રયોગ (બ્રહ્માવસ્થામાં લીન થવું)"
+    ],
+    impQuestions: [
+      {
+        q: "ગંગાસતી પાનબાઈને કેવા સાધુને વારંવાર નમવાનું કહે છે? (૪ ગુણ મોસ્ટ IMP)",
+        a: "જેનું શીલ (ચારિત્ર્ય) સદા અખંડ હોય, જેનું વર્તન પરિસ્થિતિ પ્રમાણે ન બદલાય, જેના ચિત્તની વૃત્તિ પવિત્ર હોય, જેને શત્રુ કે મિત્રમાં ભેદ ન હોય, જે મન-વાણી-કર્મમાં એકરૂપ હોય અને જેને તુરિયા અવસ્થાનો આનંદ મળતો હોય."
+      }
+    ]
+  },
+  {
+    id: "padya-05",
+    cat: "padya",
+    num: 5,
+    title: "દીકરી",
+    author: "અશોક ચાવડા 'બેદિલ'",
+    genre: "ગઝલ",
+    source: "પગલાં તળાવમાં",
+    summary: "દીકરીના ગૌરવ, સ્નેહ અને પિતા-પુત્રીના અનુપમ પ્રેમનું આલેખન કરતી ભાવસભર ગઝલ. કવિ દીકરીમાં સ્વર્ગની એક-એક દેવીની ઝલક જુએ છે. સુખડ, ચંદન અને કુમકુમના તિલકમાં દીકરીની શીતળતા અને પવિત્રતા વસી છે. જે દીકરીના માથે પિતા આશીર્વાદનો હાથ ફેરવતા હતા, આજે એ જ દીકરી મોટી થઈ પિતાને ટેકો (હાથ) આપે છે. કોઈની દીકરીની વિદાય વેળાએ પિતાની આંખો ભીની થઈ જાય છે.",
+    intro: "• કવિ: અશોક ચાવડા (જન્મ: માંડવી-સુરેન્દ્રનગર).\n• ઉપનામ: 'બેદિલ'.\n• સાહિત્ય પ્રકાર: ગઝલ (શે'ર આધારિત રચના).\n• વિશેષતા: આધુનિક ગુજરાતી ગઝલ સાહિત્યમાં પિતા-પુત્રીના વાત્સલ્યને સર્વોચ્ચ શિખરે પહોંચાડતી રચના.",
+    analysis: "• કાવ્યાર્થ: દીકરી માત્ર જવાબદારી નથી પણ ઘરને સ્વર્ગ બનાવનાર દિવ્ય શક્તિ છે. પથ્થરમાંથી શિલ્પ કોતરાય તેમ માતાપિતાના ત્યાગ અને સ્નેહમાંથી દીકરીનું ઘડતર થાય છે.",
+    characterSketch: "• દીકરીનું સ્વરૂપ:\n- સુખડ-ચંદન જેવી શીતળતા અને સુગંધ આપનારી.\n- લાજ, મર્યાદા અને સંસ્કારો વચ્ચે ઉછરેલી.\n- ઘરડા પિતાનો સૌથી મોટો માનસિક સહારો.",
+    words: [
+      { w: "ઝલક", m: "શોભા, તેજસ્વી છાપ" },
+      { w: "ફડક", m: "ચિંતા, ડર, સંકોચ" },
+      { w: "હાથ દેવો", m: "સહારો આપવો, ટેકો બનવો" },
+      { w: "માથે હાથ ફેરવવો", m: "આશીર્વાદ આપવા, વહાલ કરવું" }
+    ],
+    grammarNotes: [
+      "સુખડ-ચંદન: દ્વંદ્વ સમાસ (સુખડ અને ચંદન)",
+      "હાથ દેવો: રૂઢિપ્રયોગ (સહારો આપવો)",
+      "વિરોધી: આકાશ x ધરતી, ભીનું x સૂકું"
+    ],
+    impQuestions: [
+      {
+        q: "કવિ દીકરીને શાના તિલકમાં જુએ છે?",
+        a: "કુમકુમ, સુખડ અને ચંદનના પવિત્ર તિલકમાં દીકરીની ઝલક જુએ છે."
+      },
+      {
+        q: "'જે માથે હાથ ફેરવતો હતો હવે એ હાથ દે છે' - પંક્તિ સમજાવો. (૪ ગુણ મોસ્ટ IMP)",
+        a: "નાનપણમાં પિતા દીકરીના માથે આશીર્વાદ અને વહાલનો હાથ ફેરવી રક્ષણ આપતા હતા, આજે એ જ પુત્રી સમજણી થઈને વૃદ્ધ પિતાને જીવનમાં ટેકો અને સહારો આપે છે."
+      }
+    ]
+  },
+  {
+    id: "padya-11",
+    cat: "padya",
+    num: 11,
+    title: "શિકારીને",
+    author: "કલાપી (સુરસિંહજી ગોહિલ)",
+    genre: "સોનેટ (પ્રકૃતિ કાવ્ય)",
+    source: "કલાપીનો કેકારવ",
+    summary: "જીવદયા અને પ્રકૃતિ સંરક્ષણનો અમર સંદેશ આપતું સોનેટ. કવિ શિકારી યુવાનને પક્ષીઓનો સંહાર ન કરવાની વિનંતી કરે છે. તીર મારીને માત્ર નિર્જીવ પક્ષીનું મડદું મેળવી શકાય, તેનું મધુર ગીત કે સૌંદર્ય ક્યારેય પામી શકાતું નથી. સૌંદર્ય પામતાં પહેલાં માણસે પોતે સુંદર અને દયાળુ બનવું પડે છે.",
+    intro: "• કવિ: સુરસિંહજી તખ્તસિંહજી ગોહિલ (જન્મ: લાઠી, અમરેલી).\n• ઉપનામ: 'કલાપી'.\n• વિશેષતા: પ્રેમ, આંસુ અને પ્રકૃતિના રાજવી કવિ. ૧૪ પંક્તિના આ સોનેટમાં અનુષ્ટુપ છંદનો અદભુત પ્રયોગ થયો છે.",
+    analysis: "• કેન્દ્રીય વિચાર: આખી સૃષ્ટિ ઈશ્વરનો પવિત્ર આશ્રમ છે. કોઈપણ નિર્દોષ પક્ષી કે જીવને હણવાનો અધિકાર માણસને નથી. ક્રૂરતાથી સુંદરતા કદી જીતી શકાતી નથી.",
+    characterSketch: "• શિકારી યુવાન:\n- અવિચારી, પક્ષીઓને મારીને ખુશ થનારો.\n- કવિ તેને જીવન અને સૌંદર્યનો સાચો અર્થ સમજાવી અહિંસાના પંથે વાળે છે.",
+    words: [
+      { w: "સંહાર", m: "નાશ, કતલ, વિનાશ" },
+      { w: "સ્થૂળ શબ", m: "નિર્જીવ શરીર, મડદું" },
+      { w: "કારુણ્ય", m: "દયા, અનુકંપા, કરુણા" }
+    ],
+    grammarNotes: [
+      "સૌંદર્ય: સુંદર + ય (ભાવવાચક સંજ્ઞા)",
+      "સ્થૂળ શબ: કર્મધારય સમાસ",
+      "વિશ્વ આશ્રમ: તત્પુરુષ સમાસ"
+    ],
+    impQuestions: [
+      {
+        q: "'સૌંદર્ય પામતાં પહેલાં સૌંદર્ય બનવું પડે' - સમજાવો. (૪ ગુણ મોસ્ટ IMP)",
+        a: "કુદરતની સુંદરતા કે પક્ષીઓનું માધુર્ય હિંસા અને અહંકારથી નથી પમાતું; તેને માણવા માણસે પોતાના હૃદયમાં પ્રેમ, કરુણા, પવિત્રતા અને સુંદરતા કેળવવી પડે છે."
+      },
+      {
+        q: "કલાપી શિકારીને પક્ષી પર તીર ચલાવવાની શા માટે ના પાડે છે?",
+        a: "કારણ કે તીરથી પક્ષીનું મધુર ગીત નહિ પણ માત્ર તેનું રક્તરંજિત નિર્જીવ શબ મળે છે."
+      }
+    ]
+  },
+
+  // ====================== ગદ્ય વિભાગ (Prose) ======================
+  {
+    id: "gadya-02",
+    cat: "gadya",
+    num: 2,
+    title: "રેસનો ઘોડો",
+    author: "વર્ષા અડાલજા",
+    genre: "નવલિકા (ટૂંકી વાર્તા)",
+    source: "કોઈ વાર થાય કે...",
+    summary: "શિક્ષણમાં વધતી જતી અંધાધૂંધ સ્પર્ધા અને વાલીઓની મહત્વાકાંક્ષા પર કટાક્ષ કરતી વાર્તા. વિનુકાકા પોતાના દીકરા સૌરભને સતત ટ્યુશન અને ક્લાસમાં જોતરીને અમેરિકાનો મોટો ડોક્ટર બનાવે છે, પરંતુ સૌરભ પાસે વૃદ્ધ મા-બાપ માટે સમય નથી. બીજી તરફ નીનાબહેન પોતાના દીકરા અંકિતને સંસ્કાર, સ્વતંત્રતા અને માનવતા આપે છે. અંકિત બેંકમાં સામાન્ય નોકરી કરે છે પણ માંદાં મા-બાપની સેવા કરે છે. વિનુકાકા અંતે હારી ગયાનો સ્વીકાર કરે છે.",
+    intro: "• લેખિકા: વર્ષા ગુણવંતરાય અડાલજા (જન્મ: મુંબઈ).\n• સાહિત્ય પ્રકાર: નવલિકા (ટૂંકી વાર્તા).\n• પુરસ્કાર: સાહિત્ય અકાદમી દિલ્હી એવોર્ડ વિજેતા.\n• કેન્દ્રીય થીમ: બાળકના નિર્દોષ બાળપણને ભણતરના ભારણ અને 'રેસના ઘોડા' જેવી સ્પર્ધામાંથી મુક્ત કરવું.",
+    analysis: "• કથાસાર વિશ્લેષણ:\n૧. વિનુકાકાનો ભ્રમ: માત્ર માર્ક્સ અને મેડલ જ જીવનની સફળતા છે.\n૨. નીનાબહેનનો વિવેક: બાળકનું સ્વાસ્થ્ય, સંસ્કાર અને સુખ ડિગ્રી કરતાં મહત્વનાં છે.\n૩. પરિણામ: સૌરભ પાસે અમેરિકામાં બંગલો અને ગાડી છે પણ મા-બાપ માટે પ્રેમ નથી; અંકિત પાસે સમય અને કુટુંબપ્રેમ છે.",
+    characterSketch: "• વિનુકાકા: અતિ મહત્વાકાંક્ષી, બાળક પર પોતાના સપના થોપનારા, અંતે પસ્તાવો કરનારા પિતા.\n• અંકિત: સંવેદનશીલ, માતાપિતાની સેવા કરનારો, સંસ્કારી આદર્શ પુત્ર.\n• નીનાબહેન: બાળકની સાચી લાગણી સમજનારી આદર્શ માતા.",
+    words: [
+      { w: "સ્પર્ધાત્મક", m: "હરીફાઈવાળું ('ઇક' પ્રત્યય)" },
+      { w: "નિશાન ઊંચું રાખવું", m: "મોટો લક્ષ્યાંક રાખવો" },
+      { w: "ભોંયમાં પેસી જવું", m: "ખૂબ શરમિંદા કે લજ્જિત થવું (રૂઢિપ્રયોગ)" },
+      { w: "ઘોડા ઘડવા", m: "મનમાં આયોજન કે તરંગો કરવા (રૂઢિપ્રયોગ)" }
+    ],
+    grammarNotes: [
+      "માતાપિતા: દ્વંદ્વ સમાસ (માતા અને પિતા)",
+      "સ્પર્ધાત્મક: 'ઇક' પ્રત્યયથી શુદ્ધ જોડણી",
+      "કર્મણિ: વિનુકાકાથી સૌરભને ભણાવાયો"
+    ],
+    impQuestions: [
+      {
+        q: "વિનુકાકાનું પાત્રાલેખન કરો. (૪ ગુણ મોસ્ટ IMP)",
+        a: "વિનુકાકા આજના એવા મહત્વાકાંક્ષી વાલીનું પ્રતીક છે જે બાળકનું બાળપણ છીનવી તેને માત્ર માર્ક્સ અને ટકાવારી પાછળ દોડાવે છે. તેઓ સૌરભને અમેરિકા મોકલે છે પણ અંતે ઘરડાં મા-બાપ એકલાં પડી જાય છે અને સ્વીકારે છે કે 'નીના સાચી હતી, આપણે હારી ગયા.'"
+      },
+      {
+        q: "નીનાબહેને અંકિતને ભણતરના ભારણમાંથી કેમ મુક્ત કર્યો?",
+        a: "અંકિતને તાવ આવ્યો ત્યારે તેમણે સમજ્યું કે બાળકની ખુશી અને સંસ્કાર ટકાવારી કરતાં વધુ મહત્વના છે."
+      }
+    ]
+  },
+  {
+    id: "gadya-04",
+    cat: "gadya",
+    num: 4,
+    title: "ગોપાળબાપા",
+    author: "મનુભાઈ પંચોળી 'દર્શક'",
+    genre: "નવલકથા અંશ",
+    source: "ઝેર તો પીધાં છે જાણી જાણી (ભાગ-૧)",
+    summary: "વડોદરાના મહારાજા સયાજીરાવ ગાયકવાડ અને નીડર, પરોપકારી ખેડૂત ગોપાળબાપા વચ્ચેનો અમર સંવાદ. ગોપાળબાપા પોતાના સ્વર્ગસ્થ મિત્રના અનાથ દીકરાના ભરણપોષણ માટે કોતરોની જમીન માંગે છે. ગોપાળબાપાની નિર્ભયતા, સત્યવાદિતા અને ગુરુ માંડણ ભગત પ્રત્યેની શ્રદ્ધાથી પ્રભાવિત થઈ મહારાજા જમીન મંજૂર કરે છે.",
+    intro: "• લેખક: મનુભાઈ રાજારામ પંચોળી (પંચાસીયા, મોરબી).\n• ઉપનામ: 'દર્શક'.\n• સંદર્ભ નવલકથા: 'ઝેર તો પીધાં છે જાણી જાણી' (ગુજરાતી સાહિત્યની ક્લાસિક નવલકથા).\n• વિશેષતા: ગાંધીવાદી કેળવણીકાર અને નીડર સાહિત્યકાર.",
+    analysis: "• સંવાદની ભવ્યતા: રાજા સામે સામાન્ય ખેડૂત સહેજ પણ ડર્યા વગર સત્ય બોલે છે અને રાજા પણ ખેડૂતના ખુદ્દાર સ્વભાવની કદર કરે છે. લોકશાહી અને પ્રજાવત્સલ રાજવીનું આ ઉત્કૃષ્ટ ઉદાહરણ છે.",
+    characterSketch: "• ગોપાળબાપા: પરોપકારી, મિત્રધર્મ નિભાવનારા, નિર્ભય અને ધરતીપુત્ર.\n• મહારાજા સયાજીરાવ: પ્રજાવત્સલ, ગુણગ્રાહી, પારખુ આંખ ધરાવનારા ઉત્તમ રાજવી.\n• માંડણ ભગત: કીડીઓને પણ જીવવાનો અધિકાર માનનારા પરમ દયાળુ સંત.",
+    words: [
+      { w: "કોતર", m: "નદીના પ્રવાહથી બનેલો ઊંડો ખાડો" },
+      { w: "પાણતિયો", m: "જમીનનું પાણી પારખનાર વિદ્વાન" },
+      { w: "દાદ આપવી", m: "ન્યાય કરવો, ફરિયાદ સાંભળવી (રૂઢિપ્રયોગ)" }
+    ],
+    grammarNotes: [
+      "સયાજીરાવ: સંજ્ઞાવાચક નામ",
+      "પાણતિયો: શબ્દસમૂહ માટે એક શબ્દ",
+      "વિરોધી: અનાથ x સનાથ"
+    ],
+    impQuestions: [
+      {
+        q: "ગોપાળબાપાએ કોતરોની જમીન શા માટે માંગી? (૪ ગુણ મોસ્ટ IMP)",
+        a: "ગોપાળબાપાએ પોતાના માટે નહિ પણ પોતાના બાળપણના મિત્રના અનાથ દીકરાના ભવિષ્ય અને ભરણપોષણ માટે કોતરોની જમીન માંગી હતી."
+      },
+      {
+        q: "માંડણ ભગતનું જીવન કેવું હતું?",
+        a: "માંડણ ભગત પરમ સંત હતા, જેઓ પોતાના શરીર પર ચડતી કીડીઓને સાચવીને કહેતા કે 'કીડીઓને ક્યાં જવું? એનેય ખાવા દેવું પડે ને!'"
+      }
+    ]
+  },
+  {
+    id: "gadya-12",
+    cat: "gadya",
+    num: 12,
+    title: "ચોપડાની ઇન્દ્રજાળ",
+    author: "ચંદ્રકાન્ત પંડ્યા",
+    genre: "આત્મકથા ખંડ",
+    source: "બાનો ભીખુ",
+    summary: "શાહુકારો દ્વારા ગરીબ રાનીપરજ આદિવાસી ખેડૂતોનું થતું ક્રૂર શોષણ. જીવલો પેટે પાટા બાંધી શાહુકારના દીકરા ભીખુને ઘી, ગોળ અને શાકભાજી આપે છે છતાં રાતા ચોપડાનું વ્યાજ કદી ખૂટતું નથી. જીવલાની લાચારી જોઈ ભીખુનું અંતરાત્મા જાગે છે અને તે શોષણખોર ચોપડો ફાડી નાખી જીવલાને મુક્ત કરે છે.",
+    intro: "• લેખક: ચંદ્રકાન્ત જેઠાલાલ પંડ્યા (વલસાડ).\n• સાહિત્ય પ્રકાર: આત્મકથા ખંડ.\n• સંદર્ભ પુસ્તક: 'બાનો ભીખુ'.\n• કેન્દ્રીય વિષય: ગરીબ અને અભણ વનવાસીઓનું શાહુકારો દ્વારા થતું આર્થિક અને માનસિક શોષણ.",
+    analysis: "• શોષણખોર પ્રથા: જીવલાએ લીધેલી મુદ્દલ રકમ કરતાં બમણું-ત્રણ ગણું અનાજ અને ઘી આપી દીધું હોવા છતાં, ચક્રવૃદ્ધિ વ્યાજની જાળમાં તેનું દેવું વધતું જ જતું હતું.",
+    characterSketch: "• જીવલો: અત્યંત ગરીબ, ભોળો, પેટે પાટા બાંધીને પણ શાહુકારના છોકરાને જમાડનારો ઈમાનદાર ખેડૂત.\n• ભીખુ (લેખક): બાળપણમાં ઉઘરાણી કરનારો પણ અંતે અંતરાત્માના અવાજે ચોપડો ફાડી નાખનારો સંવેદનશીલ યુવાન.",
+    words: [
+      { w: "ઇન્દ્રજાળ", m: "કપટ ભરેલી માયાજાળ / છેતરપિંડી" },
+      { w: "પેટે પાટા બાંધવા", m: "અતિશય ભૂખ્યા રહીને કરકસર કરવી (રૂઢિપ્રયોગ)" },
+      { w: "રાનીપરજ", m: "આદિવાસી વનવાસી પ્રજા માટેનો શબ્દ" }
+    ],
+    grammarNotes: [
+      "ચોપડાની ઇન્દ્રજાળ: તત્પુરુષ સમાસ",
+      "વિરોધી: કરજદાર x લેણદાર, અમીર x ગરીબ"
+    ],
+    impQuestions: [
+      {
+        q: "ભીખુએ લાલ ચોપડો શા માટે ફાડી નાખ્યો? (૪ ગુણ મોસ્ટ IMP)",
+        a: "જીવલાની આર્થિક ગુલામી અને શોષણ જોઈ ભીખુને આત્મગ્લાનિ થઈ કે હું આ દરિદ્ર ખેડૂતનું લોહી ચૂસી રહ્યો છું. તેણે જીવલાને દેવામાંથી અને પોતાના આત્માને પાપમાંથી મુક્ત કરવા લાલ ચોપડો ફાડી નાખ્યો."
+      }
+    ]
+  },
+  {
+    id: "gadya-18",
+    cat: "gadya",
+    num: 18,
+    title: "ભૂખથીય ભૂંડી ભીખ",
+    author: "પન્નાલાલ પટેલ",
+    genre: "નવલકથા ખંડ",
+    source: "માનવીની ભવાઈ",
+    summary: "જ્ઞાનપીઠ વિજેતા નવલકથા 'માનવીની ભવાઈ' નો ભાગ. સંવત ૧૯૫૬ ના છપ્પનિયા દુષ્કાળમાં અન્ન માટે વલખાં મારતા ધરતીપુત્રોનું દર્દ. ખુદ્દાર ખેડૂત કાળુને સુંદરજી શેઠના સદાવ્રતમાં દોઢ શેર ધાન માટે હાથ લંબાવવો પડે છે ત્યારે તે રડી પડે છે: ભૂખ તો માત્ર હાડ ગાળે છે, પણ ભીખ માણસની ટેક, સ્વમાન અને આત્માને હણી નાખે છે.",
+    intro: "• લેખક: પન્નાલાલ નાનાલાલ પટેલ (માંડલી, ડુંગરપુર).\n• પુરસ્કાર: ભારતીય જ્ઞાનપીઠ પુરસ્કાર (૧૯૮૫).\n• સંદર્ભ નવલકથા: 'માનવીની ભવાઈ'.\n• ઐતિહાસિક પૃષ્ઠભૂમિ: વિક્રમ સંવત ૧૯૫૬ નો ભયાનક છપ્પનિયો દુકાળ.",
+    analysis: "• કાળુની વ્યથા: જે ખેડૂતે આખી જિંદગી પોતાના હાથે અનાજ પકવી જગતનું પેટ ભર્યું, આજે એણે જ શેઠ સામે અનાજ માટે હાથ લંબાવવો પડ્યો. આ લાચારી કાળુના આત્માને તોડી નાખે છે.",
+    characterSketch: "• કાળુ: ખુદ્દાર, સ્વાભિમાની, ટેકીલો ખેડૂત.\n• સુંદરજી શેઠ: દીનદુખિયા પ્રત્યે દયા રાખનારા ઉદાર મહાજન.",
+    words: [
+      { w: "છપ્પનિયો દુકાળ", m: "સંવત ૧૯૫૬ નો ભયંકર દુષ્કાળ" },
+      { w: "સદાવ્રત", m: "ગરીબોને મફત અનાજ આપવાની વ્યવસ્થા" },
+      { w: "ટેક", m: "પ્રતિજ્ઞા, સ્વમાન, ખુમારી" }
+    ],
+    grammarNotes: [
+      "સદાવ્રત: શબ્દસમૂહ માટે એક શબ્દ",
+      "ધરતીપુત્ર: તત્પુરુષ સમાસ"
+    ],
+    impQuestions: [
+      {
+        q: "'ભૂખથીય ભૂંડી ભીખ છે' - કાળુના આ વિધાનની યથાર્થતા ચર્ચો. (૪ ગુણ મોસ્ટ IMP)",
+        a: "ભૂખ માત્ર શરીરને મારે છે અને હાડકાં ગાળે છે, પણ ભીખ માણસના ગૌરવ, સ્વાભિમાન અને આત્માને કાયમ માટે કચડી નાખે છે."
+      }
+    ]
+  },
+  {
+    id: "gadya-06",
+    cat: "gadya",
+    num: 6,
+    title: "વાઇરલ ઇન્ફેક્શન",
+    author: "ગુણવંત શાહ",
+    genre: "નિબંધ (આરોગ્ય ચિંતન)",
+    source: "મરો ત્યાં સુધી જીવો",
+    summary: "આજના માનવીની બેદરકાર જીવનશૈલી, વ્યસનો અને આરોગ્ય પ્રત્યેની ઉપેક્ષા પર તીખો કટાક્ષ. હોસ્પિટલો દર્દીઓથી ઊભરાય એ સમાજની તંદુરસ્તી નથી પણ માંદગીનું પ્રદર્શન છે. માણસ પોતાના શરીરને મંદિર જેવું પવિત્ર રાખવાને બદલે તમાકુ, સિગારેટ અને અનિયમિત ખોરાકથી રોગોનું ઘર બનાવે છે. પ્રેમ અને સ્નેહ પણ દર્દી માટે ઔષધનું કામ કરે છે.",
+    intro: "• લેખક: ગુણવંત ભૂષણલાલ શાહ (રાંદેર, સુરત).\n• સાહિત્ય પ્રકાર: ચિંતનાત્મક નિબંધ.\n• સંદર્ભ સંગ્રહ: 'મરો ત્યાં સુધી જીવો'.\n• મુખ્ય સંદેશ: શરીરમાં રોગ ન પ્રવેશે તે માટે સ્વચ્છતા, સંયમ અને પ્રેમભાવ અનિવાર્ય છે.",
+    analysis: "• વિચાર વિશ્લેષણ:\n૧. હોસ્પિટલની ગંદકી: પાનના ગલ્લાથી હોસ્પિટલ સુધી સ્વચ્છતાનો અભાવ.\n૨. વ્યસનની ગુલામી: સિગારેટ, તમાકુ અને ગુટખા જીવન ટૂંકાવે છે.\n૩. સાચો ઉપાય: રોગ થાય પછી દવા લેવા કરતાં રોગ ન થાય તેવી સાવચેતી રાખવી.",
+    characterSketch: "• આધુનિક માનવી:\n- ખાવા-પીવામાં અસંયમી, શરીરની કાળજી વગરનો.\n- ડોક્ટરને માત્ર શરીર રીપેર કરનાર મિકેનિક માને છે.",
+    words: [
+      { w: "બેદરકાર", m: "કાળજી વિનાનું, ગાફેલ" },
+      { w: "અનાથ આશ્રમ", m: "નિરાધારો માટેનું આશ્રયસ્થાન" },
+      { w: "ખાતરજમા કરવી", m: "ખાતરી કરવી, તપાસવું (રૂઢિપ્રયોગ)" }
+    ],
+    grammarNotes: [
+      "વાઇરલ ઇન્ફેક્શન: અંગ્રેજી શબ્દપ્રયોગ",
+      "આરોગ્ય: ભાવવાચક સંજ્ઞા",
+      "વિરોધી: સ્વચ્છ x ગંદુ, માંદગી x તંદુરસ્તી"
+    ],
+    impQuestions: [
+      {
+        q: "ગુણવંત શાહના મતે હોસ્પિટલની શોભા શામાં રહેલી છે? (૪ ગુણ મોસ્ટ IMP)",
+        a: "હોસ્પિટલ દર્દીઓથી ભરેલી રહે તેમાં નહિ, પણ લોકો સ્વસ્થ રહે અને હોસ્પિટલના ખાટલા ખાલી રહે તેમાં સાચી શોભા અને સમાજનું શ્રેય છે."
+      },
+      {
+        q: "ખાવા-પીવાની બાબતમાં લોકો કેવી બેદરકારી દાખવે છે?",
+        a: "સ્વાદ ખાતર ગમે ત્યાંનું અસ્વચ્છ ખાવાનું ખાય છે અને પોતાના પાચનતંત્ર પર અત્યાચાર ગુજારે છે."
+      }
+    ]
+  },
+  {
+    id: "padya-07",
+    cat: "padya",
+    num: 7,
+    title: "હું એવો ગુજરાતી",
+    author: "વિનોદ જોશી",
+    genre: "ગીત (અસ્મિતા કાવ્ય)",
+    source: "વિનોદ જોશી કાવ્યસંચય",
+    summary: "ગુજરાતની ભૌગોલિક, સાંસ્કૃતિક, ઐતિહાસિક અને આધ્યાત્મિક વિરાસતનું ગૌરવગાન. નર્મદા, ગિરનાર, શત્રુંજય અને સોમનાથની પવિત્રતા; ગાંધીજીનું મૌન અને સરદારની હાકલ; નરસિંહના પ્રભાતિયાં અને મીરાંની કરતાલ; પ્રેમાનંદના આખ્યાનો અને સંતોની વાણી - આ બધું જ કવિ પોતાની રગેરગમાં ધબકતું અનુભવે છે. હું ભલે વૈશ્વિક માનવ હોઉં પણ મારી માતૃભૂમિ ગુજરાતનું ગૌરવ સદા અણનમ છે.",
+    intro: "• કવિ: વિનોદ હરગોવિંદદાસ જોશી (ભોળાદ, ધંધૂકા).\n• સાહિત્ય પ્રકાર: ગૌરવ ગીત.\n• પ્રધાન ભાવ: ગુજરાતી અસ્મિતા અને ભારતમાતા પ્રત્યેની અનન્ય નિષ્ઠા.",
+    analysis: "• કાવ્યાર્થ: ગુજરાતની ભૂમિ પર એક તરફ ગાંધીજીનું શાંતિનું સત્યાગ્રહ છે તો બીજી તરફ સરદાર વલ્લભભાઈ પટેલનું લોખંડી નેતૃત્વ છે. અહીં સંત અને શૂરવીર બંનેનો સુભગ સમન્વય છે.",
+    characterSketch: "• ગુજરાતી ઓળખ:\n- વિનમ્ર છતાં ખુદ્દાર.\n- સંતોની ભક્તિ અને શૂરવીરોનું તેજ ધરાવનાર.",
+    words: [
+      { w: "અસ્મિતા", m: "સ્વમાન, ગૌરવ, ઓળખ" },
+      { w: "મહીસાગર", m: "મહી નદી અને સાગરનો સંગમ" },
+      { w: "રત્નાકર", m: "સમુદ્ર, રત્નોની ખાણ" }
+    ],
+    grammarNotes: [
+      "રત્નાકર: રત્ન + આકર (દીર્ઘ સંધિ)",
+      "નર્મદા: આનંદ આપનારી (ઉપપદ સમાસ)",
+      "ગાંધીજીનું મૌન: સંબંધ તત્પુરુષ"
+    ],
+    impQuestions: [
+      {
+        q: "'હું એવો ગુજરાતી' કાવ્યમાં કવિએ ગુજરાતના કયા ઐતિહાસિક અને સાંસ્કૃતિક પાત્રોનું સ્મરણ કર્યું છે? (૪ ગુણ મોસ્ટ IMP)",
+        a: "નરસિંહ મહેતા, મીરાંબાઈ, પ્રેમાનંદ, મહાત્મા ગાંધીજી અને સરદાર વલ્લભભાઈ પટેલનું સ્મરણ કરી તેમની તપોભૂમિ તરીકે ગુજરાતનું ગૌરવ ગાયું છે."
+      }
+    ]
+  },
+  {
+    id: "gadya-08",
+    cat: "gadya",
+    num: 8,
+    title: "છત્રી",
+    author: "રતિલાલ બોરીસાગર",
+    genre: "હાસ્ય નિબંધ",
+    source: "ઓમ હાસ્યમ્",
+    summary: "ભૂલકણા સ્વભાવને કારણે વારંવાર છત્રી ખોવાઈ જવાની વિનોદી ઘટનાઓ. લેખક છત્રી ટકાવી રાખવા માટે દુકાનદારની અનોખી સલાહથી છત્રી પર પોતાનું પૂરું નામ, સરનામું અને ફોન નંબર લખાવે છે. છત્રી રાજકોટની બસમાં ભૂલાઈ જાય છે અને પ્રમાણિક માણસનો કાગળ આવતાં લેખક ખુશ થઈને રાજકોટ છત્રી લેવા જાય છે. છત્રી પાછી મળી જાય છે પણ પરત વળતી બસમાં ફરીથી છત્રી ભૂલીને ઘરે આવે છે!",
+    intro: "• લેખક: રતિલાલ મોહનલાલ બોરીસાગર (સાવરકુંડલા, અમરેલી).\n• સાહિત્ય પ્રકાર: હળવો હાસ્ય નિબંધ.\n• સંદર્ભ સંગ્રહ: 'ઓમ હાસ્યમ્'.\n• હાસ્યની ખૂબી: સામાન્ય રોજિંદી ભૂલમાંથી નિર્દોષ અને કુદરતી હાસ્ય નિષ્પન્ન કરવાની કળા.",
+    analysis: "• મનોવૈજ્ઞાનિક વિશ્લેષણ: માણસ ઘણીવાર સાચવવાના અતિ ઉત્સાહમાં મૂળ વાત ભૂલી જાય છે. રાજકોટ જવાનો ખર્ચ છત્રીની કિંમત કરતાં વધી ગયો છતાં પ્રમાણિકતાની કદર કરવા લેખક જાય છે અને અંતે ફરી ભૂલી જાય છે.",
+    characterSketch: "• લેખક (હાસ્ય પાત્ર):\n- ભોળા, ભૂલકણા, છતાં નૈતિક મૂલ્યો જાળવનારા.\n- પોતાની ખામીઓ પર જાતે હસી શકવાની ઉદારતા ધરાવનારા.",
+    words: [
+      { w: "શાશ્વત", m: "કાયમી, સનાતન (વિરોધી: ક્ષણભંગુર)" },
+      { w: "ઉપાય", m: "ઈલાજ, તરકીબ, યુક્તિ" },
+      { w: "પારખુ", m: "પારખનાર, ગુણદોષ સમજનાર" }
+    ],
+    grammarNotes: [
+      "દુકાનદાર: ઉપપદ સમાસ (દુકાન રાખનાર)",
+      "રાજકોટ: સંજ્ઞાવાચક નામ",
+      "વિરોધી: સ્મૃતિ x વિસ્મૃતિ, પ્રમાણિક x અપ્રમાણિક"
+    ],
+    impQuestions: [
+      {
+        q: "દુકાનદારે લેખકને છત્રી ન ખોવાય તે માટે કયો ઉપાય બતાવ્યો હતો? (૨ ગુણ)",
+        a: "છત્રી પર સફેદ રંગથી પોતાનું પૂરું નામ, સરનામું અને ફોન નંબર લખાવી દેવાની સલાહ આપી હતી."
+      },
+      {
+        q: "છત્રી પાઠમાં સર્જાતા હાસ્યના પ્રસંગો વર્ણવો. (૪ ગુણ મોસ્ટ IMP)",
+        a: "લેખકની છત્રી ખોવાઈ જવાની આદત, મિત્રોની વિચિત્ર સલાહો, રાજકોટ છત્રી લેવા જવાનો ખર્ચાળ પ્રવાસ અને અંતે પાછા આવતી વખતે ફરી બસમાં છત્રી ભૂલી જવાની પરાકાષ્ઠામાંથી નિર્દોષ હાસ્ય સર્જાય છે."
+      }
+    ]
+  },
+  {
+    id: "padya-09",
+    cat: "padya",
+    num: 9,
+    title: "માધવને દીઠો છે ક્યાંય?",
+    author: "હરીન્દ્ર દવે",
+    genre: "ઉર્મિગીત (કૃષ્ણ વિરહ ગીત)",
+    source: "વરસાદની મોસમ છે",
+    summary: "શ્રીકૃષ્ણથી વિખૂટી પડેલી વાંસળીનો સૂર માધવ (કૃષ્ણ) ને શોધવા વ્યાકુળ બનીને ભટકે છે. સૂર કદંબની ડાળ, યમુનાના વહેણ, રાધાની આંખ અને ચાંદની રાતને પૂછે છે કે મારા કૃષ્ણ ક્યાં છે? યમુનાનાં જળ શાંત છે, રાધાની આંખ ઉદાસ છે. અંતે રાત્રે પાતાળમાં હરિવર પરખાય છે અને જળમાં કૃષ્ણનું પ્રતિબિંબ ભાસતાં વિરહ મિલનમાં ફેરવાય છે.",
+    intro: "• કવિ: હરીન્દ્ર જયંતીલાલ દવે (ખંભરા, કચ્છ).\n• સાહિત્ય પ્રકાર: આધ્યાત્મિક ઉર્મિગીત.\n• સંદર્ભ સંગ્રહ: 'વરસાદની મોસમ છે'.\n• વિશેષતા: વાંસળીના નિર્જીવ સૂરનું સજીવારોપણ કરીને કૃષ્ણભક્તિની પરાકાષ્ઠા દર્શાવી છે.",
+    analysis: "• કાવ્ય સૌંદર્ય:\n૧. સૂરનું ભટકવું: આત્મા પરમાત્માને શોધવા વ્યાકુળ બને છે.\n૨. પ્રકૃતિનાં પ્રતીકો: કદંબ વૃક્ષ, યમુનાનું જળ, રાધાના આંસુ અને રાતરાણીની સુગંધ.\n૩. અલંકાર: સજીવારોપણ અને ઉત્પ્રેક્ષા.",
+    characterSketch: "• વાંસળીનો સૂર:\n- કૃષ્ણ વિરહમાં તડપતો, પ્રેમાતુર ભક્તનું પ્રતીક.",
+    words: [
+      { w: "વિખૂટું", m: "જુદું પડેલું, વિખરાયેલું" },
+      { w: "માધવ", m: "શ્રીકૃષ્ણ, મધુ દૈત્યને મારનાર" },
+      { w: "કદંબ", m: "એક પવિત્ર વૃક્ષ જેના પર કૃષ્ણ બેસતા" }
+    ],
+    grammarNotes: [
+      "રાધાકૃષ્ણ: દ્વંદ્વ સમાસ (રાધા અને કૃષ્ણ)",
+      "વાંસળીનો સૂર: તત્પુરુષ સમાસ",
+      "સજીવારોપણ અલંકાર: વાંસળીનો સૂર રડે છે અને પ્રશ્ન પૂછે છે"
+    ],
+    impQuestions: [
+      {
+        q: "વાંસળીનો સૂર કોને કોને કૃષ્ણ વિશે પૂછે છે? (૪ ગુણ મોસ્ટ IMP)",
+        a: "વાંસળીનો સૂર માર્ગની ધૂળને, કદંબની છાંયને, યમુનાના જળને અને રાધાની આંખને પૂછે છે કે તમે મારા માધવને ક્યાંય જોયો છે?"
+      }
+    ]
+  },
+  {
+    id: "gadya-10",
+    cat: "gadya",
+    num: 10,
+    title: "ડાંગવનો અને...",
+    author: "મહેન્દ્રસિંહ પરમાર",
+    genre: "પ્રવાસ નિબંધ (પત્ર રૂપ)",
+    source: "રખડુનો કાગળ",
+    summary: "દક્ષિણ ગુજરાતના ડાંગ જિલ્લાનાં ગાઢ અરણ્યો, ગીરા ધોધ, સૂર્યાસ્ત પોઇન્ટ અને આદિવાસી સંસ્કૃતિનું જીવંત પ્રકૃતિ દર્શન. લેખક પોતાના બાપુજીને પત્ર લખીને આહવા અને ડાંગની હરિયાળી, વાંસનાં જંગલો, પહાડો અને ખળખળ વહેતી નદીઓના અદભુત રંગો વર્ણવે છે. આદિવાસીઓનું સહજ સંગીતમય જીવન પ્રકૃતિ સાથે એકાકાર છે.",
+    intro: "• લેખક: મહેન્દ્રસિંહ પરમાર (કુકણા, સુરેન્દ્રનગર).\n• સાહિત્ય પ્રકાર: પ્રવાસ નિબંધ (પત્ર શૈલી).\n• સંદર્ભ પુસ્તક: 'રખડુનો કાગળ'.\n• વિશેષતા: ડાંગના આદિવાસી જીવન અને સુંદર વનશ્રીનું આબેહૂબ શબ્દચિત્ર.",
+    analysis: "• પ્રકૃતિ ચિત્રણ: ડાંગમાં પ્રવેશતાં જ વૃક્ષોનું સામ્રાજ્ય મન મોહી લે છે. ગીરા ધોધ પરથી પડતું દૂધ જેવું ફીણવાળું પાણી અને સૂર્યાસ્ત વખતે આકાશમાં રચાતા સોનેરી-ગુલાબી રંગોનું અદભુત દર્શન થાય છે.",
+    characterSketch: "• ડાંગના આદિવાસીઓ:\n- સાદગીપૂર્ણ, પ્રકૃતિપ્રેમી, નૃત્ય અને સંગીતના શોખીન નિર્દોષ લોકો.",
+    words: [
+      { w: "અરણ્ય", m: "જંગલ, વન, કાનન" },
+      { w: "ક્ષિતિજ", m: "પૃથ્વી અને આકાશ મળતાં દેખાય તે રેખા" },
+      { w: "વનશ્રી", m: "જંગલની કુદરતી શોભા" }
+    ],
+    grammarNotes: [
+      "સૂર્યાસ્ત: સૂર્ય + અસ્ત (દીર્ઘ સ્વરસંધિ)",
+      "વનશ્રી: તત્પુરુષ સમાસ",
+      "વિરોધી: સૂર્યોદય x સૂર્યાસ્ત, કૃત્રિમ x કુદરતી"
+    ],
+    impQuestions: [
+      {
+        q: "લેખકે ગીરા ધોધનું વર્ણન કેવી રીતે કર્યું છે? (૪ ગુણ મોસ્ટ IMP)",
+        a: "ગીરા ધોધ ઊંચા પહાડ પરથી પછડાતાં દૂધના ફીણ જેવો સફેદ દેખાય છે અને નીચે ખડકો પર અથડાઈને અસંખ્ય જળબિંદુઓ હવામાં ઊડીને મેઘધનુષ રચે છે."
+      }
+    ]
+  },
+  {
+    id: "padya-13",
+    cat: "padya",
+    num: 13,
+    title: "વતનથી વિદાય થતાં",
+    author: "જયંત પાઠક",
+    genre: "સોનેટ (સ્મૃતિકાવ્ય)",
+    source: "અંતરિક્ષ",
+    summary: "વતન અને બાળપણની માટીથી છૂટા પડીને શહેરમાં કમાવા જતાં માનવીની હૃદયદ્રાવક વેદના. કવિ વન, કોતર, ડુંગર અને નદીને છોડીને ભારે પગલે આગળ વધે છે, જાણે વેચાઈ ગયેલું ઢોર પોતાના જૂના કોઢાર તરફ પાછળ જોતું હોય. રસ્તે ચાલતાં લાગે છે કે પાછળથી કોઈ 'બચુડા' કહીને સાદ પાડે છે અને બાળપણની માતા આંસુ લૂછવા હાથ લંબાવે છે.",
+    intro: "• કવિ: જયંત હિંમતલાલ પાઠક (ગોઠ, રાજગઢ-પંચમહાલ).\n• સાહિત્ય પ્રકાર: સોનેટ (૧૪ પંક્તિનું છંદોબદ્ધ કાવ્ય).\n• સંદર્ભ સંગ્રહ: 'અંતરિક્ષ'.\n• છંદ: શિખરિણી છંદ (ય મ ન સ ભ લ ગા).\n• કેન્દ્રીય ભાવ: વતન વિચ્છેદની અસહ્ય વેદના.",
+    analysis: "• કાવ્યાર્થ: વતનની માટી અને પ્રકૃતિ સાથે નાભિનાળ જેવો સંબંધ છે. ઢોરનું દ્રષ્ટાંત આપી કવિએ વતનની માયાનું અદભુત પ્રતીક સર્જ્યું છે.",
+    characterSketch: "• કવિનું હૃદય:\n- પ્રકૃતિપ્રેમી, વતનની ધૂળ અને શૈશવની યાદોથી ભાવવિભોર થયેલું.",
+    words: [
+      { w: "કોઢાર", m: "ઢોર બાંધવાની જગ્યા, ગમાણ" },
+      { w: "વેંચાયું ઢોર", m: "માલિક બદલાતાં પોતાના જૂના ઘર તરફ તાકતું પશુ" },
+      { w: "ભિન્ન", m: "જુદું, અલગ" }
+    ],
+    grammarNotes: [
+      "શિખરિણી છંદ: ૧૭ અક્ષર (યતિ: ૬, ૧૨ અક્ષરે)",
+      "બચુડા: વહાલવાચક સંબોધન",
+      "વિરોધી: વિયોગ x સંયોગ, વતન x પરદેશ"
+    ],
+    impQuestions: [
+      {
+        q: "કવિ વતન છોડતાં પશુના કયા ઉદાહરણ સાથે પોતાની સરખામણી કરે છે? (૨ ગુણ)",
+        a: "જેમ હાટે વેચાઈ ગયેલું ઢોર પોતાના જૂના કોઢાર અને માલિક તરફ પાછું વળી વળીને જુએ છે, તેમ કવિ વતન તરફ જુએ છે."
+      },
+      {
+        q: "'વતનથી વિદાય થતાં' સોનેટનો કેન્દ્રીય વિચાર સ્પષ્ટ કરો. (૪ ગુણ મોસ્ટ IMP)",
+        a: "આધુનિક યુગમાં રોજીરોટી માટે ગામડું છોડી શહેરમાં વસતાં માણસની વતન અને કુદરત પ્રત્યેની ગાઢ લાગણી અને પાછળ છૂટી જતી સ્મૃતિઓની કારમી વેદના આલેખાઈ છે."
+      }
+    ]
+  },
+  {
+    id: "gadya-14",
+    cat: "gadya",
+    num: 14,
+    title: "જનમી",
+    author: "સુરેશ જોષી",
+    genre: "નવલિકા (સંવેદનકથા)",
+    source: "ગૃહપ્રવેશ",
+    summary: "એક જ રાતમાં જન્મ લેતા બે નવજાત બાળકો વચ્ચેના સામાજિક અને આર્થિક વિષમતાનું કરુણ ચિત્ર. એક તરફ શ્રીમંત કાનજી-દેવજીના ઘેર બાળકનો જન્મ થાય છે ત્યારે ઢોલ-નગારા, ફટાકડા અને ઉત્સવ ઊજવાય છે. બીજી તરફ ગરીબ ઝૂંપડપટ્ટીમાં જન્મેલા અંધ-અપંગ બાળકના પગ જન્મતાં જ વાળી નાખવામાં આવે છે જેથી તે ભીખ માંગીને પરિવારનું પેટ ભરી શકે. સમાજની ક્રૂર વાસ્તવિકતા હૃદય હચમચાવી દે છે.",
+    intro: "• લેખક: સુરેશ હરિપ્રસાદ જોષી (વાલોડ, તાપી).\n• સાહિત્ય પ્રકાર: આધુનિક નવલિકા.\n• સંદર્ભ સંગ્રહ: 'ગૃહપ્રવેશ'.\n• વિશેષતા: બે વિરોધાભાસી પરિસ્થિતિઓનું સમાંતર આલેખન કરી સામાજિક અન્યાય ઉજાગર કર્યો છે.",
+    analysis: "• કરુણ વિરોધાભાસ: એક બાળક માટે જન્મ આનંદનો અવસર છે, જ્યારે બીજા બાળક માટે જન્મ એ આજીવન ભીખ અને યાતનાની શરૂઆત છે. ધનિક અને નિર્ધન વચ્ચેની આ ખાઈ સમાજની ક્રૂરતા દર્શાવે છે.",
+    characterSketch: "• ગરીબ માતા:\n- લાચાર, પોતાના નવજાત શિશુને ભૂખમરાથી બચાવવા માટે વિવશ.",
+    words: [
+      { w: "વિષમતા", m: "અસમાનતા, મોટો ભેદભાવ" },
+      { w: "ટાંચા સાધનો", m: "અપૂરતી સગવડો, ગરીબી" },
+      { w: "નિર્દયતા", m: "ક્રૂરતા, દયાહીનતા" }
+    ],
+    grammarNotes: [
+      "વિષમતા: ભાવવાચક સંજ્ઞા",
+      "ઝૂંપડપટ્ટી: કર્મધારય સમાસ",
+      "વિરોધી: સુખ x દુઃખ, ધનવાન x દરિદ્ર"
+    ],
+    impQuestions: [
+      {
+        q: "'જનમી' વાર્તામાં લેખકે કયો સામાજિક વિરોધાભાસ આલેખ્યો છે? (૪ ગુણ મોસ્ટ IMP)",
+        a: "એક જ રાતમાં જન્મેલા બે બાળકો પૈકી શ્રીમંતના ઘેર જન્મોત્સવ અને આતિશબાજી થાય છે, જ્યારે ગરીબ બાળકને ભીખ માંગવા માટે અપંગ બનાવવાની કારમી લાચારી વર્ણવી છે."
+      }
+    ]
+  },
+  {
+    id: "padya-15",
+    cat: "padya",
+    num: 15,
+    title: "તે બેસે અહીં",
+    author: "સ્નેહી પરમાર",
+    genre: "ગઝલ (નૈતિક ચિંતન)",
+    source: "સ્નેહી પરમાર ગઝલસંગ્રહ",
+    summary: "માનવતા, નમ્રતા, દયા અને પવિત્રતાની કસોટી કરતી દાર્શનિક ગઝલ. કવિ પૂછે છે કે સભામાં આગળ બેસવાનો કે મોટાઈનો દાવો કરવાનો સાચો હક કોને છે? જેણે કોઈના આંસુ લૂછ્યાં હોય, જેણે પોતાના ઘા છુપાવી બીજાના દર્દ પર મલમ લગાવ્યો હોય, જેણે ઈર્ષ્યા વગર બીજાની પ્રગતિ જોઈને તાળી પાડી હોય - તે જ સન્માનની બેઠક પર બેસવા લાયક છે.",
+    intro: "• કવિ: સ્નેહી પરમાર (અમરેલી).\n• સાહિત્ય પ્રકાર: ચિંતનાત્મક ગઝલ.\n• કેન્દ્રીય વિચાર: બાહ્ય પદ કે પ્રતિષ્ઠા કરતાં ચારિત્ર્ય અને કરુણાની મોટાઈ સર્વોપરી છે.",
+    analysis: "• નૈતિક માપદંડ: સાચી સજ્જનતા એ છે કે પોતાના સુખમાં નહિ પણ બીજાના દુઃખમાં ભાગીદાર થવું. કોઈનું હૃદય દુભવ્યા વિના જીવવું એ જ ખરી પ્રાર્થના છે.",
+    characterSketch: "• સદાચારી માણસ:\n- નિઃસ્વાર્થ, સંવેદનશીલ અને નિરહંકારી.",
+    words: [
+      { w: "મલમ", m: "ઘા રૂઝવવાની દવા, સાંત્વના" },
+      { w: "આંસુ લૂછવા", m: "દુઃખમાં સહારો આપવો (રૂઢિપ્રયોગ)" },
+      { w: "પારખવું", m: "ઓળખવું, કસોટી કરવી" }
+    ],
+    grammarNotes: [
+      "ગઝલ રદીફ-કાફિયા આધારિત કાવ્યરૂપ છે",
+      "આંસુ લૂછવા: રૂઢિપ્રયોગ",
+      "વિરોધી: અહંકાર x નમ્રતા"
+    ],
+    impQuestions: [
+      {
+        q: "કવિના મતે સભામાં આગળ બેસવા કોણ અધિકારી છે? (૪ ગુણ મોસ્ટ IMP)",
+        a: "જે બીજાના દુઃખમાં આંસુ લૂછે છે, પોતાના દર્દ વચ્ચે પણ બીજાને સુખ આપે છે અને કોઈના પ્રત્યે દ્વેષ રાખતો નથી તે જ બેસવા યોગ્ય છે."
+      }
+    ]
+  },
+  {
+    id: "gadya-16",
+    cat: "gadya",
+    num: 16,
+    title: "ગતિભંગ",
+    author: "મોહનલાલ પટેલ",
+    genre: "લઘુકથા (માતૃત્વ દર્શન)",
+    source: "મોહનલાલ પટેલની લઘુકથાઓ",
+    summary: "માતૃત્વ અને વિયોગની હૃદયસ્પર્શી ટૂંકી લઘુકથા. ડુંગર અને તેની પત્ની રેલવે સ્ટેશને ગાડી પકડવા ઉતાવળા પગલે જઈ રહ્યા છે. અચાનક પત્નીના પગ થંભી જાય છે. પતિ પૂછે છે કે કેમ અટકી ગઈ? ગાડી ચૂકી જઈશું! પત્ની ધૂળમાં પડેલાં નાનાં બાળકના પગલાં બતાવીને કહે છે: 'આ પગલાં આપણી સ્વર્ગસ્થ બબલીનાં જ પગલાં જેવાં છે!' મૃત બાળકીની યાદમાં માતાની શારીરિક ગતિ ભંગ થઈ જાય છે.",
+    intro: "• લેખક: મોહનલાલ બાબાસદાસ પટેલ (પાટણ).\n• સાહિત્ય પ્રકાર: લઘુકથા (ચોટદાર અંતવાળી વાર્તા).\n• કેન્દ્રીય ભાવ: મૃત સંતાનની સ્મૃતિથી માતાના હૃદયમાં ઊઠતી કારમી વેદના.",
+    analysis: "• મનોવૈજ્ઞાનિક વિશ્લેષણ: બાહ્ય ગતિ ઝડપી હોવા છતાં આંતરિક શોક માણસને સ્તબ્ધ કરી દે છે. ધૂળમાં પડેલાં પગલાં જોઈ માતાનું વાત્સલ્ય છલકાઈ ઊઠે છે.",
+    characterSketch: "• ડુંગરની પત્ની:\n- વિયોગી માતા, સંતાનની યાદમાં ઘેરાયેલી લાગણીશીલ સ્ત્રી.",
+    words: [
+      { w: "ગતિભંગ", m: "ચાલવાની ઝડપ અટકી જવી તે" },
+      { w: "પગલાંની છાપ", m: "ધૂળમાં અંકિત થયેલ પગની નિશાની" },
+      { w: "સ્તબ્ધ", m: "આશ્ચર્ય કે દુઃખથી જડવત થઈ જવું" }
+    ],
+    grammarNotes: [
+      "ગતિભંગ: તત્પુરુષ સમાસ (ગતિનો ભંગ)",
+      "બબલીનાં પગલાં: સંબંધ તત્પુરુષ",
+      "વિરોધી: ગતિ x સ્થિરતા"
+    ],
+    impQuestions: [
+      {
+        q: "ડુંગરની પત્ની ચાલતાં ચાલતાં શા માટે અટકી ગઈ? (૪ ગુણ મોસ્ટ IMP)",
+        a: "રસ્તાની ધૂળમાં નાના બાળકના પગલાંની છાપ જોઈ તેને પોતાની સ્વર્ગસ્થ પુત્રી બબલીના પગલાં યાદ આવી ગયા અને વાત્સલ્યથી તે સ્તબ્ધ બની ગઈ."
+      }
+    ]
+  },
+  {
+    id: "padya-17",
+    cat: "padya",
+    num: 17,
+    title: "દિવસો જુદાઈના જાય છે",
+    author: "ગની દહીંવાલા",
+    genre: "ગઝલ (અમર પ્રેમ કાવ્ય)",
+    source: "મહેક",
+    summary: "વિરહ, આશા અને ઈશ્વરભક્તિની અદભુત ગઝલ. શાયર ગની દહીંવાલા વિરહના દિવસો ગણતાં કહે છે કે જુદાઈના દિવસો પણ એક દિવસ જરૂર પૂરા થશે અને પ્રિયતમ સાથે મિલન થશે. સંસારના લોકો ભલે સ્વાર્થી હોય અને છેતરે, પણ અંતે ઈશ્વરની અસીમ કૃપાથી વિરહનો અંધકાર દૂર થશે અને જીવન ધન્ય બનશે.",
+    intro: "• કવિ: અબ્દુલગની અબ્દુલકરીમ દહીંવાલા (સુરત).\n• સાહિત્ય પ્રકાર: ગઝલ.\n• સંદર્ભ સંગ્રહ: 'મહેક'.\n• વિશેષતા: ગુજરાતી મુશાયરાની સૌથી લોકપ્રિય અને હૃદયસ્પર્શી ગઝલોમાં સ્થાન.",
+    analysis: "• ગઝલનો મિજાજ: દુઃખમાં પણ આશાવાદી રહેવાની પ્રેરણા. વિરહ એ માત્ર પીડા નથી પણ પ્રેમની સાચી કસોટી છે.",
+    characterSketch: "• આશાવાદી આશિક:\n- દર્દ વચ્ચે પણ ઈશ્વર અને પ્રીતિ પર અખંડ વિશ્વાસ રાખનાર.",
+    words: [
+      { w: "જુદાઈ", m: "વિયોગ, વિરહ (વિરોધી: મિલન)" },
+      { w: "આશરા", m: "સહારા, ટેકા" },
+      { w: "નસીબ", m: "પ્રારબ્ધ, ભાગ્ય" }
+    ],
+    grammarNotes: [
+      "દિવસો જુદાઈના: સંબંધ તત્પુરુષ",
+      "વિરોધી: આશા x નિરાશા, જુદાઈ x મિલન"
+    ],
+    impQuestions: [
+      {
+        q: "'દિવસો જુદાઈના જાય છે' ગઝલનો મુખ્ય સંદેશ શું છે? (૪ ગુણ મોસ્ટ IMP)",
+        a: "જીવનમાં વિરહ કે મુશ્કેલી ભલે ગમે તેટલી લાંબી હોય, પણ આશા અને ઈશ્વર પર શ્રદ્ધા રાખવાથી એક દિવસ સુખ અને મિલનનો ઉજાસ જરૂર પ્રગટે છે."
+      }
+    ]
+  },
+  {
+    id: "padya-19",
+    cat: "padya",
+    num: 19,
+    title: "એક બપોરે",
+    author: "રાવજી પટેલ",
+    genre: "ઉર્મિકાવ્ય (મૃત્યુચેતના)",
+    source: "અંગત",
+    summary: "ક્ષયરોગથી યુવાન વયે મૃત્યુ પામનાર કવિ રાવજી પટેલનું હૃદયસ્પર્શી કાવ્ય. ખેતરમાં બપોરે કામ કરતાં કરતાં અચાનક સારસી ઊડી જાય છે અને કવિનો જીવનરસ શમી જાય છે. તે પોતાની માતાને કહે છે કે હવે રોટલો ખાવા માટે મારે વાટકો નથી ઢાંકવો, તમાકુની તાપણિયે તમાકુ નથી પીવી અને બળદોને પણ હવે હળેથી છોડી દેવા છે. સારસીનું ઊડી જવું એ કવિના જીવનના અંતનું કરુણ પ્રતીક છે.",
+    intro: "• કવિ: રાવજી છોટાલાલ પટેલ (વલ્લભપુરા, ડાકોર).\n• ઉપનામ: 'અશ્રુઘર' ના સર્જક.\n• સંદર્ભ કાવ્યસંગ્રહ: 'અંગત'.\n• વિશેષતા: આધુનિક ગુજરાતી કવિતામાં ગ્રામીણ પરિવેશ સાથે મૃત્યુચેતનાનું સૌથી સંવેદનશીલ કાવ્ય.",
+    analysis: "• પ્રતીકાત્મક અર્થ: 'સારસી ઊડી ગઈ' એટલે જીવનની ચેતના, આનંદ કે પ્રેમ ચાલી ગયો. ખેતીના સાધનો (દાતરડું, હળ, કલેવું) છૂટી જવા એ સંસારમાંથી વિદાય લેવાની તૈયારી છે.",
+    characterSketch: "• કવિ રાવજી:\n- સંવેદનશીલ ગ્રામીણ યુવાન, મૃત્યુના ઓછાયા વચ્ચે પણ માતૃપ્રેમ અનુભવનાર.",
+    words: [
+      { w: "સારસી", m: "એક સુંદર પક્ષી (અહીં જીવન અને પ્રેમનું પ્રતીક)" },
+      { w: "કલેવું", m: "ખેતરમાં સવારે કે બપોરે કરાતો નાસ્તો" },
+      { w: "તાપણિયે", m: "તાપણું કરવા માટેની નાની સગડી" }
+    ],
+    grammarNotes: [
+      "સારસીનું ઊડવું: રૂપાત્મક પ્રતીક",
+      "વિરોધી: જીવન x મૃત્યુ, રસ x નિરસ"
+    ],
+    impQuestions: [
+      {
+        q: "'મારા ખેતરને શેઢેથી લ્યા સારસી ઊડી ગઈ' - પંક્તિનો ગૂઢાર્થ જણાવો. (૪ ગુણ મોસ્ટ IMP)",
+        a: "સારસીનું ઊડી જવું એ માત્ર પક્ષીનું ઊડવું નથી, પણ કવિના જીવનમાંથી સુખ, સ્નેહ, જીવનરસ અને આયુષ્યનો અંત આવી રહ્યો હોવાનું કરુણ પ્રતીક છે."
+      }
+    ]
+  },
+  {
+    id: "gadya-20",
+    cat: "gadya",
+    num: 20,
+    title: "વિરલ વિભૂતિ",
+    author: "આત્મર્પિત અપૂર્વજી",
+    genre: "ચરિત્ર નિબંધ",
+    source: "શ્રીમદ્ રાજચંદ્ર દર્શન",
+    summary: "મહાત્મા ગાંધીજીના આધ્યાત્મિક માર્ગદર્શક શ્રીમદ્ રાજચંદ્ર (રાયચંદભાઈ) નું પવિત્ર જીવનદર્શન. બાળપણથી જ જાતિસ્મરણ જ્ઞાન, અદ્ભુત શતાવધાન શક્તિ (એક સાથે ૧૦૦ ક્રિયાઓ યાદ રાખવી) અને વૈરાગ્યભાવ ધરાવતા શ્રીમદ્દે ગાંધીજીની આધ્યાત્મિક શંકાઓનું સમાધાન કરી તેમને સત્ય અને અહિંસાના પંથે દૃઢ બનાવ્યા હતા.",
+    intro: "• લેખક: આત્મર્પિત અપૂર્વજી.\n• સાહિત્ય પ્રકાર: ચરિત્ર નિબંધ.\n• સંદર્ભ: શ્રીમદ્ રાજચંદ્ર આશ્રમ, ધરમપુર.\n• ઐતિહાસિક મહત્વ: ગાંધીજીએ પોતાની આત્મકથામાં શ્રીમદ્ રાજચંદ્રને પોતાના આધ્યાત્મિક ગુરુ ગણાવ્યા છે.",
+    analysis: "• વિભૂતિના ગુણો:\n૧. શતાવધાની: એક સાથે ૧૦૦ વાતો યાદ રાખીને પુનરાવર્તન કરવાની અદભુત સ્મરણશક્તિ.\n૨. ગૃહસ્થ વૈરાગી: મોતીનો મોટો વેપાર કરવા છતાં કમળ જેવા નિર્લેપ રહ્યા.\n૩. ગાંધીજી પર પ્રભાવ: દક્ષિણ આફ્રિકામાં ગાંધીજીને ધર્મસંકટમાંથી ઉગાર્યા.",
+    characterSketch: "• શ્રીમદ્ રાજચંદ્ર:\n- જ્ઞાની, શતાવધાની, પરમ વૈરાગ્યવાન અને ગાંધીજીના પ્રેરણામૂર્તિ.",
+    words: [
+      { w: "શતાવધાન", m: "એક સાથે ૧૦૦ ક્રિયાઓ સાંભળીને યાદ રાખવાની શક્તિ" },
+      { w: "જાતિસ્મરણ જ્ઞાન", m: "પૂર્વજન્મની વાતો યાદ રહેવાનું દિવ્ય જ્ઞાન" },
+      { w: "નિર્લેપ", m: "મોહમાયાથી અલિપ્ત, અણસ્પર્શ્યું" }
+    ],
+    grammarNotes: [
+      "વિરલ વિભૂતિ: કર્મધારય સમાસ",
+      "શતાવધાની: બહુવ્રીહિ સમાસ",
+      "વિરોધી: રાગ x વિરાગ"
+    ],
+    impQuestions: [
+      {
+        q: "ગાંધીજી પર શ્રીમદ્ રાજચંદ્રના જીવનનો શો પ્રભાવ પડ્યો? (૪ ગુણ મોસ્ટ IMP)",
+        a: "ગાંધીજીને આંતરિક સંકટ અને ધર્મ પરિવર્તનના વિચારો વખતે શ્રીમદ્દે પત્રો દ્વારા ભારતીય ધર્મ અને સંસ્કૃતિનું સત્ય સમજાવી શાંતિ આપી અને સત્યાગ્રહ માટે દૃઢ કર્યા."
+      }
+    ]
+  },
+  {
+    id: "padya-21",
+    cat: "padya",
+    num: 21,
+    title: "ચાંદલિયો",
+    author: "ઝવેરચંદ મેઘાણી સંપાદિત",
+    genre: "લોકગીત (ગરબો)",
+    source: "રઢિયાળી રાત",
+    summary: "શરદ પૂનમની રાત્રે ગરબે ઘૂમતી નવોઢા મુગ્ધાના હૃદયની પારિવારિક પ્રસન્નતાનું મનોહારી લોકગીત. આસો સુદ પૂનમની રાત્રે આકાશમાં ઊગેલા ચાંદલિયાને સાસરીમાં પોતાના વ્હાલા સાસુ, સસરા, જેઠ, જેઠાણી, દેર, દેરાણી અને નણંદ-નણદોઈના સ્નેહ સાથે સરખાવે છે. છેલ્લે પોતાના પરણેતરને 'સગી નણંદના વીર' કહીને ભારતીય નારીની લાજ અને પ્રેમ પ્રગટ કરે છે.",
+    intro: "• સંપાદક: ઝવેરચંદ કાળીદાસ મેઘાણી ('રાષ્ટ્રીય શાયર', ચોટીલા).\n• સાહિત્ય પ્રકાર: લોકગીત (કોઈ એક કવિ નથી હોતો, લોકસમૂહ દ્વારા રચાય છે).\n• સંદર્ભ લોકસંગ્રહ: 'રઢિયાળી રાત'.\n• મુખ્ય ભાવ: સંયુક્ત કુટુંબની મિઠાશ અને દાંપત્યપ્રેમ.",
+    analysis: "• લોકઢાળ અને સંસ્કાર: નારી સાસુને માવડી સમાન અને સસરાને પિતા તુલ્ય ગણે છે. પરિવારના દરેક સભ્ય સાથેનો તેનો સંબંધ કાવ્યાત્મક રીતે વ્યક્ત થયો છે.",
+    characterSketch: "• નવોઢા પરણેતર:\n- સંસ્કારી, સાસરીને જ પોતાનું પિયર માનનારી પ્રેમાળ ગૃહિણી.",
+    words: [
+      { w: "ચાંદલિયો", m: "ચંદ્ર, ચાંદો (લાડવાચક રૂપ)" },
+      { w: "વીર", m: "ભાઈ (અહીં પતિ માટે લાજવંતી ઓળખ)" },
+      { w: "નવોઢા", m: "નવી પરણેલી સ્ત્રી" }
+    ],
+    grammarNotes: [
+      "સાસુ-સસરા: દ્વંદ્વ સમાસ",
+      "લોકગીત: લોક દ્વારા રચાયેલું ગીત",
+      "વિરોધી: સાસરી x પિયર"
+    ],
+    impQuestions: [
+      {
+        q: "નાયિકા પોતાના પતિને સીધા નામથી બોલાવવાને બદલે શું કહે છે? (૨ ગુણ)",
+        a: "ભારતીય મર્યાદા અને લાજ રાખીને પોતાના પતિને 'મારી સગી નણંદના વીર' કહીને બોલાવે છે."
+      }
+    ]
+  },
+  {
+    id: "gadya-22",
+    cat: "gadya",
+    num: 22,
+    title: "પાવન પંથે",
+    author: "લલિત ત્રિવેદી",
+    genre: "પ્રેરક પ્રસંગ (જીવનચરિત્ર)",
+    source: "જીવન પ્રેરણા કથાઓ",
+    summary: "પરિશ્રમ, ધગશ અને નૈતિક મૂલ્યો સાથે જીવનમાં સફળતા પ્રાપ્ત કરનાર યુવાનની પ્રેરણાદાયી ગાથા. મુશ્કેલ પરિસ્થિતિઓમાં પણ હતાશ થયા વગર સચ્ચાઈ અને પ્રામાણિકતાના માર્ગે ચાલવાથી પ્રગતિ થાય છે તે આ પાઠનો મુખ્ય સંદેશ છે.",
+    intro: "• લેખક: લલિત ત્રિવેદી.\n• સાહિત્ય પ્રકાર: પ્રેરક પ્રસંગકથા.\n• જીવન સંદેશ: સત્ય અને પવિત્રતાનો પંથ ભલે કઠિન હોય પણ અંતે તે જ વિજય અપાવે છે.",
+    analysis: "• મૂલ્ય શિક્ષણ: યુવા પેઢીએ શોર્ટકટ કે અનૈતિક રસ્તા અપનાવવાને બદલે સ્વાવલંબન અને પુરુષાર્થનો રસ્તો પકડવો જોઈએ.",
+    characterSketch: "• સંઘર્ષશીલ યુવાન:\n- પરિશ્રમી, આશાવાદી અને નૈતિક મૂલ્યોવાળો.",
+    words: [
+      { w: "પાવન", m: "પવિત્ર, શુદ્ધ" },
+      { w: "પંથ", m: "માર્ગ, રસ્તો" },
+      { w: "ધગશ", m: "ઉત્સાહ, લગન" }
+    ],
+    grammarNotes: [
+      "પાવન પંથ: કર્મધારય સમાસ",
+      "વિરોધી: પવિત્ર x અપવિત્ર"
+    ],
+    impQuestions: [
+      {
+        q: "'પાવન પંથે' પાઠમાંથી વિદ્યાર્થીઓને કઈ પ્રેરણા મળે છે?",
+        a: "જીવનના ગમે તેવા સંઘર્ષમાં પણ સત્ય, પ્રમાણિકતા અને પરિશ્રમનો માર્ગ ક્યારેય છોડવો ન જોઈએ."
+      }
+    ]
+  },
+  {
+    id: "padya-23",
+    cat: "padya",
+    num: 23,
+    title: "બોલીએ ના કંઈ",
+    author: "રાજેન્દ્ર શાહ",
+    genre: "ગીત (શાંતિ અને મૌન કાવ્ય)",
+    source: "શ્રુતિ",
+    summary: "જ્ઞાનપીઠ વિજેતા કવિ રાજેન્દ્ર શાહનું અંતર્મુખ કરતું ચિંતનાત્મક ગીત. કવિ કહે છે કે કોઈપણ મુશ્કેલી કે વેદનામાં મોઢેથી કકળાટ ન કરવો, આપણું દુઃખ બીજાને કહેવા જતાં તે મજાક ઉડાવશે કે તમાશો જોશે. પોતાના હૃદયના દર્દને અંદર જ સમાવીને, એકલાં રહીને પણ ગૌરવભેર જીવવું. વેરાન વગડામાં પણ મૌન રહીને પોતાની મસ્તીમાં ચાલતા રહેવું.",
+    intro: "• કવિ: રાજેન્દ્ર કેશવલાલ શાહ (કપડવંજ, ખેડા).\n• પુરસ્કાર: ભારતીય જ્ઞાનપીઠ પુરસ્કાર (૨૦૦૧).\n• સંદર્ભ સંગ્રહ: 'શ્રુતિ'.\n• કાવ્ય સૂર: મૌનનું ગૌરવ અને આંતરિક સ્થિરતા.",
+    analysis: "• કાવ્યાર્થ: દુનિયા પારકા દુઃખને જાણીને માત્ર ઉપરછલ્લી સહાનુભૂતિ બતાવે છે અથવા પાછળથી હસે છે. તેથી પોતાના આંસુ ઈશ્વર સમક્ષ જ વહાવવા અને દુનિયા સમક્ષ સદાય હસતો ચહેરો રાખવો.",
+    characterSketch: "• ધીરગંભીર સાધક:\n- સુખ અને દુઃખમાં મૌન રહીને સ્થિતપ્રજ્ઞ રહેનાર.",
+    words: [
+      { w: "બોલીએ ના કંઈ", m: "શાંત રહો, મૌન સેવો" },
+      { w: "વૈણ", m: "વચન, બોલ, વાણી" },
+      { w: "ગાણું", m: "ગીત, વ્યથાનું ગાન" }
+    ],
+    grammarNotes: [
+      "બોલીએ: આજ્ઞાર્થ ક્રિયાપદ",
+      "વિરોધી: બોલવું x મૌન રહેવું"
+    ],
+    impQuestions: [
+      {
+        q: "કવિ રાજેન્દ્ર શાહ દુઃખમાં બોલવાની શા માટે ના પાડે છે? (૪ ગુણ મોસ્ટ IMP)",
+        a: "કારણ કે સંસારના લોકો પારકી વેદના સમજી શકતા નથી પણ તેનું પ્રદર્શન જોઈ તમાશો માણે છે. તેથી મૌન રહી આત્મબળથી દર્દ સહન કરવું ઉત્તમ છે."
+      }
+    ]
+  },
+  {
+    id: "gadya-24",
+    cat: "gadya",
+    num: 24,
+    title: "ઘોડીની સ્વામીભક્તિ",
+    author: "જોરાવરસિંહ જાદવ",
+    genre: "લોકકથા (પ્રાણીપ્રેમ)",
+    source: "લોકસાહિત્યની અશ્વકથાઓ",
+    summary: "કાઠિયાવાડના આંબા પટેલ અને તેમની વફાદાર ઘોડી 'ઢેલ' વચ્ચેના અદ્ભુત પ્રેમ અને સ્વામીભક્તિની શૌર્યકથા. ચોમાસાની તોફાની રાત્રે શેત્રુંજી નદીમાં ઘોડાપૂર આવ્યું હોય છે ત્યારે આંબા પટેલ ઘોડી સાથે નદી પાર કરવા કૂદી પડે છે. વમળમાં પટેલનો હાથ લગામ પરથી છૂટી જાય છે અને તેઓ તણાવા લાગે છે. ઘોડી પોતે કિનારે પહોંચી જવા છતાં પાછી ફરી ડૂબતા માલિકને પોતાની પૂંછડી પકડાવી બચાવી લે છે અને પટેલના ખોળામાં માથું મૂકી દમ તોડે છે.",
+    intro: "• લેખક: જોરાવરસિંહ દાણુભા જાદવ (ધંધૂકા, અમદાવાદ).\n• સાહિત્ય પ્રકાર: સૌરાષ્ટ્રની લોકકથા.\n• સંદર્ભ પુસ્તક: 'લોકસાહિત્યની અશ્વકથાઓ'.\n• કેન્દ્રીય ભાવ: અબોલ પશુની અજોડ વફાદારી અને આત્મબલિદાન.",
+    analysis: "• લોકસાહિત્યનું તેજ: કાઠિયાવાડી બોલીના રૂઢિપ્રયોગો, શેત્રુંજી નદીનું ભયાનક પૂર અને ઢેલ ઘોડીનું અપ્રતિમ સાહસ હૃદયને સ્પર્શી જાય છે.",
+    characterSketch: "• આંબા પટેલ: માયાળુ, ઘોડીને પોતાની દીકરીની જેમ સાચવનારા ખેડૂત.\n• ઢેલ ઘોડી: માલિક માટે પોતાનો જીવ ન્યોછાવર કરનારી સ્વામીભક્ત અશ્વ.",
+    words: [
+      { w: "ઢેલ", m: "ઘોડીનું નામ (મોરની માદા)" },
+      { w: "શેત્રુંજી", m: "સૌરાષ્ટ્રની પ્રખ્યાત પવિત્ર નદી" },
+      { w: "ઘોડાપૂર", m: "અત્યંત વેગવંતું અને ભયાનક જળપ્રવાહ" }
+    ],
+    grammarNotes: [
+      "સ્વામીભક્તિ: તત્પુરુષ સમાસ (સ્વામી પ્રત્યે ભક્તિ)",
+      "શેત્રુંજી: સંજ્ઞાવાચક નામ",
+      "વિરોધી: વફાદાર x બેવફા"
+    ],
+    impQuestions: [
+      {
+        q: "ઢેલ ઘોડીએ આંબા પટેલનો જીવ કેવી રીતે બચાવ્યો? (૪ ગુણ મોસ્ટ IMP)",
+        a: "શેત્રુંજીના પ્રચંડ પૂરમાં પટેલ તણાવા લાગ્યા ત્યારે ઘોડી કિનારેથી પાછી પૂરમાં કૂદી પડી, પટેલ પાસે જઈ પોતાની પૂંછડી પકડાવી તેમને સુરક્ષિત કિનારે ખેંચી લાવીને પોતાના પ્રાણ ન્યોછાવર કર્યા."
+      }
+    ]
+  }
+];
+
+/**
+ * 3. સંપૂર્ણ લેખન સજ્જતા વિભાગ (Writing Section - વિભાગ D)
+ */
+const LEKHAN_VAULT = [
+  {
+    id: "l-01",
+    cat: "lekhan",
+    num: "લેખન ૧",
+    title: "વિચાર વિસ્તાર (અર્થવિસ્તાર) માસ્ટરી",
+    author: "વિભાગ D (૪ ગુણ)",
+    genre: "સૂક્તિ વિસ્તાર",
+    source: "બોર્ડ ફોર્મેટ & IMP",
+    summary: "કોઈપણ કાવ્યપંક્તિ કે સુભાષિતનો ગૂઢ અર્થ સરળ શબ્દોમાં ૨-૩ ફકરામાં વિસ્તૃત કરવો.",
+    intro: "બોર્ડમાં પુરેપુરા ૪ ગુણ મેળવવાની સોનેરી ટ્રીક: ૧. અર્થ સમજૂતી ૨. દ્રષ્ટાંતો/દાખલા ૩. જીવન બોધ.",
+    childTrick: "💡 સરળ ફોર્મ્યુલા:\n• ફકરો ૧: પંક્તિનો સાદો અર્થ અને કેન્દ્રીય વિચાર.\n• ફકરો ૨: સમાજ અને ઇતિહાસના જીવંત ઉદાહરણો.\n• ફકરો ૩: બોધ (આપણે જીવનમાં શું શીખવું જોઈએ).",
+    words: [
+      { w: "આવ નહીં આદર નહીં", m: "જ્યાં માન-સન્માન ન હોય ત્યાં સોનાનો વરસાદ થતો હોય તોય ન જવું." },
+      { w: "સફળતા જિંદગીની...", m: "સફળતા હાથની રેખાઓમાં નહિ પણ કપાળના પરસેવા (મહેનત) માં હોય છે." },
+      { w: "મન હોય તો માળવે જવાય", m: "દૃઢ સંકલ્પશક્તિ હોય તો ગમે તેવો મુશ્કેલ માર્ગ પણ સરળ બની જાય છે." },
+      { w: "કડવાં હોય ઔષધ પણ...", m: "કડવી દવા રોગ મટાડે છે અને સાચી શિખામણ જીવન સુધારે છે." }
+    ],
+    grammarNotes: ["વિચાર વિસ્તારમાં ભાષા શુદ્ધ અને જોડણીદોષ રહિત હોવી જોઈએ."],
+    impQuestions: [
+      {
+        q: "'આવ નહીં આદર નહીં, નહિ નયનમાં નેહ; તે ઘર કદી ન જઈએ, ભલે કંચન વરસે મેહ' - વિચાર વિસ્તાર કરો.",
+        a: "અર્થ: આ પંક્તિમાં સ્વમાનનું મહત્વ દર્શાવ્યું છે. જ્યાં આપણું સન્માન ન હોય, આવકાર ન મળે ત્યાં ધન-દોલતનો ઢગલો હોય તોપણ ક્યારેય પગ ન મૂકવો. ઉદાહરણ: શ્રીકૃષ્ણ દુર્યોધનના મેવા-મિઠાઈ છોડી વિદુરજીની ભાજી ખાવા ગયા હતા કારણ કે ત્યાં સાચો પ્રેમ હતો. બોધ: આત્મસન્માન એ માનવીનું સૌથી મોટું ઘરેણું છે."
+      }
+    ]
+  },
+  {
+    id: "l-02",
+    cat: "lekhan",
+    num: "લેખન ૨",
+    title: "સંક્ષેપીકરણ (૧/૩ ભાગમાં સંક્ષેપ)",
+    author: "વિભાગ D (૪ ગુણ)",
+    genre: "સાર લેખન",
+    source: "બોર્ડ ફોર્મેટ & IMP",
+    summary: "આપેલા મોટા ગદ્યખંડને તેના મૂળ વિચારને જાળવી રાખી ત્રીજા ભાગમાં સચોટ લખવો.",
+    intro: "સંક્ષેપીકરણમાં યોગ્ય શીર્ષકના ૧ ગુણ અને સંક્ષેપના ૩ ગુણ હોય છે.",
+    childTrick: "💡 સરળ ૪ સ્ટેપ્સ:\n૧. પેરાગ્રાફ બે વાર ધ્યાનથી વાંચો.\n૨. ઉદાહરણો, અલંકારો અને વધારાના શબ્દો પેન્સિલથી ચેકી નાખો.\n૩. માત્ર મુખ્ય મુદ્દાઓને જોડીને ૧/૩ ભાગમાં પોતાની ભાષામાં લખો.\n૪. મસ્ત નાનકડું કેચિંગ 'યોગ્ય શીર્ષક' આપો.",
+    words: [
+      { w: "યોગ્ય શીર્ષક", m: "સમગ્ર ફકરાનો સારાંશ દર્શાવતું ૨-૩ શબ્દોનું નામ" },
+      { w: "૧/૩ ભાગ", m: "જો ૯૦ શબ્દો હોય તો આશરે ૩૦ શબ્દોમાં લખાણ" }
+    ],
+    grammarNotes: ["સંક્ષેપીકરણમાં મૂળ ફકરાની પંક્તિઓ બેઠી ન ઉતારવી."],
+    impQuestions: [
+      {
+        q: "સંક્ષેપીકરણ કરતી વખતે કઈ બાબતો ખાસ ધ્યાનમાં રાખવી?",
+        a: "૧. લખાણ મૂળ ગદ્યખંડના ત્રીજા ભાગ જેટલું થવું જોઈએ. ૨. યોગ્ય શીર્ષક અવશ્ય આપવું. ૩. પુનરાવર્તન કે અલંકારિક દાખલા ટાળવા."
+      }
+    ]
+  },
+  {
+    id: "l-03",
+    cat: "lekhan",
+    num: "લેખન ૩",
+    title: "નિબંધ લેખન (વિષયવાર IMP માળખું)",
+    author: "વિભાગ D (૮ ગુણ)",
+    genre: "મૌલિક લેખન",
+    source: "બોર્ડ ફોર્મેટ & IMP",
+    summary: "વિષયને અનુરૂપ મુદ્દાસર, સુવાચ્ય અને અવતરણો (કાવ્યપંક્તિઓ) સાથેનું સુંદર લખાણ.",
+    intro: "બોર્ડ ટોપર્સની ગુપ્ત ચાવી: શરૂઆત અને અંતમાં ૧-૧ સુંદર કાવ્યપંક્તિ લખવાથી પુરા ૮ માંથી ૮ ગુણ મળે છે!",
+    childTrick: "💡 નિબંધના ૪ સ્તંભ:\n૧. પ્રસ્તાવના (વિષયની સુંદર શરૂઆત)\n૨. મુખ્ય વિષય વિસ્તાર (મુદ્દાવાર ૩-૪ ફકરા)\n૩. વર્તમાન સ્થિતિ અને ઉપાયો\n૪. ઉપસંહાર (સમાપન અને સકારાત્મક સંદેશ)",
+    words: [
+      { w: "માતૃપ્રેમ (મા તે મા)", m: "'જનનીની જોડ સખી નહિ જડે રે લોલ...' / 'મીઠા મધુ ને મીઠા મેહુલા રે લોલ'" },
+      { w: "પરિશ્રમ એ જ પારસમણિ", m: "'ઉદ્યમેન હિ સિધ્યન્તિ કાર્યાણિ ન મનોરથૈઃ' / પરિશ્રમ વિના પ્રારબ્ધ પાંગળું છે" },
+      { w: "પ્રદૂષણ : વિકટ સમસ્યા", m: "વૃક્ષો વાવો, પર્યાવરણ બચાવો - ગ્લોબલ વોર્મિંગ સામે લડત" },
+      { w: "પુસ્તકો આપણા મિત્રો", m: "પુસ્તક એ મનની ભૂખ સંતોષનાર અમૃત છે" }
+    ],
+    grammarNotes: ["જોડણી અને વિરામચિહ્નોની શુદ્ધતા નિબંધમાં મહત્વની છે."],
+    impQuestions: [
+      {
+        q: "બોર્ડ પરીક્ષા માટે મોસ્ટ IMP નિબંધો કયા કયા છે?",
+        a: "૧. મા તે મા (માતૃપ્રેમ), ૨. પરિશ્રમ એ જ પારસમણિ, ૩. પ્રદૂષણ : એક વિકટ સમસ્યા, ૪. જીવનમાં પુસ્તકોનું મહત્વ, ૫. જો હું શિક્ષણમંત્રી હોઉં તો..."
+      }
+    ]
+  },
+  {
+    id: "l-04",
+    cat: "lekhan",
+    num: "લેખન ૪",
+    title: "અહેવાલ લેખન & પત્ર લેખન",
+    author: "વિભાગ D (૪ ગુણ)",
+    genre: "વ્યવહારુ લેખન",
+    source: "બોર્ડ ફોર્મેટ & IMP",
+    summary: "શાળા કે સમાજમાં યોજાયેલા કાર્યક્રમનો સચોટ અહેવાલ અથવા સગાં-સંબંધી કે અધિકારીને પત્ર.",
+    intro: "અહેવાલ લેખનમાં સ્થળ, તારીખ, સમય અને ક્રમબદ્ધ વિગતો અનિવાર્ય છે.",
+    childTrick: "💡 અહેવાલ ફોર્મેટ:\n• જમણી બાજુ: સ્થળ અને તારીખ (દા.ત. સુરત, તા. ૨૬/૦૧/૨૦૨૬)\n• વચ્ચે મસ્ત હેડિંગ: 'શાળામાં પ્રજાસત્તાક દિનની ભવ્ય ઉજવણી'\n• લખાણ: ભૂતકાળમાં જ લખવું (આયોજન થયું હતું, મહેમાનો આવ્યા હતા, ઇનામો વહેંચાયા હતા).",
+    words: [
+      { w: "વૃક્ષારોપણ દિન", m: "પર્યાવરણ બચાવવા યોજાયેલ કાર્યક્રમનો અહેવાલ" },
+      { w: "સ્વચ્છતા અભિયાન", m: "ગાંધી જયંતિએ યોજાયેલી સફાઈ ઝુંબેશ" },
+      { w: "રક્તદાન શિબિર", m: "માનવસેવા માટે આયોજિત બ્લડ ડોનેશન કેમ્પ" }
+    ],
+    grammarNotes: ["અહેવાલ હંમેશાં ભૂતકાળમાં જ લખાય છે."],
+    impQuestions: [
+      {
+        q: "અહેવાલ લેખનમાં સૌથી મહત્વની કઈ બાબત છે?",
+        a: "અહેવાલ સત્ય હકીકતો પર આધારિત, ભૂતકાળમાં અને યોગ્ય તારીખ-સ્થળ સાથે આશરે ૧૦૦ શબ્દોમાં હોવો જોઈએ."
+      }
+    ]
+  }
+];
+
+// Literature Matching Matrix Data (24 chapters for Board Section A & B)
+const LITERATURE_MATRIX = [
+  { num: 1, title: "વૈષ્ણવજન", author: "નરસિંહ મહેતા", genre: "પદ / પ્રભાતિયું", src: "નરસિંહ શ્રેષ્ઠ પદમાળા" },
+  { num: 2, title: "રેસનો ઘોડો", author: "વર્ષા અડાલજા", genre: "નવલિકા", src: "કોઈ વાર થાય કે..." },
+  { num: 3, title: "શીલવંત સાધુને", author: "ગંગાસતી", genre: "ભજન / પદ", src: "ગંગાસતીની ભજનગંગા" },
+  { num: 4, title: "ગોપાળબાપા", author: "મનુભાઈ પંચોળી 'દર્શક'", genre: "નવલકથા અંશ", src: "ઝેર તો પીધાં છે જાણી જાણી" },
+  { num: 5, title: "દીકરી", author: "અશોક ચાવડા 'બેદિલ'", genre: "ગઝલ", src: "પગલાં તળાવમાં" },
+  { num: 6, title: "વાઇરલ ઇન્ફેક્શન", author: "ગુણવંત શાહ", genre: "નિબંધ", src: "મરો ત્યાં સુધી જીવો" },
+  { num: 7, title: "હું એવો ગુજરાતી", author: "વિનોદ જોશી", genre: "ગીત", src: "વિનોદ જોશી કાવ્યસંચય" },
+  { num: 8, title: "છત્રી", author: "રતિલાલ બોરીસાગર", genre: "હાસ્ય નિબંધ", src: "ઓમ હાસ્યમ્" },
+  { num: 9, title: "માધવને દીઠો છે ક્યાંય?", author: "હરીન્દ્ર દવે", genre: "ઉર્મિગીત", src: "વરસાદની મોસમ છે" },
+  { num: 10, title: "ડાંગવનો અને...", author: "મહેન્દ્રસિંહ પરમાર", genre: "પ્રવાસ નિબંધ", src: "રખડુનો કાગળ" },
+  { num: 11, title: "શિકારીને", author: "કલાપી", genre: "સોનેટ", src: "કલાપીનો કેકારવ" },
+  { num: 12, title: "ચોપડાની ઇન્દ્રજાળ", author: "ચંદ્રકાન્ત પંડ્યા", genre: "આત્મકથા ખંડ", src: "બાનો ભીખુ" },
+  { num: 13, title: "વતનથી વિદાય થતાં", author: "જયંત પાઠક", genre: "સોનેટ", src: "અંતરિક્ષ" },
+  { num: 14, title: "જનમી", author: "સુરેશ જોષી", genre: "વાર્તા", src: "ગૃહપ્રવેશ" },
+  { num: 15, title: "તે બેસે અહીં", author: "સ્નેહી પરમાર", genre: "ગઝલ", src: "સ્નેહી પરમાર ગઝલસંગ્રહ" },
+  { num: 16, title: "ગતિભંગ", author: "મોહનલાલ પટેલ", genre: "લઘુકથા", src: "મોહનલાલ પટેલની લઘુકથાઓ" },
+  { num: 17, title: "દિવસો જુદાઈના જાય છે", author: "ગની દહીંવાલા", genre: "ગઝલ", src: "મહેક" },
+  { num: 18, title: "ભૂખથીય ભૂંડી ભીખ", author: "પન્નાલાલ પટેલ", genre: "નવલકથા ખંડ", src: "માનવીની ભવાઈ" },
+  { num: 19, title: "એક બપોરે", author: "રાવજી પટેલ", genre: "ઉર્મિકાવ્ય", src: "અંગત" },
+  { num: 20, title: "વિરલ વિભૂતિ", author: "આત્મર્પિત અપૂર્વજી", genre: "ચરિત્ર નિબંધ", src: "શ્રીમદ્ રાજચંદ્ર દર્શન" },
+  { num: 21, title: "ચાંદલિયો", author: "ઝવેરચંદ મેઘાણી સંપાદિત", genre: "લોકગીત", src: "રઢિયાળી રાત" },
+  { num: 22, title: "પાવન પંથે", author: "લલિત ત્રિવેદી", genre: "પ્રેરક પ્રસંગ", src: "જીવન પ્રેરણા કથાઓ" },
+  { num: 23, title: "બોલીએ ના કંઈ", author: "રાજેન્દ્ર શાહ", genre: "ગીત", src: "શ્રુતિ" },
+  { num: 24, title: "ઘોડીની સ્વામીભક્તિ", author: "જોરાવરસિંહ જાદવ", genre: "લોકકથા", src: "લોકસાહિત્યની અશ્વકથાઓ" }
+];
+
+/**
+ * 4. સંપૂર્ણ MCQ પ્રશ્નબેંક અને ગણતરી એન્જિન (MCQ Bank & Live Score Engine)
+ */
+const MCQ_BANK = [
+  // ----------- સાહિત્ય / પ્રકરણો આધારિત MCQs -----------
+  {
+    id: "mcq-01",
+    chNum: 1,
+    cat: "padya",
+    q: "૧. નરસિંહ મહેતાના મતે સાચો વૈષ્ણવજન કોને કહેવાય?",
+    options: [
+      "જે પારકાના દુઃખને પોતાનું સમજી સેવા કરે પણ અહંકાર ન રાખે",
+      "જે માત્ર મંદિરમાં જઈ પૂજા-અર્ચના કરે",
+      "જે ખૂબ ધનવાન હોય અને દાન આપતો ફરે",
+      "જે સંસાર છોડીને જંગલમાં તપસ્યા કરે"
+    ],
+    correct: 0,
+    exp: "નરસિંહ મહેતા કહે છે: 'પીડ પરાઈ જાણે રે, પરદુઃખે ઉપકાર કરે તોયે મન અભિમાન ન આણે રે.' સાચી ભક્તિ માનવસેવામાં છે."
+  },
+  {
+    id: "mcq-02",
+    chNum: 2,
+    cat: "gadya",
+    q: "૨. 'રેસનો ઘોડો' વાર્તામાં વિનુકાકા પોતાના દીકરા સૌરભને શું બનાવવા માંગતા હતા?",
+    options: [
+      "પ્રખ્યાત ક્રિકેટર",
+      "સંસ્કારી શિક્ષક",
+      "અમેરિકાનો ટોચનો ડોક્ટર",
+      "મોટો ઉદ્યોગપતિ"
+    ],
+    correct: 2,
+    exp: "વિનુકાકા સૌરભને રેસના ઘોડાની જેમ સતત ભણાવીને અમેરિકાનો મોટો ડોક્ટર બનાવે છે, પણ અંતે સંસ્કાર અને સમય ગુમાવે છે."
+  },
+  {
+    id: "mcq-03",
+    chNum: 3,
+    cat: "padya",
+    q: "૩. ગંગાસતી પાનબાઈને કેવા સાધુને વારંવાર નમન કરવાની સલાહ આપે છે?",
+    options: [
+      "જે ભગવા કપડાં પહેરીને ચમત્કારો બતાવે",
+      "જેનું શીલ (ચારિત્ર્ય) નિર્મળ હોય અને વર્તન કદી ન બદલાય",
+      "જે મોટો આશ્રમ ચલાવતો હોય",
+      "જે આખો દિવસ મૌન રહેતો હોય"
+    ],
+    correct: 1,
+    exp: "'શીલવંત સાધુને વારે વારે નમીએ, જેના બદલે નહીં વર્તમાન રે' - ચારિત્ર્યની પવિત્રતા જ સાચા સાધુનું લક્ષણ છે."
+  },
+  {
+    id: "mcq-04",
+    chNum: 4,
+    cat: "gadya",
+    q: "૪. ગોપાળબાપાએ મહારાજા સયાજીરાવ પાસે કોતરોની જમીન શા માટે માંગી?",
+    options: [
+      "પોતાના અંગત વેપાર અને ખેતી માટે",
+      "પોતાના સ્વર્ગસ્થ મિત્રના અનાથ દીકરાના ભરણપોષણ માટે",
+      "ગુરુ માંડણ ભગતનો આશ્રમ બનાવવા",
+      "રાજા પાસેથી ઇનામ મેળવવા"
+    ],
+    correct: 1,
+    exp: "ગોપાળબાપા પરોપકારી અને મિત્રધર્મી હતા. તેમણે પોતાના સ્વર્ગસ્થ મિત્રના દીકરાના ભવિષ્ય માટે કોતરોની જમીન માંગી હતી."
+  },
+  {
+    id: "mcq-05",
+    chNum: 5,
+    cat: "padya",
+    q: "૫. કવિ અશોક ચાવડા 'બેદિલ' દીકરીની ઝલક શેમાં જુએ છે?",
+    options: [
+      "સ્વર્ગની એક-એક દેવીમાં અને પવિત્ર તિલકમાં",
+      "સોના-ચાંદીના ઘરેણાંમાં",
+      "બગીચાના ગુલાબમાં",
+      "આકાશના તારાઓમાં"
+    ],
+    correct: 0,
+    exp: "'સ્વર્ગની એક એક દેવીની ઝલકમાં દીકરી, છે સુખડ ચંદનને કુમકુમના તિલકમાં દીકરી.' દીકરી પવિત્રતાની મૂર્તિ છે."
+  },
+  {
+    id: "mcq-06",
+    chNum: 6,
+    cat: "gadya",
+    q: "૬. ગુણવંત શાહના મતે હોસ્પિટલની સાચી શોભા શામાં રહેલી છે?",
+    options: [
+      "તેમાં ખૂબ મોંઘાં સાધનો હોય તેમાં",
+      "તેના બધા ખાટલા દર્દીઓથી સતત ભરેલા રહે તેમાં",
+      "લોકો સ્વસ્થ રહે અને તેના ખાટલા ખાલી રહે તેમાં",
+      "તેની ફી ખૂબ વધારે હોય તેમાં"
+    ],
+    correct: 2,
+    exp: "લેખક કહે છે કે હોસ્પિટલ દર્દીઓથી ઊભરાય તે સમાજની માંદગી છે; લોકો તંદુરસ્ત રહે અને ખાટલા ખાલી રહે એ જ સાચી શોભા છે."
+  },
+  {
+    id: "mcq-07",
+    chNum: 7,
+    cat: "padya",
+    q: "૭. 'હું એવો ગુજરાતી' કાવ્યમાં કવિએ ગાંધીજીનું શું વિશેષ ગણાવ્યું છે?",
+    options: [
+      "ગાંધીજીનું મૌન",
+      "ગાંધીજીનું ભાષણ",
+      "ગાંધીજીની લાકડી",
+      "ગાંધીજીની ચિઠ્ઠી"
+    ],
+    correct: 0,
+    exp: "'હું ગાંધીનું મૌન, હું જ સરદાર તણી છું હાકલ' - ગાંધીજીના મૌનમાં વિશ્વને હચમચાવવાની સત્યાગ્રહ શક્તિ હતી."
+  },
+  {
+    id: "mcq-08",
+    chNum: 8,
+    cat: "gadya",
+    q: "૮. 'છત્રી' પાઠમાં લેખક રાજકોટથી પાછા વળતાં શું ભૂલી ગયા?",
+    options: [
+      "પોતાનું પાકીટ",
+      "પોતાનો થેલો",
+      "જે છત્રી લેવા ગયા હતા તે જ છત્રી બસમાં",
+      "બસની ટિકિટ"
+    ],
+    correct: 2,
+    exp: "લેખક રાજકોટ સુધી જે ખોવાયેલી છત્રી લેવા ગયા હતા, પરત વળતી બસમાં ફરીથી તે જ છત્રી ભૂલીને ઘરે આવી ગયા!"
+  },
+  {
+    id: "mcq-09",
+    chNum: 9,
+    cat: "padya",
+    q: "૯. 'માધવને દીઠો છે ક્યાંય?' કાવ્યમાં કોણ શ્રીકૃષ્ણની શોધમાં વ્યાકુળ બની ભટકે છે?",
+    options: [
+      "અર્જુન",
+      "વાંસળીનો વિખૂટો પડેલો સૂર",
+      "સુદામા",
+      "ગોપીઓ"
+    ],
+    correct: 1,
+    exp: "વાંસળીમાંથી વિખૂટો પડેલો સૂર કદંબ, યમુના અને રાધાની આંખને પૂછતો પૂછતો કૃષ્ણની શોધમાં ભટકે છે."
+  },
+  {
+    id: "mcq-10",
+    chNum: 10,
+    cat: "gadya",
+    q: "૧૦. 'ડાંગવનો અને...' પાઠમાં લેખકે ડાંગના કયા ભવ્ય જળધોધનું વર્ણન કર્યું છે?",
+    options: [
+      "જોગનો ધોધ",
+      "ગીરા ધોધ",
+      "ઝરવાણી ધોધ",
+      "ધૂંવાધાર ધોધ"
+    ],
+    correct: 1,
+    exp: "લેખક મહેન્દ્રસિંહ પરમારે ડાંગના આહવા નજીકના રમણીય 'ગીરા ધોધ' નું દૂધના ફીણ જેવું મનોહારી વર્ણન કર્યું છે."
+  },
+  {
+    id: "mcq-11",
+    chNum: 11,
+    cat: "padya",
+    q: "૧૧. કલાપી શિકારી યુવાનને પક્ષી પર તીર ચલાવવાની શા માટે ના પાડે છે?",
+    options: [
+      "કારણ કે તીરથી માત્ર પક્ષીનું નિર્જીવ શબ મળે, તેનું મધુર ગીત કે સૌંદર્ય નહીં",
+      "કારણ કે તીર મોંઘું છે",
+      "કારણ કે પક્ષી નાનું છે",
+      "કારણ કે રાજા દંડ કરશે"
+    ],
+    correct: 0,
+    exp: "'તીરથી પામવા પક્ષી વ્યર્થ આ ક્રૂરતા મથે, તીરથી પક્ષી તો ના મળે, કિન્તુ કેવળ સ્થૂળ શબ મળે.' - સૌંદર્ય પામવા દયાળુ બનવું પડે."
+  },
+  {
+    id: "mcq-12",
+    chNum: 12,
+    cat: "gadya",
+    q: "૧૨. 'ચોપડાની ઇન્દ્રજાળ' પાઠમાં ભીખુએ લાલ ચોપડો કેમ ફાડી નાખ્યો?",
+    options: [
+      "ચોપડો જૂનો થઈ ગયો હતો",
+      "જીવલાના શોષણમાંથી મુક્ત કરવા અને પોતાના આત્માને પાપમુક્ત કરવા",
+      "માતાએ ફાડવાનું કહ્યું હતું",
+      "વરસાદમાં પલળી ગયો હતો"
+    ],
+    correct: 1,
+    exp: "ભીખુને સમજાયું કે ગરીબ જીવલાનું પેઢીઓથી અમાનવીય શોષણ થઈ રહ્યું છે, એટલે તેણે ચોપડો ફાડી જીવલાને દેવામુક્ત કર્યો."
+  },
+  {
+    id: "mcq-13",
+    chNum: 13,
+    cat: "padya",
+    q: "૧૩. 'વતનથી વિદાય થતાં' સોનેટમાં કવિ પોતાની સરખામણી કોની સાથે કરે છે?",
+    options: [
+      "હાટે વેચાઈ ગયેલા ઢોર સાથે જે પાછળ પોતાના જૂના કોઢાર તરફ જુએ છે",
+      "ઊડતા પક્ષી સાથે",
+      "નદીના પાણી સાથે",
+      "સૂકા પાંદડા સાથે"
+    ],
+    correct: 0,
+    exp: "જેમ હાટે વેચાયેલું ઢોર નવા માલિક સાથે જતાં જૂના ઘર તરફ વળી વળીને જુએ છે તેમ કવિ વતન તરફ જુએ છે."
+  },
+  {
+    id: "mcq-14",
+    chNum: 14,
+    cat: "gadya",
+    q: "૧૪. 'જનમી' વાર્તા સુરેશ જોષીના કયા સંગ્રહમાંથી લેવામાં આવી છે?",
+    options: [
+      "ગૃહપ્રવેશ",
+      "બીજી સવાર",
+      "અભિજ્ઞાન",
+      "કુરુક્ષેત્ર"
+    ],
+    correct: 0,
+    exp: "'જનમી' વાર્તા સુરેશ જોષીના પ્રખ્યાત વાર્તાસંગ્રહ 'ગૃહપ્રવેશ' માંથી લેવામાં આવી છે."
+  },
+  {
+    id: "mcq-15",
+    chNum: 15,
+    cat: "padya",
+    q: "૧૫. 'તે બેસે અહીં' ગઝલ મુજબ સભામાં બેસવાનો સાચો હકદાર કોણ છે?",
+    options: [
+      "જે ખૂબ ધનવાન હોય",
+      "જે બીજાના આંસુ લૂછે અને દર્દ પર મલમ લગાવે",
+      "જે સૌથી ઊંચા પદ પર હોય",
+      "જે સુંદર વસ્ત્રો પહેરીને આવે"
+    ],
+    correct: 1,
+    exp: "જે નિઃસ્વાર્થ ભાવે બીજાના દુઃખમાં ભાગીદાર બને અને કોઈના પ્રત્યે ઈર્ષ્યા ન રાખે તે જ સન્માનને પાત્ર છે."
+  },
+  {
+    id: "mcq-16",
+    chNum: 16,
+    cat: "gadya",
+    q: "૧૬. 'ગતિભંગ' લઘુકથામાં ડુંગરની પત્ની અચાનક કેમ અટકી ગઈ?",
+    options: [
+      "તેના પગમાં કાંટો વાગ્યો હતો",
+      "તે રસ્તો ભૂલી ગઈ હતી",
+      "ધૂળમાં નાનાં બાળકના પગલાં જોઈ તેને સ્વર્ગસ્થ દીકરી બબલી યાદ આવી ગઈ",
+      "તે થાકી ગઈ હતી"
+    ],
+    correct: 2,
+    exp: "ધૂળમાં પગલાંની છાપ જોઈ માતાના હૃદયમાં મૃત પુત્રી બબલીની સ્મૃતિ જાગી અને તેની ચાલવાની શારીરિક ગતિ ભંગ થઈ ગઈ."
+  },
+  {
+    id: "mcq-17",
+    chNum: 17,
+    cat: "padya",
+    q: "૧૭. 'દિવસો જુદાઈના જાય છે' ગઝલના રચયિતા કોણ છે?",
+    options: [
+      "ગની દહીંવાલા",
+      "મરીઝ",
+      "બેફામ",
+      "શૂન્ય પાલનપુરી"
+    ],
+    correct: 0,
+    exp: "આ અમર આશાવાદી ગઝલ સુરતના મહાન શાયર અબ્દુલગની દહીંવાલા (ગની દહીંવાલા) ની રચના છે."
+  },
+  {
+    id: "mcq-18",
+    chNum: 18,
+    cat: "gadya",
+    q: "૧૮. પન્નાલાલ પટેલની 'માનવીની ભવાઈ' ના કાળુના મતે ભૂખ કરતાં પણ ભૂંડું શું છે?",
+    options: [
+      "તડકો",
+      "ભીખ (લાચારી અને સ્વમાન ગુમાવવું)",
+      "માંદગી",
+      "ગરીબી"
+    ],
+    correct: 1,
+    exp: "કાળુ કહે છે: 'ભૂખ તો હાડ ગાળે છે, પણ ભીખ માણસની ટેક, ખુમારી અને આત્માને હણી નાખે છે. ભૂખથીય ભૂંડી ભીખ છે.'"
+  },
+  {
+    id: "mcq-19",
+    chNum: 19,
+    cat: "padya",
+    q: "૧૯. 'એક બપોરે' કાવ્યમાં કવિ રાવજી પટેલના ખેતરના શેઢેથી શું ઊડી ગયું?",
+    options: [
+      "મોર",
+      "પોપટ",
+      "સારસી",
+      "કોયલ"
+    ],
+    correct: 2,
+    exp: "'મારા ખેતરને શેઢેથી લ્યા સારસી ઊડી ગઈ' - સારસીનું ઊડવું એ કવિના જીવનરસ અને આયુષ્યનો અંત દર્શાવે છે."
+  },
+  {
+    id: "mcq-20",
+    chNum: 20,
+    cat: "gadya",
+    q: "૨૦. ગાંધીજીના આધ્યાત્મિક માર્ગદર્શક અને શતાવધાની વિભૂતિ કોણ હતા?",
+    options: [
+      "ગોપાળકૃષ્ણ ગોખલે",
+      "શ્રીમદ્ રાજચંદ્ર (રાયચંદભાઈ)",
+      "રવીન્દ્રનાથ ટાગોર",
+      "સ્વામી વિવેકાનંદ"
+    ],
+    correct: 1,
+    exp: "ગાંધીજીએ શ્રીમદ્ રાજચંદ્રને પોતાના આધ્યાત્મિક ગુરુ ગણાવ્યા છે, જેઓ શતાવધાની અને પરમ વૈરાગી પુરુષ હતા."
+  },
+
+  // ----------- સંપૂર્ણ વ્યાકરણ આધારિત MCQs (વિભાગ C) -----------
+  {
+    id: "mcq-21",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૨૧. 'મા-બાપ' શબ્દ કયો સમાસ છે?",
+    options: [
+      "તત્પુરુષ સમાસ",
+      "દ્વંદ્વ સમાસ",
+      "મધ્યમપદલોપી સમાસ",
+      "ઉપપદ સમાસ"
+    ],
+    correct: 1,
+    exp: "મા અને બાપ - બંને પદો સમાન મોભો ધરાવે છે અને વચ્ચે 'અને' થી વિગ્રહ થાય છે, તેથી તે 'દ્વંદ્વ સમાસ' છે."
+  },
+  {
+    id: "mcq-22",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૨૨. 'પંકજ' (કાદવમાં જન્મનાર) શબ્દ કયો સમાસ છે?",
+    options: [
+      "દ્વંદ્વ સમાસ",
+      "ઉપપદ સમાસ",
+      "દ્વિગુ સમાસ",
+      "કર્મધારય સમાસ"
+    ],
+    correct: 1,
+    exp: "શબ્દનો વિગ્રહ કરતાં અંતે ક્રિયાવાચક 'નાર' આવે (કાદવમાં જન્મનાર) તેને 'ઉપપદ સમાસ' કહેવાય છે."
+  },
+  {
+    id: "mcq-23",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૨૩. 'નવરાત્રિ' અને 'ત્રિલોક' કયા સમાસના ઉદાહરણો છે?",
+    options: [
+      "દ્વિગુ સમાસ",
+      "તત્પુરુષ સમાસ",
+      "બહુવ્રીહિ સમાસ",
+      "અવ્યયીભાવ સમાસ"
+    ],
+    correct: 0,
+    exp: "જે સમાસનું પ્રથમ પદ સંખ્યાવાચક (નંબર) હોય અને સમૂહ દર્શાવે તેને 'દ્વિગુ સમાસ' કહે છે."
+  },
+  {
+    id: "mcq-24",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૨૪. 'હૈયું જાણે હિમાલય!' પંક્તિમાં કયો અલંકાર છે?",
+    options: [
+      "ઉપમા અલંકાર",
+      "ઉત્પ્રેક્ષા અલંકાર",
+      "રૂપક અલંકાર",
+      "અનન્વય અલંકાર"
+    ],
+    correct: 1,
+    exp: "વાક્યમાં 'જાણે, રખે, શકે' જેવા સંભાવનાસૂચક શબ્દો આવે ત્યારે 'ઉત્પ્રેક્ષા અલંકાર' બને છે."
+  },
+  {
+    id: "mcq-25",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૨૫. 'દમયંતીનું મુખ ચંદ્ર જેવું સુંદર છે' માં કયો અલંકાર છે?",
+    options: [
+      "ઉપમા અલંકાર",
+      "વ્યતિરેક અલંકાર",
+      "શ્લેષ અલંકાર",
+      "વર્ણાનુપ્રાસ અલંકાર"
+    ],
+    correct: 0,
+    exp: "સરખામણી માટે 'જેવો, જેવી, જેવું, સરખો, સમો' શબ્દ વપરાય ત્યારે 'ઉપમા અલંકાર' થાય છે."
+  },
+  {
+    id: "mcq-26",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૨૬. 'મા તે મા, બીજા બધા વગડાના વા' પંક્તિમાં કયો અલંકાર છે?",
+    options: [
+      "રૂપક અલંકાર",
+      "અનન્વય અલંકાર",
+      "સજીવારોપણ અલંકાર",
+      "વ્યાજસ્તુતિ અલંકાર"
+    ],
+    correct: 1,
+    exp: "જ્યારે ઉપમેયની સરખામણી કરવા યોગ્ય કોઈ ઉપમાન ન મળતાં તેની સરખામણી તેની સાથે જ કરાય ત્યારે 'અનન્વય' બને છે."
+  },
+  {
+    id: "mcq-27",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૨૭. 'ય મ ન સ ભ લ ગા' (૧૭ અક્ષર) કયા છંદનું બંધારણ છે?",
+    options: [
+      "મંદાક્રાન્તા છંદ",
+      "શિખરિણી છંદ",
+      "પૃથ્વી છંદ",
+      "શાર્દૂલવિક્રીડિત છંદ"
+    ],
+    correct: 1,
+    exp: "'ય મ ન સ ભ લ ગા' એ ૧૭ અક્ષરવાળા 'શિખરિણી છંદ' નું બંધારણ છે (યતિ ૬ અને ૧૨મા અક્ષરે આવે)."
+  },
+  {
+    id: "mcq-28",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૨૮. ૧૯ અક્ષર અને ૧૨મા અક્ષરે યતિ ધરાવતો છંદ કયો છે?",
+    options: [
+      "વસંતતિલકા",
+      "ચોપાઈ",
+      "શાર્દૂલવિક્રીડિત છંદ",
+      "મંદાક્રાન્તા"
+    ],
+    correct: 2,
+    exp: "શાર્દૂલવિક્રીડિત છંદમાં ૧૯ અક્ષર હોય છે અને તેનું ગણ બંધારણ 'મ સ જ સ ત ત ગા' છે."
+  },
+  {
+    id: "mcq-29",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૨૯. નીચેનામાંથી કઈ જોડણી બિલકુલ સાચી છે?",
+    options: [
+      "શારિરિક",
+      "શારીરિક",
+      "શારિરીક",
+      "શારીરીક"
+    ],
+    correct: 1,
+    exp: "'શારીરિક' સાચી જોડણી છે. પ્રથમ 'ી' દીર્ઘ અને બીજી 'િ' હ્રસ્વ આવે છે કારણ કે પાછળ 'ઇક' પ્રત્યય છે."
+  },
+  {
+    id: "mcq-30",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૩૦. 'સુ + આગત' શબ્દની સાચી સંધિ કઈ થશે?",
+    options: [
+      "સુઆગત",
+      "સ્વાગત",
+      "સૌગત",
+      "સ્વાગાત"
+    ],
+    correct: 1,
+    exp: "ઉ + આ = વા બને છે (યણ સંધિ નિયમ મુજબ: સુ + આગત = સ્વાગત)."
+  },
+  {
+    id: "mcq-31",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૩૧. 'રમતો છોકરો પડી ગયો' વાક્યમાં 'રમતો' કયું કૃદંત છે?",
+    options: [
+      "વર્તમાન કૃદંત",
+      "ભૂતકૃદંત",
+      "ભવિષ્ય કૃદંત",
+      "હેત્વર્થ કૃદંત"
+    ],
+    correct: 0,
+    exp: "જે કૃદંતના અંતે 'ત' પ્રત્યય (રમતો, દોડતી, ચાલતું) આવે અને ચાલુ ક્રિયા દર્શાવે તેને 'વર્તમાન કૃદંત' કહે છે."
+  },
+  {
+    id: "mcq-32",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૩૨. 'વિદ્યાર્થીઓએ રોજ નિયમિત વાંચવું જોઈએ' માં 'વાંચવું' કયું કૃદંત છે?",
+    options: [
+      "સંબંધક ભૂતકૃદંત",
+      "સામાન્ય / વિધ્યર્થ કૃદંત",
+      "વર્તમાન કૃદંત",
+      "ભૂતકૃદંત"
+    ],
+    correct: 1,
+    exp: "અંતે 'વ/વું' પ્રત્યય આવે અને ફરજ કે કર્તવ્ય દર્શાવે તેને 'સામાન્ય / વિધ્યર્થ કૃદંત' કહેવાય છે."
+  },
+  {
+    id: "mcq-33",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૩૩. 'ગાંધીજીએ સત્યનો જ આગ્રહ રાખ્યો' વાક્યમાંથી નિપાત શોધો:",
+    options: [
+      "ગાંધીજી",
+      "સત્યનો",
+      "જ",
+      "રાખ્યો"
+    ],
+    correct: 2,
+    exp: "'જ' ભારવાચક નિપાત છે, જે વાક્યમાં શબ્દ પર વજન કે ભાર મૂકવા માટે વપરાયો છે."
+  },
+  {
+    id: "mcq-34",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૩૪. 'રાધા ગીત ગાય છે' નું સાચું કર્મણિ વાક્ય કયું થશે?",
+    options: [
+      "રાધા ગીત ગાશે",
+      "રાધાથી ગીત ગવાય છે",
+      "રાધા ગીત ગવડાવે છે",
+      "રાધાએ ગીત ગાવું જોઈએ"
+    ],
+    correct: 1,
+    exp: "કર્તા સાથે 'થી' પ્રત્યય લાગે અને ક્રિયાપદમાં 'આ' ઉમેરાય: 'રાધાથી ગીત ગવાય છે'."
+  },
+  {
+    id: "mcq-35",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૩૫. 'ભોંયમાં પેસી જવું' રૂઢિપ્રયોગનો સાચો અર્થ શો છે?",
+    options: [
+      "જમીનમાં ખાડો ખોદવો",
+      "અત્યંત લજ્જિત કે શરમિંદા થવું",
+      "સંતાઈ જવું",
+      "ઘર છોડીને ચાલ્યા જવું"
+    ],
+    correct: 1,
+    exp: "'ભોંયમાં પેસી જવું' એટલે ખૂબ જ શરમ આવવી અથવા અત્યંત લજ્જિત થવું."
+  },
+  {
+    id: "mcq-36",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૩૬. 'જમીનની અંદર રહેલું પાણી તપાસનાર વિદ્વાન' માટે એક શબ્દ આપો:",
+    options: [
+      "ભૂગોળશાસ્ત્રી",
+      "પાણતિયો",
+      "ખેડૂત",
+      "સદાવ્રતી"
+    ],
+    correct: 1,
+    exp: "ગોપાળબાપા પાઠમાં આવે છે: જમીનનું પાણી પારખનાર વિદ્વાનને 'પાણતિયો' કહેવામાં આવે છે."
+  },
+  {
+    id: "mcq-37",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૩૭. 'મોરના ઈંડાંને ચીતરવાં ન પડે' કહેવતનો સાચો અર્થ શું છે?",
+    options: [
+      "મોરના ઈંડાં સુંદર હોય છે",
+      "તેજસ્વી માતાપિતાના સંતાનોમાં સંસ્કારો અને ગુણ જન્મજાત હોય છે",
+      "ચિત્ર દોરવું સહેલું નથી",
+      "પક્ષીઓની સંભાળ રાખવી"
+    ],
+    correct: 1,
+    exp: "હોશિયાર અને સંસ્કારી મા-બાપના સંતાનોને અલગથી ગુણો શીખવવા નથી પડતા, તે જન્મજાત આવે છે."
+  },
+  {
+    id: "mcq-38",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૩૮. 'તૃષ્ણા' શબ્દનો સાચો સમાનાર્થી શબ્દ કયો છે?",
+    options: [
+      "ઈચ્છા / લાલસા",
+      "તરસ્યો કાગડો",
+      "શાંતિ",
+      "ધિક્કાર"
+    ],
+    correct: 0,
+    exp: "'તૃષ્ણા' એટલે તીવ્ર ઈચ્છા, લાલસા કે કામના."
+  },
+  {
+    id: "mcq-39",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૩૯. 'તેણે મહેનત કરી પરંતુ સફળ ન થયો' વાક્યમાં સંયોજક કયું છે?",
+    options: [
+      "તેણે",
+      "મહેનત",
+      "પરંતુ",
+      "ન થયો"
+    ],
+    correct: 2,
+    exp: "'પરંતુ' બે વાક્યો વચ્ચે વિરોધ દર્શાવતો સંયોજક છે."
+  },
+  {
+    id: "mcq-40",
+    chNum: 0,
+    cat: "vyakaran",
+    q: "૪૦. 'અમે કાલે અમદાવાદ જઈશું' કયો કાળ દર્શાવે છે?",
+    options: [
+      "વર્તમાનકાળ",
+      "ભૂતકાળ",
+      "ભવિષ્યકાળ",
+      "વિધ્યર્થકાળ"
+    ],
+    correct: 2,
+    exp: "'જઈશું' ક્રિયા હવે પછી થવાની છે તે દર્શાવે છે, તેથી તે 'ભવિષ્યકાળ' છે."
+  }
+];
+
+// Combine all for easy filtering & lookup
+const ALL_ITEMS = [...CHAPTERS_DATA, ...GRAMMAR_VAULT, ...LEKHAN_VAULT];
+
+// App State
+let currentCat = 'chapters'; // Default tab is strictly chapters 1 to 24!
+let subFilter = 'all'; // 'all', 'padya', 'gadya'
+let mcqSubFilter = 'all'; // 'all', 'vyakaran', 'padya', 'gadya'
+let searchQuery = '';
+let activeItem = null;
+
+// Quiz State & Live Score Calculator
+let quizAnswers = {}; // { questionId: selectedIndex }
+let quizCorrectCount = 0;
+let quizWrongCount = 0;
+let quizAttemptedCount = 0;
+
+// DOM Elements
+const viewHome = document.getElementById('view-home');
+const viewDetail = document.getElementById('view-detail');
+const chaptersGrid = document.getElementById('chapters-grid');
+const mainSearchInput = document.getElementById('main-search-input');
+const catTabsContainer = document.getElementById('cat-tabs-container');
+const btnBackHome = document.getElementById('btn-back-home');
+const navHomeTitle = document.getElementById('nav-home-title');
+const navDetailBar = document.getElementById('nav-detail-bar');
+const detailHeaderTitle = document.getElementById('detail-header-title');
+const detailContainer = document.getElementById('detail-container');
+const btnListenHeader = document.getElementById('btn-listen-header');
+
+// Sub-filter handler
+function setSubFilter(val) {
+  subFilter = val;
+  document.querySelectorAll('#sub-filter-container .sub-pill').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  const activeBtn = document.querySelector(`#sub-filter-container .sub-pill[data-val="${val}"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+  renderHome();
+}
+
+// MCQ Sub-filter handler
+function setMCQSubFilter(val) {
+  mcqSubFilter = val;
+  renderMCQQuizView();
+}
+
+// Reset Quiz Score Handler
+function resetQuizScore() {
+  quizAnswers = {};
+  quizCorrectCount = 0;
+  quizWrongCount = 0;
+  quizAttemptedCount = 0;
+  renderMCQQuizView();
+}
+
+// Handle Single Question Answer Click
+function handleMCQAnswer(qId, optIdx) {
+  if (quizAnswers[qId] !== undefined) return; // already answered
+
+  const question = MCQ_BANK.find(m => m.id === qId);
+  if (!question) return;
+
+  quizAnswers[qId] = optIdx;
+  quizAttemptedCount++;
+
+  if (optIdx === question.correct) {
+    quizCorrectCount++;
+  } else {
+    quizWrongCount++;
+  }
+
+  // Update UI in place for instant response without jarring jumps
+  const card = document.getElementById(`card-${qId}`);
+  if (card) {
+    card.classList.add('answered');
+    const opts = card.querySelectorAll('.mcq-opt');
+    opts.forEach((btn, idx) => {
+      btn.disabled = true;
+      if (idx === question.correct) {
+        btn.classList.add('correct');
+        btn.innerHTML = `${btn.innerText} <span>✅ સાચો જવાબ</span>`;
+      } else if (idx === optIdx) {
+        btn.classList.add('wrong');
+        btn.innerHTML = `${btn.innerText} <span>❌ ખોટો જવાબ</span>`;
+      }
+    });
+
+    const expBox = card.querySelector('.mcq-explanation');
+    if (expBox) expBox.classList.add('show');
+  }
+
+  // Update Sticky Scoreboard
+  updateScoreboardUI();
+}
+
+// Update the Top Live Scoreboard UI
+function updateScoreboardUI() {
+  const sbCorrect = document.getElementById('sb-correct');
+  const sbWrong = document.getElementById('sb-wrong');
+  const sbAttempted = document.getElementById('sb-attempted');
+  const sbScore = document.getElementById('sb-score');
+  const sbGrade = document.getElementById('sb-grade');
+  const sbFill = document.getElementById('sb-fill');
+
+  let activeList = MCQ_BANK;
+  if (mcqSubFilter !== 'all') {
+    activeList = activeList.filter(m => m.cat === mcqSubFilter);
+  }
+  const total = activeList.length;
+
+  if (sbCorrect) sbCorrect.innerText = quizCorrectCount;
+  if (sbWrong) sbWrong.innerText = quizWrongCount;
+  if (sbAttempted) sbAttempted.innerText = `${quizAttemptedCount}/${total}`;
+
+  const pct = total > 0 ? Math.round((quizCorrectCount / total) * 100) : 0;
+  if (sbScore) sbScore.innerText = `${pct}% (${quizCorrectCount} ગુણ)`;
+  if (sbFill) sbFill.style.width = `${Math.min(100, Math.round((quizAttemptedCount / total) * 100))}%`;
+
+  if (sbGrade) {
+    let grade = 'પરીક્ષા ચાલુ છે...';
+    let color = 'var(--accent)';
+    if (quizAttemptedCount >= 5) {
+      if (pct >= 90) { grade = '🌟 A1 (ઉત્કૃષ્ટ)'; color = 'var(--emerald)'; }
+      else if (pct >= 80) { grade = '✨ A2 (ખૂબ સરસ)'; color = 'var(--emerald)'; }
+      else if (pct >= 70) { grade = '👍 B1 (સારી તૈયારી)'; color = 'var(--accent)'; }
+      else if (pct >= 60) { grade = '⚡ B2 (મધ્યમ)'; color = 'var(--amber)'; }
+      else { grade = '⚠️ C (વધુ રિવિઝન જરૂરી)'; color = 'var(--rose)'; }
+    }
+    sbGrade.innerText = grade;
+    sbGrade.style.color = color;
+    sbGrade.style.borderColor = color;
+  }
+}
+
+// Render Interactive MCQ Practice Test & Score Calculator View
+function renderMCQQuizView() {
+  let list = MCQ_BANK;
+  if (mcqSubFilter !== 'all') {
+    list = list.filter(m => m.cat === mcqSubFilter);
+  }
+
+  if (searchQuery.trim() !== '') {
+    const q = searchQuery.toLowerCase().trim();
+    list = list.filter(m => 
+      m.q.toLowerCase().includes(q) ||
+      m.options.some(opt => opt.toLowerCase().includes(q))
+    );
+  }
+
+  const total = list.length;
+  const pct = total > 0 ? Math.round((quizCorrectCount / total) * 100) : 0;
+
+  chaptersGrid.innerHTML = `
+    <!-- Top Sticky Live Scoreboard Calculator -->
+    <div class="mcq-scoreboard">
+      <div class="mcq-score-title">
+        <span>📊 લાઇવ સ્કોર ગણતરી (Score Calculator)</span>
+        <button class="btn-reset-quiz" onclick="resetQuizScore()">🔄 રીસેટ સ્કોર</button>
+      </div>
+
+      <div class="score-metrics">
+        <div class="metric-card">
+          <div class="metric-val" id="sb-correct" style="color: var(--emerald);">${quizCorrectCount}</div>
+          <div class="metric-label">સાચા (+૧)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" id="sb-wrong" style="color: var(--rose);">${quizWrongCount}</div>
+          <div class="metric-label">ખોટા (૦)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" id="sb-attempted" style="color: var(--accent);">${quizAttemptedCount}/${total}</div>
+          <div class="metric-label">કુલ પ્રયાસ</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" id="sb-score" style="color: var(--amber); font-size: 13px; line-height: 1.6;">${pct}%</div>
+          <div class="metric-label">ટકાવારી</div>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+        <span style="font-size: 11px; color: var(--text-muted);">બોર્ડ પર્ફોર્મન્સ પરિણામ:</span>
+        <span class="grade-badge" id="sb-grade">ગણતરી ચાલુ...</span>
+      </div>
+
+      <div class="mcq-progress-bar">
+        <div class="mcq-progress-fill" id="sb-fill" style="width: ${Math.min(100, Math.round((quizAttemptedCount / total) * 100))}%;"></div>
+      </div>
+    </div>
+
+    <!-- MCQ Filter Tabs -->
+    <div class="sub-filter-row" style="margin-bottom: 16px;">
+      <button class="sub-pill ${mcqSubFilter === 'all' ? 'active' : ''}" onclick="setMCQSubFilter('all')">બધા ૪૦ મોસ્ટ IMP</button>
+      <button class="sub-pill ${mcqSubFilter === 'vyakaran' ? 'active' : ''}" onclick="setMCQSubFilter('vyakaran')">વ્યાકરણ MCQ (૨૦)</button>
+      <button class="sub-pill ${mcqSubFilter === 'padya' ? 'active' : ''}" onclick="setMCQSubFilter('padya')">પદ્ય કાવ્યો MCQ (૧૦)</button>
+      <button class="sub-pill ${mcqSubFilter === 'gadya' ? 'active' : ''}" onclick="setMCQSubFilter('gadya')">ગદ્ય પાઠ MCQ (૧૦)</button>
+    </div>
+
+    <!-- Question Cards List -->
+    <div style="display: flex; flex-direction: column;">
+      ${list.length === 0 ? `
+        <div class="empty-state">કોઈ પ્રશ્ન મળ્યો નથી.</div>
+      ` : list.map((item, idx) => {
+        const userAnswer = quizAnswers[item.id];
+        const isAnswered = userAnswer !== undefined;
+
+        return `
+          <div class="mcq-card ${isAnswered ? 'answered' : ''}" id="card-${item.id}">
+            <div class="mcq-header">
+              <div class="mcq-num">${idx + 1}</div>
+              <div class="mcq-q-text">${item.q}</div>
+            </div>
+
+            <div class="mcq-options">
+              ${item.options.map((opt, optIdx) => {
+                let btnClass = 'mcq-opt';
+                let extraTag = '';
+
+                if (isAnswered) {
+                  if (optIdx === item.correct) {
+                    btnClass += ' correct';
+                    extraTag = '<span>✅ સાચો જવાબ</span>';
+                  } else if (optIdx === userAnswer) {
+                    btnClass += ' wrong';
+                    extraTag = '<span>❌ ખોટો જવાબ</span>';
+                  }
+                }
+
+                return `
+                  <button class="${btnClass}" ${isAnswered ? 'disabled' : ''} onclick="handleMCQAnswer('${item.id}', ${optIdx})">
+                    <span>${String.fromCharCode(65 + optIdx)}. ${opt}</span>
+                    ${extraTag}
+                  </button>
+                `;
+              }).join('')}
+            </div>
+
+            <div class="mcq-explanation ${isAnswered ? 'show' : ''}">
+              <strong style="color: var(--accent);">💡 સમજૂતી / કારણ:</strong> ${item.exp}
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+
+  updateScoreboardUI();
+}
+
+// Render Main Dashboard Views
+function renderHome() {
+  const subFilterContainer = document.getElementById('sub-filter-container');
+
+  // Handle MCQ Calculator Tab
+  if (currentCat === 'mcq') {
+    if (subFilterContainer) subFilterContainer.style.display = 'none';
+    renderMCQQuizView();
+    return;
+  }
+
+  // Handle Literature Matrix Tab
+  if (currentCat === 'matrix') {
+    if (subFilterContainer) subFilterContainer.style.display = 'none';
+    renderLiteratureMatrix();
+    return;
+  }
+
+  // Handle Chapters Tab (Default: 1 to 24 strictly sorted!)
+  if (currentCat === 'chapters') {
+    if (subFilterContainer) {
+      subFilterContainer.style.display = 'flex';
+      subFilterContainer.innerHTML = `
+        <button class="sub-pill ${subFilter === 'all' ? 'active' : ''}" data-val="all" onclick="setSubFilter('all')">બધા ૧ થી ૨૪ પ્રકરણો</button>
+        <button class="sub-pill ${subFilter === 'padya' ? 'active' : ''}" data-val="padya" onclick="setSubFilter('padya')">પદ્ય (કાવ્યો)</button>
+        <button class="sub-pill ${subFilter === 'gadya' ? 'active' : ''}" data-val="gadya" onclick="setSubFilter('gadya')">ગદ્ય (પાઠ)</button>
+      `;
+    }
+
+    // Sort chapters strictly by number 1 to 24
+    let chapters = CHAPTERS_DATA.slice().sort((a, b) => a.num - b.num);
+
+    // Apply sub-filter
+    if (subFilter !== 'all') {
+      chapters = chapters.filter(c => c.cat === subFilter);
+    }
+
+    // Apply search query
+    if (searchQuery.trim() !== '') {
+      const q = searchQuery.toLowerCase().trim();
+      chapters = chapters.filter(c =>
+        c.title.toLowerCase().includes(q) ||
+        c.author.toLowerCase().includes(q) ||
+        c.genre.toLowerCase().includes(q) ||
+        c.summary.toLowerCase().includes(q)
+      );
+    }
+
+    if (chapters.length === 0) {
+      chaptersGrid.innerHTML = `
+        <div class="empty-state">
+          <div style="font-size: 32px; margin-bottom: 8px;">🔍</div>
+          <div>કોઈ પ્રકરણ મળ્યું નથી.</div>
+        </div>
+      `;
+      return;
+    }
+
+    chaptersGrid.innerHTML = chapters.map(item => {
+      let isPadya = item.cat === 'padya';
+      let typeLabel = isPadya ? 'પદ્ય કાવ્ય' : 'ગદ્ય પાઠ';
+      let typeColor = isPadya ? 'var(--purple)' : 'var(--emerald)';
+
+      return `
+        <div class="chapter-card" onclick="openItemDetail('${item.id}')">
+          <div class="ch-badge ${item.cat}">
+            <span style="font-size: 15px;">${item.num}</span>
+            <span class="sub-type">${isPadya ? 'પદ્ય' : 'ગદ્ય'}</span>
+          </div>
+          <div class="ch-info">
+            <div class="ch-title" style="font-size: 15px;">
+              પ્રકરણ ${item.num}. ${item.title}
+            </div>
+            <div class="ch-meta">
+              <span class="tag-pill" style="color: ${typeColor};">${typeLabel}</span>
+              <span>•</span>
+              <span class="tag-pill">${item.genre}</span>
+              <span>•</span>
+              <span style="color: #fff; font-weight: 600;">${item.author}</span>
+            </div>
+            <div style="margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap;">
+              <span style="font-size: 9.5px; background: rgba(56,189,248,0.1); color: var(--accent); padding: 1px 6px; border-radius: 4px; font-weight: 700;">🎯 ૬ રિવિઝન મુદ્દા</span>
+              <span style="font-size: 9.5px; background: rgba(16,185,129,0.1); color: var(--emerald); padding: 1px 6px; border-radius: 4px; font-weight: 700;">📝 MCQ & બોર્ડ IMP</span>
+            </div>
+          </div>
+          <div style="color: var(--accent); font-size: 18px; opacity: 0.8;">➔</div>
+        </div>
+      `;
+    }).join('');
+    return;
+  }
+
+  // Handle Grammar or Writing Sections
+  if (subFilterContainer) subFilterContainer.style.display = 'none';
+
+  let items = currentCat === 'vyakaran' ? GRAMMAR_VAULT : LEKHAN_VAULT;
+
+  if (searchQuery.trim() !== '') {
+    const q = searchQuery.toLowerCase().trim();
+    items = items.filter(item => 
+      item.title.toLowerCase().includes(q) ||
+      item.author.toLowerCase().includes(q) ||
+      item.genre.toLowerCase().includes(q) ||
+      item.summary.toLowerCase().includes(q)
+    );
+  }
+
+  if (items.length === 0) {
+    chaptersGrid.innerHTML = `
+      <div class="empty-state">
+        <div style="font-size: 32px; margin-bottom: 8px;">🔍</div>
+        <div>કોઈ વિગત મળી નથી.</div>
+      </div>
+    `;
+    return;
+  }
+
+  chaptersGrid.innerHTML = items.map(item => {
+    let typeClass = item.cat;
+    let typeLabel = item.cat === 'vyakaran' ? 'વ્યાકરણ' : 'લેખન';
+
+    return `
+      <div class="chapter-card" onclick="openItemDetail('${item.id}')">
+        <div class="ch-badge ${typeClass}">
+          <span>${item.num}</span>
+          <span class="sub-type">${typeLabel}</span>
+        </div>
+        <div class="ch-info">
+          <div class="ch-title">${item.title}</div>
+          <div class="ch-meta">
+            <span class="tag-pill">${item.genre}</span>
+            <span>•</span>
+            <span>${item.author}</span>
+          </div>
+        </div>
+        <div style="color: var(--accent); font-size: 16px; opacity: 0.7;">➔</div>
+      </div>
+    `;
+  }).join('');
+}
+
+// Render Literature Matching Matrix View (કૃતિ - કર્તા - સાહિત્ય પ્રકાર)
+function renderLiteratureMatrix() {
+  chaptersGrid.innerHTML = `
+    <div class="info-card">
+      <div class="info-card-header">
+        <span>📋 બોર્ડ જોડકાં માસ્ટર કોષ્ટક (૧૦ ગુણ)</span>
+      </div>
+      <div class="info-card-p" style="font-size: 12px; margin-bottom: 8px; color: var(--text-muted);">
+        વિભાગ A (ગદ્ય) અને વિભાગ B (પદ્ય) માં કૃતિ, કર્તા અને સાહિત્ય પ્રકારના જોડકાં સીધા પૂછાય છે:
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 36px; text-align: center;">ક્રમ</th>
+              <th>કૃતિનું નામ</th>
+              <th>સાહિત્ય પ્રકાર</th>
+              <th>કવિ / લેખક</th>
+              <th>સંદર્ભ સંગ્રહ</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${LITERATURE_MATRIX.map(m => `
+              <tr>
+                <td style="text-align: center; font-weight: bold; color: var(--accent);">${m.num}</td>
+                <td style="font-weight: 800; color: #fff;">${m.title}</td>
+                <td style="color: var(--purple); font-weight: 600;">${m.genre}</td>
+                <td style="color: var(--emerald); font-weight: 600;">${m.author}</td>
+                <td style="font-style: italic; color: var(--text-muted);">${m.src}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+// Open Item Detail View
+function openItemDetail(id) {
+  activeItem = ALL_ITEMS.find(i => i.id === id);
+  if (!activeItem) return;
+
+  // Update Nav
+  navHomeTitle.style.display = 'none';
+  navDetailBar.style.display = 'flex';
+  detailHeaderTitle.innerText = activeItem.title;
+
+  let catLabel = activeItem.cat === 'padya' ? 'પદ્ય કાવ્ય' : activeItem.cat === 'gadya' ? 'ગદ્ય પાઠ' : activeItem.cat === 'vyakaran' ? 'વ્યાકરણ મુદ્દો' : 'લેખન સજ્જતા';
+
+  // Render detail contents
+  detailContainer.innerHTML = `
+    <!-- Detail Hero Card -->
+    <div class="detail-hero">
+      <div class="detail-tag-row">
+        <span class="brand-badge">${catLabel}</span>
+        <span class="tag-pill">${activeItem.genre}</span>
+        ${activeItem.source ? `<span class="tag-pill" style="color: var(--amber); border-color: var(--amber);">${activeItem.source}</span>` : ''}
+      </div>
+
+      <div class="detail-title">${activeItem.title}</div>
+
+      <div class="author-box">
+        <div class="author-item">
+          <span class="author-item-label">કર્તા / કવિ / લેખક:</span>
+          <span class="author-item-val">${activeItem.author}</span>
+        </div>
+        <div class="author-item">
+          <span class="author-item-label">સાહિત્ય પ્રકાર:</span>
+          <span class="author-item-val">${activeItem.genre}</span>
+        </div>
+      </div>
+
+      <button class="btn-audio" onclick="playAudioNarration()">
+        🔊 ઓડિયો સાંભળો (Audio Read-Aloud)
+      </button>
+    </div>
+
+    <!-- Inside Navigation Segments (5 to 6 Big Sections) -->
+    <div class="seg-tabs">
+      <button class="seg-tab active" onclick="switchSegment('sec-intro', this)">૧. પરિચય</button>
+      <button class="seg-tab" onclick="switchSegment('sec-summary', this)">૨. કથાસાર</button>
+      ${activeItem.characterSketch ? `<button class="seg-tab" onclick="switchSegment('sec-character', this)">૩. પાત્રાલેખન</button>` : ''}
+      <button class="seg-tab" onclick="switchSegment('sec-words', this)">${activeItem.characterSketch ? '૪' : '૩'}. શબ્દાર્થ</button>
+      <button class="seg-tab" onclick="switchSegment('sec-imp', this)">${activeItem.characterSketch ? '૫' : '૪'}. IMP પ્રશ્નો</button>
+      <button class="seg-tab" onclick="switchSegment('sec-mcq', this)">${activeItem.characterSketch ? '૬' : '૫'}. 🎯 MCQ ટેસ્ટ</button>
+      ${activeItem.grammarNotes && activeItem.grammarNotes.length > 0 ? `<button class="seg-tab" onclick="switchSegment('sec-grammar-special', this)">${activeItem.characterSketch ? '૭' : '૬'}. વ્યાકરણ</button>` : ''}
+    </div>
+
+    <!-- Segment 1: પરિચય & સરળ ટ્રીક -->
+    <div id="sec-intro" class="content-box active">
+      ${activeItem.childTrick ? `
+        <div class="trick-box">
+          <div class="trick-title">⚡ સરળ સમજૂતી શોર્ટકટ (Child-Friendly Formula)</div>
+          <div class="trick-desc" style="white-space: pre-line;">${activeItem.childTrick}</div>
+        </div>
+      ` : ''}
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <span>✍️ કર્તા અને કૃતિ પરિચય</span>
+        </div>
+        <p class="info-card-p" style="white-space: pre-line;">${activeItem.intro || activeItem.summary}</p>
+      </div>
+
+      ${activeItem.analysis ? `
+        <div class="info-card">
+          <div class="info-card-header" style="color: var(--purple);">
+            <span>🔍 વિચારબિંદુ અને વિશ્લેષણ</span>
+          </div>
+          <p class="info-card-p" style="white-space: pre-line;">${activeItem.analysis}</p>
+        </div>
+      ` : ''}
+    </div>
+
+    <!-- Segment 2: કથાસાર & કાવ્યાર્થ -->
+    <div id="sec-summary" class="content-box">
+      <div class="info-card">
+        <div class="info-card-header">
+          <span>📖 સંપૂર્ણ કથાસાર / ભાવાર્થ (Core Narrative)</span>
+        </div>
+        <p class="info-card-p" style="font-size: 13.5px; line-height: 1.85;">${activeItem.summary}</p>
+      </div>
+    </div>
+
+    <!-- Segment 3: મુખ્ય પાત્રાલેખન (જો ઉપલબ્ધ હોય) -->
+    ${activeItem.characterSketch ? `
+      <div id="sec-character" class="content-box">
+        <div class="info-card">
+          <div class="info-card-header" style="color: var(--amber);">
+            <span>👤 મુખ્ય પાત્રાલેખન (Character Sketches)</span>
+          </div>
+          <p class="info-card-p" style="white-space: pre-line;">${activeItem.characterSketch}</p>
+        </div>
+      </div>
+    ` : ''}
+
+    <!-- Segment 4: શબ્દાર્થ, વિરોધી & રૂઢિપ્રયોગો -->
+    <div id="sec-words" class="content-box">
+      <div class="info-card">
+        <div class="info-card-header">
+          <span>📚 મહત્વના શબ્દાર્થ, વિરોધી અને ઉદાહરણો</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          ${activeItem.words && activeItem.words.length > 0 ? activeItem.words.map(w => `
+            <div style="background: rgba(0,0,0,0.25); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+              <span style="font-weight: 800; color: #fff; font-size: 13px;">${w.w}</span>
+              <span style="color: var(--accent); font-size: 12px; font-weight: 600; text-align: right;">➔ ${w.m}</span>
+            </div>
+          `).join('') : '<div style="color: var(--text-muted); font-size: 12px;">આ મુદ્દા માટે સામાન્ય શબ્દો છે.</div>'}
+        </div>
+      </div>
+    </div>
+
+    <!-- Segment 5: બોર્ડ પરીક્ષા લક્ષી મોસ્ટ IMP પ્રશ્નોત્તરી -->
+    <div id="sec-imp" class="content-box">
+      <div class="info-card">
+        <div class="info-card-header" style="color: var(--emerald);">
+          <span>🎯 બોર્ડ પરીક્ષા મોસ્ટ IMP પ્રશ્નોત્તરી (૧, ૨ & ૪ ગુણ)</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          ${activeItem.impQuestions && activeItem.impQuestions.length > 0 ? activeItem.impQuestions.map((q, idx) => `
+            <div class="qa-item">
+              <div class="qa-header" onclick="toggleQA(this)">
+                <span><strong>પ્રશ્ન ${idx + 1}:</strong> ${q.q}</span>
+                <span style="font-size: 14px;">▼</span>
+              </div>
+              <div class="qa-body">
+                <strong style="color: var(--emerald); display: block; margin-bottom: 2px;">ઉત્તર:</strong>
+                ${q.a}
+              </div>
+            </div>
+          `).join('') : '<div style="color: var(--text-muted); font-size: 12px;">પ્રશ્નોત્તરી ઉપલબ્ધ નથી.</div>'}
+        </div>
+      </div>
+    </div>
+
+    <!-- Segment 6: પ્રકરણ આધારિત MCQ સેલ્ફ-ટેસ્ટ & ગણતરી -->
+    <div id="sec-mcq" class="content-box">
+      <div class="info-card">
+        <div class="info-card-header" style="color: var(--accent);">
+          <span>🎯 આ પ્રકરણનો MCQ સેલ્ફ-ટેસ્ટ & ગણતરી</span>
+        </div>
+        <p class="info-card-p" style="font-size: 12px; margin-bottom: 12px; color: var(--text-muted);">
+          સાચો વિકલ્પ પસંદ કરો અને તમારું જ્ઞાન ચકાસો (ઇન્સ્ટન્ટ ફીડબેક):
+        </p>
+        <div style="display: flex; flex-direction: column;">
+          ${(function() {
+            let rel = MCQ_BANK.filter(m => m.chNum === activeItem.num);
+            if (rel.length === 0) rel = MCQ_BANK.filter(m => m.cat === activeItem.cat).slice(0, 3);
+            if (rel.length === 0) rel = MCQ_BANK.slice(0, 3);
+            return rel.map((item, idx) => {
+              const userAnswer = quizAnswers[item.id];
+              const isAnswered = userAnswer !== undefined;
+              return `
+                <div class="mcq-card ${isAnswered ? 'answered' : ''}" id="card-${item.id}">
+                  <div class="mcq-header">
+                    <div class="mcq-num">${idx + 1}</div>
+                    <div class="mcq-q-text">${item.q}</div>
+                  </div>
+                  <div class="mcq-options">
+                    ${item.options.map((opt, optIdx) => {
+                      let btnClass = 'mcq-opt';
+                      let extraTag = '';
+                      if (isAnswered) {
+                        if (optIdx === item.correct) {
+                          btnClass += ' correct';
+                          extraTag = '<span>✅ સાચો</span>';
+                        } else if (optIdx === userAnswer) {
+                          btnClass += ' wrong';
+                          extraTag = '<span>❌ ખોટો</span>';
+                        }
+                      }
+                      return `
+                        <button class="${btnClass}" ${isAnswered ? 'disabled' : ''} onclick="handleMCQAnswer('${item.id}', ${optIdx})">
+                          <span>${String.fromCharCode(65 + optIdx)}. ${opt}</span>
+                          ${extraTag}
+                        </button>
+                      `;
+                    }).join('')}
+                  </div>
+                  <div class="mcq-explanation ${isAnswered ? 'show' : ''}">
+                    <strong style="color: var(--accent);">💡 સમજૂતી:</strong> ${item.exp}
+                  </div>
+                </div>
+              `;
+            }).join('');
+          })()}
+        </div>
+      </div>
+    </div>
+
+    <!-- Segment 7: પાઠ આધારિત વ્યાકરણ વિશેષ -->
+    ${activeItem.grammarNotes && activeItem.grammarNotes.length > 0 ? `
+      <div id="sec-grammar-special" class="content-box">
+        <div class="info-card">
+          <div class="info-card-header" style="color: var(--amber);">
+            <span>⚡ આ પ્રકરણમાંથી બોર્ડમાં પૂછાતું વ્યાકરણ (Grammar Vault)</span>
+          </div>
+          <ul class="bullet-list">
+            ${activeItem.grammarNotes.map(n => `<li>${n}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+    ` : ''}
+  `;
+
+  // Toggle View Visibility
+  viewHome.classList.remove('active');
+  viewDetail.classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+// Switch Inner Segments
+function switchSegment(secId, btn) {
+  document.querySelectorAll('.seg-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.content-box').forEach(b => b.classList.remove('active'));
+
+  btn.classList.add('active');
+  const target = document.getElementById(secId);
+  if (target) target.classList.add('active');
+}
+
+// Toggle Q&A Accordion Item
+function toggleQA(headerEl) {
+  const bodyEl = headerEl.nextElementSibling;
+  const arrowEl = headerEl.querySelector('span:last-child');
+  if (bodyEl.style.display === 'none' || !bodyEl.style.display) {
+    bodyEl.style.display = 'block';
+    if (arrowEl) arrowEl.innerText = '▲';
+  } else {
+    bodyEl.style.display = 'none';
+    if (arrowEl) arrowEl.innerText = '▼';
+  }
+}
+
+// Native Text-to-Speech Audio Player (Gujarati Voice)
+function playAudioNarration() {
+  if (!activeItem) return;
+  if (!('speechSynthesis' in window)) {
+    alert('તમારા બ્રાઉઝરમાં સ્પીચ સિન્થેસિસ ઉપલબ્ધ નથી.');
+    return;
+  }
+
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+    return;
+  }
+
+  const narration = `${activeItem.title}. કર્તા: ${activeItem.author}. સાહિત્ય પ્રકાર: ${activeItem.genre}. સારાંશ: ${activeItem.summary}`;
+  const utterance = new SpeechSynthesisUtterance(narration);
+  utterance.lang = 'gu-IN';
+  utterance.rate = 0.92;
+  window.speechSynthesis.speak(utterance);
+}
+
+// Header Listen Button Handler
+btnListenHeader.onclick = () => {
+  playAudioNarration();
+};
+
+// Back to Home Handler
+btnBackHome.onclick = () => {
+  if (window.speechSynthesis && window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
+  navDetailBar.style.display = 'none';
+  navHomeTitle.style.display = 'flex';
+  viewDetail.classList.remove('active');
+  viewHome.classList.add('active');
+  activeItem = null;
+  window.scrollTo(0, 0);
+};
+
+// Category Filter Click Handler
+catTabsContainer.onclick = (e) => {
+  if (e.target.classList.contains('cat-tab')) {
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    e.target.classList.add('active');
+    currentCat = e.target.dataset.cat;
+    renderHome();
+  }
+};
+
+// Search Input Handler
+mainSearchInput.oninput = (e) => {
+  searchQuery = e.target.value;
+  renderHome();
+};
+
+// Initial Mount
+renderHome();
+</script>
+
+</body>
+</html>
