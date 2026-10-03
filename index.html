@@ -877,6 +877,312 @@
       color: var(--accent);
       border-color: var(--accent);
     }
+
+    /* ================== Custom User MCQ & Modal Styles ================== */
+    .btn-add-mcq-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.16), rgba(56, 189, 248, 0.16));
+      border: 1.5px dashed var(--emerald);
+      color: #34d399;
+      font-size: 13.5px;
+      font-weight: 800;
+      padding: 11px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-bottom: 14px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 10px rgba(16, 185, 129, 0.1);
+    }
+    .btn-add-mcq-primary:hover {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.28), rgba(56, 189, 248, 0.28));
+      border-color: #34d399;
+      transform: translateY(-1px);
+    }
+    .btn-add-mcq-inline {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--emerald);
+      color: #34d399;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    .btn-add-mcq-inline:hover {
+      background: rgba(16, 185, 129, 0.25);
+    }
+    .badge-custom-mcq {
+      font-size: 10px;
+      font-weight: 800;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      padding: 2px 7px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .btn-delete-mcq {
+      background: transparent;
+      border: none;
+      color: var(--rose);
+      font-size: 12px;
+      cursor: pointer;
+      padding: 3px 6px;
+      border-radius: 6px;
+      margin-left: auto;
+      opacity: 0.8;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .btn-delete-mcq:hover {
+      opacity: 1;
+      background: rgba(251, 113, 133, 0.15);
+    }
+
+    /* Modal Overlay & Form Card */
+    .mcq-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 8, 17, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .mcq-modal-overlay.active {
+      display: flex;
+      animation: fadeIn 0.2s ease-out;
+    }
+    .mcq-modal-card {
+      background: #141c33;
+      border: 1px solid var(--accent);
+      border-radius: 18px;
+      width: 100%;
+      max-width: 440px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 18px 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 189, 248, 0.2);
+    }
+    .mcq-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .mcq-modal-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-close-modal {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+    .btn-close-modal:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+    .mcq-form-group {
+      margin-bottom: 12px;
+    }
+    .mcq-form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 5px;
+    }
+    .mcq-input, .mcq-select, .mcq-textarea {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: #fff;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-family: var(--font-gu);
+      outline: none;
+      transition: all 0.2s;
+    }
+    .mcq-input:focus, .mcq-select:focus, .mcq-textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent-glow);
+    }
+    .mcq-textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+    .mcq-opt-selector {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .mcq-correct-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 4px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .mcq-correct-btn.active {
+      background: rgba(16, 185, 129, 0.25);
+      border-color: var(--emerald);
+      color: #34d399;
+    }
+    .mcq-modal-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .btn-save-mcq {
+      flex: 1;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 13.5px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-save-mcq:hover {
+      filter: brightness(1.1);
+    }
+    .btn-cancel-modal {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .mcq-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(50px);
+      background: #1e294b;
+      border: 1px solid var(--emerald);
+      color: #34d399;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 999px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      z-index: 200;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    .mcq-toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Auto Quiz Generator Styles */
+    .btn-auto-generator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 12px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 16px rgba(2, 132, 199, 0.3);
+    }
+    .btn-auto-generator:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+    .mcq-mode-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 10px 8px;
+      border-radius: 10px;
+      font-size: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-align: left;
+      transition: all 0.2s;
+    }
+    .mcq-mode-btn.active {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .timer-badge {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid var(--rose);
+      color: var(--rose);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .result-card-box {
+      background: #141c33;
+      border: 1.5px solid var(--accent);
+      border-radius: 18px;
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
@@ -952,6 +1258,17 @@
       </div>
     </div>
 
+    <!-- Interactive Custom Quiz & Auto Generator Action Buttons -->
+    <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px; margin-bottom: 16px;">
+      <button type="button" class="btn-auto-generator" onclick="openAutoQuizModal()">
+        <span>⚡</span>
+        <span>ઓટો ક્વિઝ જનરેટર (Auto Quiz Maker)</span>
+      </button>
+      <button type="button" class="btn-add-mcq-primary" style="margin-bottom: 0;" onclick="openAddMCQModal()">
+        <span>✍️ જાતે નવો પ્રશ્ન ઉમેરો (Add Your Own MCQ)</span>
+      </button>
+    </div>
+
     <!-- Dynamic Cards Grid -->
     <div class="chapters-grid" id="chapters-grid">
       <!-- Injected via JavaScript -->
@@ -965,6 +1282,144 @@
     </div>
   </div>
 </div>
+
+<!-- ================== AUTO QUIZ GENERATOR MODAL ================== -->
+<div id="auto-quiz-modal" class="mcq-modal-overlay">
+  <div class="mcq-modal-card">
+    <div class="mcq-modal-header">
+      <div class="mcq-modal-title">
+        <span>⚡ ઓટો ક્વિઝ જનરેટર (Auto Quiz Maker)</span>
+      </div>
+      <button type="button" class="btn-close-modal" onclick="closeAutoQuizModal()">✕</button>
+    </div>
+
+    <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5;">
+      તમારે ફક્ત પ્રકરણ/વિષય અને પ્રશ્નોની સંખ્યા પસંદ કરવાની છે — સિસ્ટમ આપમેળે બોર્ડ મોડેલના પ્રશ્નો બનાવીને ટેસ્ટ શરૂ કરી દેશે!
+    </div>
+
+    <!-- Step 1: Scope Selection -->
+    <div class="mcq-form-group">
+      <label class="mcq-form-label">૧. કયા વિભાગ / પ્રકરણમાંથી ટેસ્ટ જોઈએ છે?</label>
+      <select id="auto-quiz-scope" class="mcq-select" onchange="onAutoScopeChange()">
+        <option value="all-syllabus">🎯 આખો સિલેબસ (સર્વગ્રાહી મિક્સ મોક ટેસ્ટ - All Mix)</option>
+        <option value="all-vyakaran">📖 સંપૂર્ણ વ્યાકરણ વિભાગ (All 15 Grammar Topics)</option>
+        <option value="all-padya">🎵 પદ્ય કાવ્યો (All 12 Poems)</option>
+        <option value="all-gadya">📚 ગદ્ય પાઠ (All 12 Prose Lessons)</option>
+        <option value="specific-chapter">🔍 કોઈ એક ચોક્કસ પ્રકરણ (Specific Chapter 1-24)</option>
+        <option value="specific-grammar">⚡ કોઈ એક ચોક્કસ વ્યાકરણ મુદ્દો (Specific Grammar Topic)</option>
+      </select>
+    </div>
+
+    <!-- Specific Target Sub-Dropdown -->
+    <div class="mcq-form-group" id="auto-specific-group" style="display: none;">
+      <label class="mcq-form-label" id="auto-specific-label">ટોપિક / પ્રકરણ પસંદ કરો:</label>
+      <select id="auto-quiz-target" class="mcq-select">
+        <!-- Dynamically filled -->
+      </select>
+    </div>
+
+    <!-- Step 2: Question Count Selector -->
+    <div class="mcq-form-group">
+      <label class="mcq-form-label">૨. પ્રશ્નોની સંખ્યા (Number of Questions):</label>
+      <div class="mcq-opt-selector" id="auto-count-selector" style="grid-template-columns: repeat(5, 1fr);">
+        <button type="button" class="mcq-correct-btn" data-cnt="5" onclick="selectAutoCount(5)">૫</button>
+        <button type="button" class="mcq-correct-btn active" data-cnt="10" onclick="selectAutoCount(10)">૧૦</button>
+        <button type="button" class="mcq-correct-btn" data-cnt="15" onclick="selectAutoCount(15)">૧૫</button>
+        <button type="button" class="mcq-correct-btn" data-cnt="20" onclick="selectAutoCount(20)">૨૦</button>
+        <button type="button" class="mcq-correct-btn" data-cnt="all" onclick="selectAutoCount('all')">બધા</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Test Mode -->
+    <div class="mcq-form-group">
+      <label class="mcq-form-label">૩. ટેસ્ટ પ્રકાર (Test Mode):</label>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+        <button type="button" class="mcq-mode-btn active" id="btn-mode-practice" onclick="selectTestMode('practice')">
+          <span style="font-size: 16px;">🎯</span>
+          <span><strong>પ્રેક્ટિસ મોડ</strong><br><small style="opacity: 0.8; font-size: 10px;">ઇન્સ્ટન્ટ સમજૂતી</small></span>
+        </button>
+        <button type="button" class="mcq-mode-btn" id="btn-mode-timed" onclick="selectTestMode('timed')">
+          <span style="font-size: 16px;">⏱️</span>
+          <span><strong>ટાઈમર એક્ઝામ</strong><br><small style="opacity: 0.8; font-size: 10px;">૧૫ સે./પ્રશ્ન</small></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mcq-modal-actions" style="margin-top: 18px;">
+      <button type="button" class="btn-cancel-modal" onclick="closeAutoQuizModal()">રદ કરો</button>
+      <button type="button" class="btn-save-mcq" style="background: linear-gradient(135deg, #0284c7, #2563eb);" onclick="startGeneratedQuiz()">
+        🚀 ક્વિઝ જનરેટ કરો & શરૂ કરો
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ================== ADD CUSTOM MCQ MODAL ================== -->
+<div id="add-mcq-modal" class="mcq-modal-overlay">
+  <div class="mcq-modal-card">
+    <div class="mcq-modal-header">
+      <div class="mcq-modal-title">
+        <span>✍️ નવો MCQ પ્રશ્ન ઉમેરો</span>
+      </div>
+      <button type="button" class="btn-close-modal" onclick="closeAddMCQModal()">✕</button>
+    </div>
+
+    <div class="mcq-form-group">
+      <label class="mcq-form-label">૧. પ્રશ્ન (Question):</label>
+      <textarea id="modal-q-text" class="mcq-textarea" placeholder="દા.ત. 'સિંહાસન' શબ્દનો સમાસ કયો છે? અથવા કાવ્ય/પાઠ આધારિત પ્રશ્ન..."></textarea>
+    </div>
+
+    <div class="mcq-form-group">
+      <label class="mcq-form-label">૨. વિભાગ / કેટેગરી (Category):</label>
+      <select id="modal-q-cat" class="mcq-select" onchange="onModalCatChange()">
+        <option value="vyakaran">વ્યાકરણ (વિભાગ C - Grammar)</option>
+        <option value="padya">પદ્ય કાવ્યો (Poems)</option>
+        <option value="gadya">ગદ્ય પાઠ (Prose)</option>
+        <option value="general">સામાન્ય / અન્ય (General)</option>
+      </select>
+    </div>
+
+    <div class="mcq-form-group" id="modal-ch-group">
+      <label class="mcq-form-label">૩. સંબંધિત ટોપિક અથવા પ્રકરણ:</label>
+      <select id="modal-q-topic" class="mcq-select">
+        <!-- Dynamically populated via JavaScript -->
+      </select>
+    </div>
+
+    <div class="mcq-form-group">
+      <label class="mcq-form-label">૪. ચાર વિકલ્પો (Options A, B, C, D):</label>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <input type="text" id="modal-opt-0" class="mcq-input" placeholder="A. પહેલો વિકલ્પ">
+        <input type="text" id="modal-opt-1" class="mcq-input" placeholder="B. બીજો વિકલ્પ">
+        <input type="text" id="modal-opt-2" class="mcq-input" placeholder="C. ત્રીજો વિકલ્પ">
+        <input type="text" id="modal-opt-3" class="mcq-input" placeholder="D. ચોથો વિકલ્પ">
+      </div>
+    </div>
+
+    <div class="mcq-form-group">
+      <label class="mcq-form-label">૫. સાચો જવાબ કયો છે? (Correct Answer):</label>
+      <div class="mcq-opt-selector" id="modal-opt-selector">
+        <button type="button" class="mcq-correct-btn active" data-idx="0" onclick="selectCorrectOpt(0)">A</button>
+        <button type="button" class="mcq-correct-btn" data-idx="1" onclick="selectCorrectOpt(1)">B</button>
+        <button type="button" class="mcq-correct-btn" data-idx="2" onclick="selectCorrectOpt(2)">C</button>
+        <button type="button" class="mcq-correct-btn" data-idx="3" onclick="selectCorrectOpt(3)">D</button>
+      </div>
+    </div>
+
+    <div class="mcq-form-group">
+      <label class="mcq-form-label">૬. 💡 સમજૂતી / હિન્ટ (Explanation - Optional):</label>
+      <textarea id="modal-q-exp" class="mcq-textarea" style="min-height: 48px;" placeholder="જવાબ શા માટે સાચો છે તેની ટૂંકી સમજૂતી (દા.ત. નિયમ અથવા સંદર્ભ)..."></textarea>
+    </div>
+
+    <div class="mcq-modal-actions">
+      <button type="button" class="btn-cancel-modal" onclick="closeAddMCQModal()">રદ કરો</button>
+      <button type="button" class="btn-save-mcq" onclick="saveNewCustomMCQ()">✅ પ્રશ્ન ઉમેરો & સેવ કરો</button>
+    </div>
+  </div>
+</div>
+
+<!-- Global Toast Notification -->
+<div id="mcq-toast" class="mcq-toast"></div>
 
 <script>
 /**
@@ -2248,7 +2703,7 @@ const LITERATURE_MATRIX = [
 /**
  * 4. સંપૂર્ણ MCQ પ્રશ્નબેંક અને ગણતરી એન્જિન (MCQ Bank & Live Score Engine)
  */
-const MCQ_BANK = [
+const BASE_MCQ_BANK = [
   // ----------- સાહિત્ય / પ્રકરણો આધારિત MCQs -----------
   {
     id: "mcq-01",
@@ -2814,21 +3269,717 @@ const MCQ_BANK = [
   }
 ];
 
+// ================== User Custom MCQs Persistence & State ==================
+function loadCustomMCQs() {
+  try {
+    const raw = localStorage.getItem('user_custom_quizzes') || localStorage.getItem('gseb10_custom_mcqs');
+    return raw ? JSON.parse(raw) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveCustomMCQs(arr) {
+  try {
+    localStorage.setItem('user_custom_quizzes', JSON.stringify(arr));
+    localStorage.setItem('gseb10_custom_mcqs', JSON.stringify(arr));
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+let customMCQs = loadCustomMCQs();
+let MCQ_BANK = [...customMCQs, ...BASE_MCQ_BANK];
+
 // Combine all for easy filtering & lookup
 const ALL_ITEMS = [...CHAPTERS_DATA, ...GRAMMAR_VAULT, ...LEKHAN_VAULT];
 
 // App State
 let currentCat = 'chapters'; // Default tab is strictly chapters 1 to 24!
 let subFilter = 'all'; // 'all', 'padya', 'gadya'
-let mcqSubFilter = 'all'; // 'all', 'vyakaran', 'padya', 'gadya'
+let mcqSubFilter = 'all'; // 'all', 'custom', 'vyakaran', 'padya', 'gadya'
 let searchQuery = '';
 let activeItem = null;
+let selectedCorrectOptIdx = 0;
 
 // Quiz State & Live Score Calculator
 let quizAnswers = {}; // { questionId: selectedIndex }
 let quizCorrectCount = 0;
 let quizWrongCount = 0;
 let quizAttemptedCount = 0;
+
+// Global Toast Notification
+function showToast(msg) {
+  const toast = document.getElementById('mcq-toast');
+  if (!toast) return;
+  toast.innerText = msg;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2500);
+}
+
+// Modal Topic Dropdown Population
+function populateModalTopicDropdown(contextItemId = null) {
+  const catSelect = document.getElementById('modal-q-cat');
+  const topicSelect = document.getElementById('modal-q-topic');
+  if (!catSelect || !topicSelect) return;
+
+  const curCat = catSelect.value;
+  topicSelect.innerHTML = '';
+
+  if (curCat === 'vyakaran') {
+    GRAMMAR_VAULT.forEach(g => {
+      const opt = document.createElement('option');
+      opt.value = g.id;
+      opt.textContent = `${g.num} - ${g.title}`;
+      if (contextItemId && contextItemId === g.id) opt.selected = true;
+      topicSelect.appendChild(opt);
+    });
+  } else if (curCat === 'padya' || curCat === 'gadya') {
+    const chapters = CHAPTERS_DATA.filter(ch => ch.cat === curCat);
+    chapters.forEach(ch => {
+      const opt = document.createElement('option');
+      opt.value = ch.id;
+      opt.textContent = `Ch ${ch.num}: ${ch.title} (${ch.genre})`;
+      if (contextItemId && contextItemId === ch.id) opt.selected = true;
+      topicSelect.appendChild(opt);
+    });
+  } else {
+    const opt = document.createElement('option');
+    opt.value = 'general';
+    opt.textContent = 'સામાન્ય / સર્વગ્રાહી પ્રશ્ન (General)';
+    topicSelect.appendChild(opt);
+  }
+}
+
+function onModalCatChange() {
+  populateModalTopicDropdown(null);
+}
+
+function selectCorrectOpt(idx) {
+  selectedCorrectOptIdx = idx;
+  document.querySelectorAll('#modal-opt-selector .mcq-correct-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  const target = document.querySelector(`#modal-opt-selector .mcq-correct-btn[data-idx="${idx}"]`);
+  if (target) target.classList.add('active');
+}
+
+function openAddMCQModal(contextItemId = null) {
+  const modal = document.getElementById('add-mcq-modal');
+  if (!modal) return;
+
+  document.getElementById('modal-q-text').value = '';
+  document.getElementById('modal-opt-0').value = '';
+  document.getElementById('modal-opt-1').value = '';
+  document.getElementById('modal-opt-2').value = '';
+  document.getElementById('modal-opt-3').value = '';
+  document.getElementById('modal-q-exp').value = '';
+  selectCorrectOpt(0);
+
+  const catSelect = document.getElementById('modal-q-cat');
+  if (contextItemId) {
+    const item = ALL_ITEMS.find(i => i.id === contextItemId);
+    if (item && catSelect) {
+      if (item.cat === 'vyakaran') {
+        catSelect.value = 'vyakaran';
+      } else if (item.cat === 'padya') {
+        catSelect.value = 'padya';
+      } else if (item.cat === 'gadya') {
+        catSelect.value = 'gadya';
+      }
+    }
+  }
+
+  populateModalTopicDropdown(contextItemId);
+  modal.classList.add('active');
+}
+
+function closeAddMCQModal() {
+  const modal = document.getElementById('add-mcq-modal');
+  if (modal) modal.classList.remove('active');
+}
+
+function saveNewCustomMCQ() {
+  const qText = document.getElementById('modal-q-text').value.trim();
+  const catSelect = document.getElementById('modal-q-cat');
+  const catVal = catSelect ? catSelect.value : 'vyakaran';
+  const topicSelect = document.getElementById('modal-q-topic');
+  const topicVal = topicSelect ? topicSelect.value : '';
+
+  const opt0 = document.getElementById('modal-opt-0').value.trim();
+  const opt1 = document.getElementById('modal-opt-1').value.trim();
+  const opt2 = document.getElementById('modal-opt-2').value.trim();
+  const opt3 = document.getElementById('modal-opt-3').value.trim();
+  const expText = document.getElementById('modal-q-exp').value.trim();
+
+  if (!qText) {
+    alert('કૃપા કરીને પ્રશ્ન લખો!');
+    return;
+  }
+  if (!opt0 || !opt1 || !opt2 || !opt3) {
+    alert('કૃપા કરીને ચારેય વિકલ્પો (A, B, C, D) ભરો!');
+    return;
+  }
+
+  let chNum = 0;
+  if (topicVal) {
+    const matchedCh = CHAPTERS_DATA.find(c => c.id === topicVal);
+    if (matchedCh) chNum = matchedCh.num;
+  }
+
+  const newMCQ = {
+    id: 'custom-' + Date.now(),
+    chNum: chNum,
+    cat: catVal,
+    topicId: topicVal,
+    q: qText,
+    options: [opt0, opt1, opt2, opt3],
+    correct: selectedCorrectOptIdx,
+    exp: expText || 'તમારા દ્વારા ઉમેરેલ પ્રશ્નની સમજૂતી.',
+    isCustom: true,
+    createdAt: Date.now()
+  };
+
+  customMCQs.unshift(newMCQ);
+  saveCustomMCQs(customMCQs);
+  MCQ_BANK = [...customMCQs, ...BASE_MCQ_BANK];
+
+  closeAddMCQModal();
+  showToast('✨ નવો MCQ પ્રશ્ન સફળતાપૂર્વક ઉમેરાઈ ગયો!');
+
+  if (viewDetail && viewDetail.classList.contains('active') && activeItem) {
+    openItemDetail(activeItem.id);
+    setTimeout(() => {
+      const mcqTab = document.querySelector('.seg-tab[onclick*="mcq"]');
+      if (mcqTab) mcqTab.click();
+    }, 60);
+  } else {
+    renderHome();
+  }
+}
+
+function deleteCustomMCQ(mcqId, evt) {
+  if (evt) evt.stopPropagation();
+  if (!confirm('શું તમે ખરેખર આ ઉમેરેલો MCQ પ્રશ્ન ડિલીટ કરવા માંગો છો?')) return;
+
+  customMCQs = customMCQs.filter(m => m.id !== mcqId);
+  saveCustomMCQs(customMCQs);
+  MCQ_BANK = [...customMCQs, ...BASE_MCQ_BANK];
+
+  delete quizAnswers[mcqId];
+
+  showToast('🗑️ પ્રશ્ન ડિલીટ થઈ ગયો.');
+
+  if (viewDetail && viewDetail.classList.contains('active') && activeItem) {
+    openItemDetail(activeItem.id);
+    setTimeout(() => {
+      const mcqTab = document.querySelector('.seg-tab[onclick*="mcq"]');
+      if (mcqTab) mcqTab.click();
+    }, 60);
+  } else {
+    renderHome();
+  }
+}
+
+// ================== AUTO QUIZ GENERATOR ENGINE ==================
+let autoSelectedScope = 'all-syllabus';
+let autoSelectedCount = 10;
+let autoSelectedMode = 'practice'; // 'practice' or 'timed'
+let activeCustomQuiz = null;
+let customQuizTimer = null;
+let timerSeconds = 15;
+
+function openAutoQuizModal(preselectTopicId = null) {
+  const modal = document.getElementById('auto-quiz-modal');
+  if (!modal) return;
+
+  const scopeSelect = document.getElementById('auto-quiz-scope');
+  if (preselectTopicId) {
+    const item = ALL_ITEMS.find(i => i.id === preselectTopicId);
+    if (item && scopeSelect) {
+      if (item.cat === 'vyakaran') {
+        scopeSelect.value = 'specific-grammar';
+      } else {
+        scopeSelect.value = 'specific-chapter';
+      }
+      onAutoScopeChange(preselectTopicId);
+    }
+  } else if (scopeSelect) {
+    scopeSelect.value = 'all-syllabus';
+    onAutoScopeChange();
+  }
+
+  selectAutoCount(10);
+  selectTestMode('practice');
+  modal.classList.add('active');
+}
+
+function closeAutoQuizModal() {
+  const modal = document.getElementById('auto-quiz-modal');
+  if (modal) modal.classList.remove('active');
+}
+
+function onAutoScopeChange(targetPreselect = null) {
+  const scopeSelect = document.getElementById('auto-quiz-scope');
+  const specificGroup = document.getElementById('auto-specific-group');
+  const targetSelect = document.getElementById('auto-quiz-target');
+  const label = document.getElementById('auto-specific-label');
+  if (!scopeSelect || !specificGroup || !targetSelect) return;
+
+  const val = scopeSelect.value;
+  if (val === 'specific-chapter') {
+    specificGroup.style.display = 'block';
+    if (label) label.innerText = 'કયું પ્રકરણ પસંદ કરશો? (Chapter 1-24):';
+    targetSelect.innerHTML = CHAPTERS_DATA.map(ch => `
+      <option value="${ch.id}" ${targetPreselect === ch.id ? 'selected' : ''}>
+        પ્રકરણ ${ch.num}. ${ch.title} (${ch.genre})
+      </option>
+    `).join('');
+  } else if (val === 'specific-grammar') {
+    specificGroup.style.display = 'block';
+    if (label) label.innerText = 'કયો વ્યાકરણ મુદ્દો પસંદ કરશો?:';
+    targetSelect.innerHTML = GRAMMAR_VAULT.map(g => `
+      <option value="${g.id}" ${targetPreselect === g.id ? 'selected' : ''}>
+        ${g.num} - ${g.title}
+      </option>
+    `).join('');
+  } else {
+    specificGroup.style.display = 'none';
+  }
+}
+
+function selectAutoCount(cnt) {
+  autoSelectedCount = cnt;
+  document.querySelectorAll('#auto-count-selector .mcq-correct-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  const btn = document.querySelector(`#auto-count-selector .mcq-correct-btn[data-cnt="${cnt}"]`);
+  if (btn) btn.classList.add('active');
+}
+
+function selectTestMode(mode) {
+  autoSelectedMode = mode;
+  const pBtn = document.getElementById('btn-mode-practice');
+  const tBtn = document.getElementById('btn-mode-timed');
+  if (pBtn && tBtn) {
+    if (mode === 'practice') {
+      pBtn.classList.add('active');
+      tBtn.classList.remove('active');
+    } else {
+      tBtn.classList.add('active');
+      pBtn.classList.remove('active');
+    }
+  }
+}
+
+// Dynamic Question Synthesis from Chapters
+function buildDynamicQuestionsForChapter(ch) {
+  const list = [];
+  if (ch.author && !ch.author.includes('સંપાદિત')) {
+    const wrongAuthors = CHAPTERS_DATA.filter(c => c.author !== ch.author).map(c => c.author).slice(0, 3);
+    const opts = [ch.author, ...wrongAuthors].sort(() => 0.5 - Math.random());
+    list.push({
+      id: `dyn-auth-${ch.num}`,
+      chNum: ch.num,
+      cat: ch.cat,
+      q: `'${ch.title}' કૃતિના લેખક / કવિ કોણ છે?`,
+      options: opts,
+      correct: opts.indexOf(ch.author),
+      exp: `'${ch.title}' ના રચયિતા ${ch.author} છે.`
+    });
+  }
+
+  if (ch.genre) {
+    const genres = ["પદ (ભક્તિગીત)", "નવલકથા ખંડ", "આત્મકથા ખંડ", "સોનેટ", "ગઝલ", "લઘુકથા", "ચરિત્ર નિબંધ", "લોકગીત", "ઉર્મિકાવ્ય", "નાટક"];
+    const wrongGenres = genres.filter(g => g !== ch.genre).slice(0, 3);
+    const opts = [ch.genre, ...wrongGenres].sort(() => 0.5 - Math.random());
+    list.push({
+      id: `dyn-gen-${ch.num}`,
+      chNum: ch.num,
+      cat: ch.cat,
+      q: `'${ch.title}' કૃતિનો સાહિત્ય પ્રકાર કયો છે?`,
+      options: opts,
+      correct: opts.indexOf(ch.genre),
+      exp: `'${ch.title}' નો સાહિત્ય પ્રકાર '${ch.genre}' છે.`
+    });
+  }
+
+  if (ch.source && ch.source !== 'પાઠ્યપુસ્તક') {
+    const sources = ["માનવીની ભવાઈ", "કલાપીનો કેકારવ", "બાનો ભીખુ", "અંતરિક્ષ", "શ્રીમદ્ રાજચંદ્ર દર્શન", "રઢિયાળી રાત"];
+    const wrongSrc = sources.filter(s => s !== ch.source).slice(0, 3);
+    const opts = [ch.source, ...wrongSrc].sort(() => 0.5 - Math.random());
+    list.push({
+      id: `dyn-src-${ch.num}`,
+      chNum: ch.num,
+      cat: ch.cat,
+      q: `'${ch.title}' પાઠ / કાવ્ય કયા પુસ્તક કે સંગ્રહમાંથી લેવામાં આવેલ છે?`,
+      options: opts,
+      correct: opts.indexOf(ch.source),
+      exp: `'${ch.title}' કૃતિનો સંદર્ભ સંગ્રહ '${ch.source}' છે.`
+    });
+  }
+
+  if (ch.words && ch.words.length > 0) {
+    ch.words.forEach((wObj, wIdx) => {
+      const wrongMeanings = ["વિરોધી ભાવ", "અજ્ઞાનતા", "સંસાર ત્યાગ", "નિષ્ફળતા"];
+      const opts = [wObj.m, ...wrongMeanings.slice(0, 3)].sort(() => 0.5 - Math.random());
+      list.push({
+        id: `dyn-w-${ch.num}-${wIdx}`,
+        chNum: ch.num,
+        cat: ch.cat,
+        q: `'${ch.title}' પ્રકરણમાં વપરાયેલા '${wObj.w}' શબ્દનો સાચો અર્થ શું થાય?`,
+        options: opts,
+        correct: opts.indexOf(wObj.m),
+        exp: `'${wObj.w}' નો સાચો અર્થ '${wObj.m}' થાય છે.`
+      });
+    });
+  }
+
+  return list;
+}
+
+// Dynamic Question Synthesis from Grammar
+function buildDynamicQuestionsForGrammar(gItem) {
+  const list = [];
+  if (gItem.words && gItem.words.length > 0) {
+    gItem.words.forEach((w, wIdx) => {
+      const defaultOpts = ["દ્વંદ્વ સમાસ", "તત્પુરુષ સમાસ", "મધ્યમપદલોપી સમાસ", "કર્મધારય સમાસ"];
+      let correctOpt = w.m;
+      let opts = [correctOpt];
+      defaultOpts.forEach(o => {
+        if (!opts.includes(o) && opts.length < 4) opts.push(o);
+      });
+      opts = opts.sort(() => 0.5 - Math.random());
+      list.push({
+        id: `dyn-g-${gItem.id}-${wIdx}`,
+        cat: 'vyakaran',
+        topicId: gItem.id,
+        q: `'${w.w}' શબ્દ માટે સાચો પ્રકાર કયો છે?`,
+        options: opts,
+        correct: opts.indexOf(correctOpt),
+        exp: `${w.w} ➔ ${w.m}`
+      });
+    });
+  }
+  return list;
+}
+
+// Generate the targeted auto quiz pool
+function generateAutoQuiz(scope, targetId, count) {
+  let pool = [];
+
+  if (scope === 'all-syllabus') {
+    pool = [...MCQ_BANK];
+    CHAPTERS_DATA.forEach(ch => {
+      pool.push(...buildDynamicQuestionsForChapter(ch));
+    });
+    GRAMMAR_VAULT.forEach(g => {
+      pool.push(...buildDynamicQuestionsForGrammar(g));
+    });
+  } else if (scope === 'all-vyakaran') {
+    pool = MCQ_BANK.filter(m => m.cat === 'vyakaran');
+    GRAMMAR_VAULT.forEach(g => {
+      pool.push(...buildDynamicQuestionsForGrammar(g));
+    });
+  } else if (scope === 'all-padya') {
+    pool = MCQ_BANK.filter(m => m.cat === 'padya');
+    CHAPTERS_DATA.filter(c => c.cat === 'padya').forEach(ch => {
+      pool.push(...buildDynamicQuestionsForChapter(ch));
+    });
+  } else if (scope === 'all-gadya') {
+    pool = MCQ_BANK.filter(m => m.cat === 'gadya');
+    CHAPTERS_DATA.filter(c => c.cat === 'gadya').forEach(ch => {
+      pool.push(...buildDynamicQuestionsForChapter(ch));
+    });
+  } else if (scope === 'specific-chapter') {
+    const ch = CHAPTERS_DATA.find(c => c.id === targetId);
+    if (ch) {
+      pool = MCQ_BANK.filter(m => m.chNum === ch.num || m.topicId === ch.id);
+      pool.push(...buildDynamicQuestionsForChapter(ch));
+    }
+  } else if (scope === 'specific-grammar') {
+    const g = GRAMMAR_VAULT.find(item => item.id === targetId);
+    if (g) {
+      pool = MCQ_BANK.filter(m => m.topicId === g.id || (m.cat === 'vyakaran' && m.q.includes(g.title)));
+      pool.push(...buildDynamicQuestionsForGrammar(g));
+      if (pool.length < 5) {
+        pool.push(...MCQ_BANK.filter(m => m.cat === 'vyakaran').slice(0, 5));
+      }
+    }
+  }
+
+  // Remove duplicates by question text
+  const seen = new Set();
+  const uniquePool = [];
+  for (const q of pool) {
+    if (!seen.has(q.q)) {
+      seen.add(q.q);
+      uniquePool.push(q);
+    }
+  }
+
+  const shuffled = uniquePool.sort(() => 0.5 - Math.random());
+  let finalCount = count === 'all' ? shuffled.length : Math.min(Number(count), shuffled.length);
+  if (finalCount === 0) finalCount = shuffled.length;
+
+  return shuffled.slice(0, finalCount);
+}
+
+function startGeneratedQuiz() {
+  const scopeSelect = document.getElementById('auto-quiz-scope');
+  const targetSelect = document.getElementById('auto-quiz-target');
+  const scope = scopeSelect ? scopeSelect.value : 'all-syllabus';
+  const targetId = targetSelect ? targetSelect.value : '';
+
+  let title = 'સર્વગ્રાહી મિક્સ મોક ટેસ્ટ';
+  if (scope === 'all-vyakaran') title = 'સંપૂર્ણ વ્યાકરણ વિભાગ ટેસ્ટ';
+  else if (scope === 'all-padya') title = 'પદ્ય કાવ્યો સ્પેશિયલ ટેસ્ટ';
+  else if (scope === 'all-gadya') title = 'ગદ્ય પાઠ સ્પેશિયલ ટેસ્ટ';
+  else if (scope === 'specific-chapter') {
+    const ch = CHAPTERS_DATA.find(c => c.id === targetId);
+    if (ch) title = `પ્રકરણ ${ch.num}. ${ch.title} (ટેસ્ટ)`;
+  } else if (scope === 'specific-grammar') {
+    const g = GRAMMAR_VAULT.find(item => item.id === targetId);
+    if (g) title = `${g.num} - ${g.title} (ટેસ્ટ)`;
+  }
+
+  const questions = generateAutoQuiz(scope, targetId, autoSelectedCount);
+
+  if (questions.length === 0) {
+    alert('આ પસંદગી માટે પ્રશ્નો લોડ થઈ શક્યા નથી.');
+    return;
+  }
+
+  activeCustomQuiz = {
+    title: title,
+    scope: scope,
+    mode: autoSelectedMode,
+    questions: questions,
+    currentIdx: 0,
+    userAnswers: {},
+    correctCount: 0,
+    wrongCount: 0,
+    startTime: Date.now(),
+    isFinished: false
+  };
+
+  closeAutoQuizModal();
+
+  if (viewDetail.classList.contains('active')) {
+    viewDetail.classList.remove('active');
+    viewHome.classList.add('active');
+    if (navDetailBar) navDetailBar.style.display = 'none';
+    if (navHomeTitle) navHomeTitle.style.display = 'flex';
+  }
+
+  currentCat = 'custom-test';
+  renderHome();
+  showToast(`🚀 ${title} શરૂ થયો! (${questions.length} પ્રશ્નો)`);
+}
+
+function exitCustomQuiz() {
+  if (customQuizTimer) clearInterval(customQuizTimer);
+  customQuizTimer = null;
+  activeCustomQuiz = null;
+  currentCat = 'chapters';
+  renderHome();
+}
+
+function renderActiveCustomQuiz() {
+  const subFilterContainer = document.getElementById('sub-filter-container');
+  if (subFilterContainer) subFilterContainer.style.display = 'none';
+
+  if (!activeCustomQuiz || activeCustomQuiz.questions.length === 0) {
+    exitCustomQuiz();
+    return;
+  }
+
+  const qData = activeCustomQuiz;
+  const total = qData.questions.length;
+
+  // Finished Scorecard Screen
+  if (qData.isFinished || qData.currentIdx >= total) {
+    const pct = total > 0 ? Math.round((qData.correctCount / total) * 100) : 0;
+    let grade = 'A1 (ટોપ રેન્ક)';
+    let gradeColor = 'var(--emerald)';
+    if (pct >= 90) { grade = '🌟 A1 (ઉત્કૃષ્ટ)'; gradeColor = 'var(--emerald)'; }
+    else if (pct >= 80) { grade = '✨ A2 (ખૂબ સરસ)'; gradeColor = 'var(--emerald)'; }
+    else if (pct >= 70) { grade = '👍 B1 (સારી તૈયારી)'; gradeColor = 'var(--accent)'; }
+    else if (pct >= 60) { grade = '⚡ B2 (મધ્યમ)'; gradeColor = 'var(--amber)'; }
+    else { grade = '⚠️ C (વધુ રિવિઝન જરૂરી)'; gradeColor = 'var(--rose)'; }
+
+    const timeSpentSeconds = Math.round((Date.now() - qData.startTime) / 1000);
+    const mins = Math.floor(timeSpentSeconds / 60);
+    const secs = timeSpentSeconds % 60;
+
+    chaptersGrid.innerHTML = `
+      <div class="result-card-box">
+        <div style="font-size: 44px; margin-bottom: 8px;">🏆</div>
+        <h2 style="font-size: 19px; font-weight: 900; color: #fff; margin-bottom: 6px;">
+          અભિનંદન! તમારો ટેસ્ટ પૂર્ણ થયો
+        </h2>
+        <div style="font-size: 13.5px; color: var(--accent); font-weight: 800; margin-bottom: 16px;">
+          ${qData.title}
+        </div>
+
+        <div class="score-metrics" style="margin-bottom: 16px;">
+          <div class="metric-card">
+            <div class="metric-val" style="color: var(--emerald); font-size: 18px;">${qData.correctCount}</div>
+            <div class="metric-label">સાચા (+૧)</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val" style="color: var(--rose); font-size: 18px;">${qData.wrongCount}</div>
+            <div class="metric-label">ખોટા (૦)</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val" style="color: var(--amber); font-size: 16px;">${pct}%</div>
+            <div class="metric-label">ટકાવારી</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val" style="color: #38bdf8; font-size: 13px; line-height: 1.6;">${mins}m ${secs}s</div>
+            <div class="metric-label">કુલ સમય</div>
+          </div>
+        </div>
+
+        <div style="background: rgba(0,0,0,0.3); padding: 12px 14px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 18px;">
+          <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px;">બોર્ડ પર્ફોર્મન્સ પરિણામ:</div>
+          <div style="font-size: 16px; font-weight: 900; color: ${gradeColor};">${grade}</div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <button type="button" class="btn-auto-generator" onclick="openAutoQuizModal()">
+            🔄 નવો ઓટો ટેસ્ટ જનરેટ કરો
+          </button>
+          <button type="button" class="btn-add-mcq-primary" style="margin-bottom: 0;" onclick="exitCustomQuiz()">
+            🏠 મુખ્ય હોમ સ્ક્રીન પર પાછા જાઓ
+          </button>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  // Active Question Card Screen
+  const currentQ = qData.questions[qData.currentIdx];
+  const userAnswer = qData.userAnswers[currentQ.id];
+  const isAnswered = userAnswer !== undefined;
+
+  chaptersGrid.innerHTML = `
+    <!-- Top Custom Quiz Header -->
+    <div class="mcq-scoreboard">
+      <div class="mcq-score-title">
+        <span style="font-size: 13px; font-weight: 800; color: #fff;">⚡ ${qData.title}</span>
+        <button type="button" class="btn-reset-quiz" onclick="exitCustomQuiz()">✕ બહાર નીકળો</button>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 12px;">
+        <span style="color: var(--accent); font-weight: 800;">
+          પ્રશ્ન ${qData.currentIdx + 1} / ${total}
+        </span>
+        <div style="display: flex; gap: 10px; font-weight: 700;">
+          <span style="color: var(--emerald);">✅ ${qData.correctCount}</span>
+          <span style="color: var(--rose);">❌ ${qData.wrongCount}</span>
+          ${qData.mode === 'timed' ? `<span class="timer-badge" id="custom-timer-badge">⏱️ <span id="timer-sec-count">15</span>s</span>` : ''}
+        </div>
+      </div>
+
+      <div class="mcq-progress-bar" style="margin-top: 8px;">
+        <div class="mcq-progress-fill" style="width: ${Math.round(((qData.currentIdx + 1) / total) * 100)}%;"></div>
+      </div>
+    </div>
+
+    <!-- Active Question Card -->
+    <div class="mcq-card ${isAnswered ? 'answered' : ''}" style="margin-bottom: 16px;">
+      <div class="mcq-header">
+        <div class="mcq-num">${qData.currentIdx + 1}</div>
+        <div class="mcq-q-text" style="font-size: 14.5px;">${currentQ.q}</div>
+      </div>
+
+      <div class="mcq-options">
+        ${currentQ.options.map((opt, optIdx) => {
+          let btnClass = 'mcq-opt';
+          let extraTag = '';
+          if (isAnswered) {
+            if (optIdx === currentQ.correct) {
+              btnClass += ' correct';
+              extraTag = '<span>✅ સાચો જવાબ</span>';
+            } else if (optIdx === userAnswer) {
+              btnClass += ' wrong';
+              extraTag = '<span>❌ ખોટો જવાબ</span>';
+            }
+          }
+          return `
+            <button class="${btnClass}" ${isAnswered ? 'disabled' : ''} onclick="handleGeneratedQuizAnswer(${optIdx})">
+              <span>${String.fromCharCode(65 + optIdx)}. ${opt}</span>
+              ${extraTag}
+            </button>
+          `;
+        }).join('')}
+      </div>
+
+      <div class="mcq-explanation ${isAnswered ? 'show' : ''}">
+        <strong style="color: var(--accent);">💡 સમજૂતી / કારણ:</strong> ${currentQ.exp || 'આ પ્રશ્નની સમજૂતી.'}
+      </div>
+    </div>
+
+    <!-- Next / Finish Action Bar -->
+    ${isAnswered ? `
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <button type="button" class="btn-save-mcq" style="background: linear-gradient(135deg, #38bdf8, #0284c7);" onclick="nextGeneratedQuestion()">
+          ${qData.currentIdx + 1 >= total ? '🏁 પરિણામ જુઓ (Finish Test)' : 'આગળનો પ્રશ્ન ➔ (Next Question)'}
+        </button>
+      </div>
+    ` : ''}
+  `;
+
+  if (qData.mode === 'timed' && !isAnswered) {
+    startCustomQuizTimer();
+  }
+}
+
+function startCustomQuizTimer() {
+  if (customQuizTimer) clearInterval(customQuizTimer);
+  timerSeconds = 15;
+  const badge = document.getElementById('timer-sec-count');
+  if (badge) badge.innerText = timerSeconds;
+
+  customQuizTimer = setInterval(() => {
+    timerSeconds--;
+    const countSpan = document.getElementById('timer-sec-count');
+    if (countSpan) countSpan.innerText = timerSeconds;
+
+    if (timerSeconds <= 0) {
+      clearInterval(customQuizTimer);
+      handleGeneratedQuizAnswer(-1);
+    }
+  }, 1000);
+}
+
+function handleGeneratedQuizAnswer(optIdx) {
+  if (!activeCustomQuiz) return;
+  if (customQuizTimer) clearInterval(customQuizTimer);
+
+  const currentQ = activeCustomQuiz.questions[activeCustomQuiz.currentIdx];
+  if (activeCustomQuiz.userAnswers[currentQ.id] !== undefined) return;
+
+  activeCustomQuiz.userAnswers[currentQ.id] = optIdx;
+
+  if (optIdx === currentQ.correct) {
+    activeCustomQuiz.correctCount++;
+  } else {
+    activeCustomQuiz.wrongCount++;
+  }
+
+  renderActiveCustomQuiz();
+}
+
+function nextGeneratedQuestion() {
+  if (!activeCustomQuiz) return;
+  activeCustomQuiz.currentIdx++;
+  renderActiveCustomQuiz();
+}
 
 // DOM Elements
 const viewHome = document.getElementById('view-home');
@@ -2951,7 +4102,9 @@ function updateScoreboardUI() {
 // Render Interactive MCQ Practice Test & Score Calculator View
 function renderMCQQuizView() {
   let list = MCQ_BANK;
-  if (mcqSubFilter !== 'all') {
+  if (mcqSubFilter === 'custom') {
+    list = list.filter(m => m.isCustom);
+  } else if (mcqSubFilter !== 'all') {
     list = list.filter(m => m.cat === mcqSubFilter);
   }
 
@@ -3003,18 +4156,35 @@ function renderMCQQuizView() {
       </div>
     </div>
 
+    <!-- Action Buttons Row in MCQ Tab -->
+    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px;">
+      <button type="button" class="btn-auto-generator" onclick="openAutoQuizModal()">
+        <span>⚡</span>
+        <span>ઓટો ક્વિઝ જનરેટર (Auto Quiz Maker)</span>
+      </button>
+      <button type="button" class="btn-add-mcq-primary" style="margin-bottom: 0;" onclick="openAddMCQModal()">
+        <span>➕</span>
+        <span>નવો MCQ ઉમેરો (Add Your MCQ)</span>
+      </button>
+    </div>
+
     <!-- MCQ Filter Tabs -->
     <div class="sub-filter-row" style="margin-bottom: 16px;">
-      <button class="sub-pill ${mcqSubFilter === 'all' ? 'active' : ''}" onclick="setMCQSubFilter('all')">બધા ૪૦ મોસ્ટ IMP</button>
-      <button class="sub-pill ${mcqSubFilter === 'vyakaran' ? 'active' : ''}" onclick="setMCQSubFilter('vyakaran')">વ્યાકરણ MCQ (૨૦)</button>
-      <button class="sub-pill ${mcqSubFilter === 'padya' ? 'active' : ''}" onclick="setMCQSubFilter('padya')">પદ્ય કાવ્યો MCQ (૧૦)</button>
-      <button class="sub-pill ${mcqSubFilter === 'gadya' ? 'active' : ''}" onclick="setMCQSubFilter('gadya')">ગદ્ય પાઠ MCQ (૧૦)</button>
+      <button class="sub-pill ${mcqSubFilter === 'all' ? 'active' : ''}" onclick="setMCQSubFilter('all')">બધા મોસ્ટ IMP (${MCQ_BANK.length})</button>
+      ${customMCQs.length > 0 ? `<button class="sub-pill ${mcqSubFilter === 'custom' ? 'active' : ''}" style="color: #38bdf8; border-color: rgba(56,189,248,0.4);" onclick="setMCQSubFilter('custom')">✨ મારા ઉમેરેલા (${customMCQs.length})</button>` : ''}
+      <button class="sub-pill ${mcqSubFilter === 'vyakaran' ? 'active' : ''}" onclick="setMCQSubFilter('vyakaran')">વ્યાકરણ MCQ</button>
+      <button class="sub-pill ${mcqSubFilter === 'padya' ? 'active' : ''}" onclick="setMCQSubFilter('padya')">પદ્ય કાવ્યો MCQ</button>
+      <button class="sub-pill ${mcqSubFilter === 'gadya' ? 'active' : ''}" onclick="setMCQSubFilter('gadya')">ગદ્ય પાઠ MCQ</button>
     </div>
 
     <!-- Question Cards List -->
     <div style="display: flex; flex-direction: column;">
       ${list.length === 0 ? `
-        <div class="empty-state">કોઈ પ્રશ્ન મળ્યો નથી.</div>
+        <div class="empty-state">
+          <div style="font-size: 28px; margin-bottom: 8px;">📝</div>
+          <div>કોઈ પ્રશ્ન મળ્યો નથી.</div>
+          ${mcqSubFilter === 'custom' ? `<button class="btn-add-mcq-inline" style="margin-top: 10px;" onclick="openAddMCQModal()">➕ પ્રથમ પ્રશ્ન ઉમેરો</button>` : ''}
+        </div>
       ` : list.map((item, idx) => {
         const userAnswer = quizAnswers[item.id];
         const isAnswered = userAnswer !== undefined;
@@ -3023,7 +4193,15 @@ function renderMCQQuizView() {
           <div class="mcq-card ${isAnswered ? 'answered' : ''}" id="card-${item.id}">
             <div class="mcq-header">
               <div class="mcq-num">${idx + 1}</div>
-              <div class="mcq-q-text">${item.q}</div>
+              <div style="flex: 1;">
+                ${item.isCustom ? `
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px;">
+                    <span class="badge-custom-mcq">✨ તમારો પ્રશ્ન</span>
+                    <button type="button" class="btn-delete-mcq" title="આ પ્રશ્ન ડિલીટ કરો" onclick="deleteCustomMCQ('${item.id}', event)">🗑️ ડિલીટ</button>
+                  </div>
+                ` : ''}
+                <div class="mcq-q-text">${item.q}</div>
+              </div>
             </div>
 
             <div class="mcq-options">
@@ -3065,6 +4243,13 @@ function renderMCQQuizView() {
 // Render Main Dashboard Views
 function renderHome() {
   const subFilterContainer = document.getElementById('sub-filter-container');
+
+  // Handle Custom Generated Test Mode
+  if (currentCat === 'custom-test') {
+    if (subFilterContainer) subFilterContainer.style.display = 'none';
+    renderActiveCustomQuiz();
+    return;
+  }
 
   // Handle MCQ Calculator Tab
   if (currentCat === 'mcq') {
@@ -3181,7 +4366,8 @@ function renderHome() {
 
   chaptersGrid.innerHTML = items.map(item => {
     let typeClass = item.cat;
-    let typeLabel = item.cat === 'vyakaran' ? 'વ્યાકરણ' : 'લેખન';
+    let typeLabel = item.cat === 'vyakaran' ? 'વિભાગ C' : 'વિભાગ D';
+    let isGrammar = item.cat === 'vyakaran';
 
     return `
       <div class="chapter-card" onclick="openItemDetail('${item.id}')">
@@ -3192,12 +4378,21 @@ function renderHome() {
         <div class="ch-info">
           <div class="ch-title">${item.title}</div>
           <div class="ch-meta">
-            <span class="tag-pill">${item.genre}</span>
+            <span class="tag-pill" style="color: ${isGrammar ? 'var(--amber)' : '#c084fc'}; border-color: ${isGrammar ? 'var(--amber)' : '#a855f7'};">${isGrammar ? '૨૦ ગુણ વ્યાકરણ' : item.author || 'લેખન સજ્જતા'}</span>
             <span>•</span>
-            <span>${item.author}</span>
+            <span style="color: var(--text-muted); font-size: 11.5px;">${item.summary ? (item.summary.length > 50 ? item.summary.substring(0, 50) + '...' : item.summary) : ''}</span>
+          </div>
+          <div style="margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap;">
+            ${isGrammar ? `
+              <span style="font-size: 9.5px; background: var(--amber-glow); color: var(--amber); padding: 1px 6px; border-radius: 4px; font-weight: 700;">⚡ સરળ શોર્ટકટ ફોર્મ્યુલા</span>
+              <span style="font-size: 9.5px; background: rgba(56,189,248,0.1); color: var(--accent); padding: 1px 6px; border-radius: 4px; font-weight: 700;">🎯 ઉદાહરણો & MCQ</span>
+            ` : `
+              <span style="font-size: 9.5px; background: rgba(168,85,247,0.15); color: #c084fc; padding: 1px 6px; border-radius: 4px; font-weight: 700;">📐 નિયમો & માળખું</span>
+              <span style="font-size: 9.5px; background: rgba(16,185,129,0.1); color: var(--emerald); padding: 1px 6px; border-radius: 4px; font-weight: 700;">✍️ બોર્ડ મોડલ ઉદાહરણો</span>
+            `}
           </div>
         </div>
-        <div style="color: var(--accent); font-size: 16px; opacity: 0.7;">➔</div>
+        <div style="color: var(--accent); font-size: 18px; opacity: 0.8;">➔</div>
       </div>
     `;
   }).join('');
@@ -3251,204 +4446,549 @@ function openItemDetail(id) {
   navDetailBar.style.display = 'flex';
   detailHeaderTitle.innerText = activeItem.title;
 
-  let catLabel = activeItem.cat === 'padya' ? 'પદ્ય કાવ્ય' : activeItem.cat === 'gadya' ? 'ગદ્ય પાઠ' : activeItem.cat === 'vyakaran' ? 'વ્યાકરણ મુદ્દો' : 'લેખન સજ્જતા';
+  let isGrammar = activeItem.cat === 'vyakaran';
+  let isLekhan = activeItem.cat === 'lekhan';
+  let catLabel = activeItem.cat === 'padya' ? 'પદ્ય કાવ્ય' : activeItem.cat === 'gadya' ? 'ગદ્ય પાઠ' : isGrammar ? 'વિભાગ C વ્યાકરણ' : 'વિભાગ D લેખન સજ્જતા';
 
-  // Render detail contents
-  detailContainer.innerHTML = `
-    <!-- Detail Hero Card -->
-    <div class="detail-hero">
-      <div class="detail-tag-row">
-        <span class="brand-badge">${catLabel}</span>
-        <span class="tag-pill">${activeItem.genre}</span>
-        ${activeItem.source ? `<span class="tag-pill" style="color: var(--amber); border-color: var(--amber);">${activeItem.source}</span>` : ''}
+  if (isGrammar) {
+    // ==========================================
+    // 1. CLEAN GRAMMAR-SPECIFIC DETAIL TEMPLATE
+    // ==========================================
+    detailContainer.innerHTML = `
+      <!-- Grammar Detail Hero Card (No Author / No Literature Type) -->
+      <div class="detail-hero" style="border-color: rgba(251, 191, 36, 0.3);">
+        <div class="detail-tag-row">
+          <span class="brand-badge" style="background: var(--amber-glow); color: var(--amber); border-color: var(--amber);">વિભાગ C • વ્યાકરણ</span>
+          <span class="tag-pill" style="color: var(--accent); border-color: var(--accent);">૨૦ ગુણ કવરેજ</span>
+          <span class="tag-pill" style="color: var(--emerald); border-color: var(--emerald);">સરળ શોર્ટકટ</span>
+        </div>
+
+        <div class="detail-title" style="color: #fff; margin-bottom: 4px;">${activeItem.title}</div>
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-top: 4px;">${activeItem.summary}</p>
+
+        <button class="btn-audio" onclick="playAudioNarration()">
+          🔊 ઓડિયો સાંભળો (Audio Read-Aloud)
+        </button>
       </div>
 
-      <div class="detail-title">${activeItem.title}</div>
+      <!-- 4 Strict Grammar Tabs -->
+      <div class="seg-tabs">
+        <button class="seg-tab active" onclick="switchSegment('sec-g-rules', this)">૧. સરળ નિયમો અને શોર્ટકટ</button>
+        <button class="seg-tab" onclick="switchSegment('sec-g-examples', this)">૨. વિગ્રહ સહિત ઉદાહરણો</button>
+        <button class="seg-tab" onclick="switchSegment('sec-g-imp', this)">૩. બોર્ડ IMP પ્રશ્નો</button>
+        <button class="seg-tab" onclick="switchSegment('sec-g-mcq', this)">૪. MCQ ટેસ્ટ</button>
+      </div>
 
-      <div class="author-box">
-        <div class="author-item">
-          <span class="author-item-label">કર્તા / કવિ / લેખક:</span>
-          <span class="author-item-val">${activeItem.author}</span>
-        </div>
-        <div class="author-item">
-          <span class="author-item-label">સાહિત્ય પ્રકાર:</span>
-          <span class="author-item-val">${activeItem.genre}</span>
+      <!-- Tab 1: સરળ નિયમો અને શોર્ટકટ (Rules & Shortcuts) -->
+      <div id="sec-g-rules" class="content-box active">
+        ${activeItem.childTrick ? `
+          <div class="trick-box">
+            <div class="trick-title">⚡ સરળ સમજૂતી શોર્ટકટ (Child-Friendly Formula)</div>
+            <div class="trick-desc" style="white-space: pre-line;">${activeItem.childTrick}</div>
+          </div>
+        ` : ''}
+
+        <div class="info-card">
+          <div class="info-card-header">
+            <span>📖 વ્યાકરણ નિયમો અને મુખ્ય સંકલ્પના</span>
+          </div>
+          <p class="info-card-p" style="white-space: pre-line;">${activeItem.intro || activeItem.summary}</p>
+          
+          ${activeItem.grammarNotes && activeItem.grammarNotes.length > 0 ? `
+            <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border);">
+              <strong style="color: var(--accent); font-size: 12px; display: block; margin-bottom: 6px;">📌 મુખ્ય યાદ રાખવા જેવા નિયમો:</strong>
+              <ul class="bullet-list">
+                ${activeItem.grammarNotes.map(n => `<li>${n}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
         </div>
       </div>
 
-      <button class="btn-audio" onclick="playAudioNarration()">
-        🔊 ઓડિયો સાંભળો (Audio Read-Aloud)
-      </button>
-    </div>
-
-    <!-- Inside Navigation Segments (5 to 6 Big Sections) -->
-    <div class="seg-tabs">
-      <button class="seg-tab active" onclick="switchSegment('sec-intro', this)">૧. પરિચય</button>
-      <button class="seg-tab" onclick="switchSegment('sec-summary', this)">૨. કથાસાર</button>
-      ${activeItem.characterSketch ? `<button class="seg-tab" onclick="switchSegment('sec-character', this)">૩. પાત્રાલેખન</button>` : ''}
-      <button class="seg-tab" onclick="switchSegment('sec-words', this)">${activeItem.characterSketch ? '૪' : '૩'}. શબ્દાર્થ</button>
-      <button class="seg-tab" onclick="switchSegment('sec-imp', this)">${activeItem.characterSketch ? '૫' : '૪'}. IMP પ્રશ્નો</button>
-      <button class="seg-tab" onclick="switchSegment('sec-mcq', this)">${activeItem.characterSketch ? '૬' : '૫'}. 🎯 MCQ ટેસ્ટ</button>
-      ${activeItem.grammarNotes && activeItem.grammarNotes.length > 0 ? `<button class="seg-tab" onclick="switchSegment('sec-grammar-special', this)">${activeItem.characterSketch ? '૭' : '૬'}. વ્યાકરણ</button>` : ''}
-    </div>
-
-    <!-- Segment 1: પરિચય & સરળ ટ્રીક -->
-    <div id="sec-intro" class="content-box active">
-      ${activeItem.childTrick ? `
-        <div class="trick-box">
-          <div class="trick-title">⚡ સરળ સમજૂતી શોર્ટકટ (Child-Friendly Formula)</div>
-          <div class="trick-desc" style="white-space: pre-line;">${activeItem.childTrick}</div>
+      <!-- Tab 2: વિગ્રહ સહિત ઉદાહરણો (Examples with Splitting) -->
+      <div id="sec-g-examples" class="content-box">
+        <div class="info-card">
+          <div class="info-card-header" style="color: var(--emerald);">
+            <span>📚 મહત્વના બોર્ડ ઉદાહરણો અને વિગ્રહ / સમજૂતી</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            ${activeItem.words && activeItem.words.length > 0 ? activeItem.words.map(w => `
+              <div style="background: rgba(0,0,0,0.25); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+                <span style="font-weight: 800; color: #fff; font-size: 13.5px;">${w.w}</span>
+                <span style="color: var(--accent); font-size: 12.5px; font-weight: 600; text-align: right;">➔ ${w.m}</span>
+              </div>
+            `).join('') : '<div style="color: var(--text-muted); font-size: 12px;">ઉદાહરણો ઉપલબ્ધ નથી.</div>'}
+          </div>
         </div>
-      ` : ''}
-
-      <div class="info-card">
-        <div class="info-card-header">
-          <span>✍️ કર્તા અને કૃતિ પરિચય</span>
-        </div>
-        <p class="info-card-p" style="white-space: pre-line;">${activeItem.intro || activeItem.summary}</p>
       </div>
 
-      ${activeItem.analysis ? `
+      <!-- Tab 3: બોર્ડ IMP પ્રશ્નો (Board Questions) -->
+      <div id="sec-g-imp" class="content-box">
         <div class="info-card">
           <div class="info-card-header" style="color: var(--purple);">
-            <span>🔍 વિચારબિંદુ અને વિશ્લેષણ</span>
+            <span>🎯 બોર્ડ પરીક્ષા મોસ્ટ IMP પ્રશ્નોત્તરી</span>
           </div>
-          <p class="info-card-p" style="white-space: pre-line;">${activeItem.analysis}</p>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            ${activeItem.impQuestions && activeItem.impQuestions.length > 0 ? activeItem.impQuestions.map((q, idx) => `
+              <div class="qa-item">
+                <div class="qa-header" onclick="toggleQA(this)">
+                  <span><strong>પ્રશ્ન ${idx + 1}:</strong> ${q.q}</span>
+                  <span style="font-size: 14px;">▼</span>
+                </div>
+                <div class="qa-body">
+                  <strong style="color: var(--emerald); display: block; margin-bottom: 2px;">ઉત્તર:</strong>
+                  ${q.a}
+                </div>
+              </div>
+            `).join('') : '<div style="color: var(--text-muted); font-size: 12px;">પ્રશ્નોત્તરી ઉપલબ્ધ નથી.</div>'}
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: MCQ ટેસ્ટ (Quick Test) -->
+      <div id="sec-g-mcq" class="content-box">
+        <div class="info-card">
+          <div class="info-card-header" style="color: var(--accent); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span>🎯 આ વ્યાકરણ મુદ્દાની MCQ સેલ્ફ-ટેસ્ટ</span>
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <button type="button" class="btn-auto-generator" style="padding: 4px 10px; font-size: 11px; margin-bottom: 0; width: auto; box-shadow: none;" onclick="openAutoQuizModal('${activeItem.id}')">⚡ ઓટો ટેસ્ટ</button>
+              <button type="button" class="btn-add-mcq-inline" onclick="openAddMCQModal('${activeItem.id}')">➕ નવો પ્રશ્ન</button>
+            </div>
+          </div>
+          <p class="info-card-p" style="font-size: 12px; margin-bottom: 12px; color: var(--text-muted);">
+            સાચો વિકલ્પ પસંદ કરો અને ઇન્સ્ટન્ટ ફીડબેક મેળવો:
+          </p>
+          <div style="display: flex; flex-direction: column;">
+            ${(function() {
+              let gMCQs = MCQ_BANK.filter(m => m.cat === 'vyakaran' || m.topicId === activeItem.id);
+              let rel = gMCQs.filter(m => {
+                if (m.topicId === activeItem.id) return true;
+                if (activeItem.title.includes('સમાસ') && m.q.includes('સમાસ')) return true;
+                if (activeItem.title.includes('અલંકાર') && m.q.includes('અલંકાર')) return true;
+                if (activeItem.title.includes('છંદ') && m.q.includes('છંદ')) return true;
+                if (activeItem.title.includes('જોડણી') && m.q.includes('જોડણી')) return true;
+                if (activeItem.title.includes('સંધિ') && m.q.includes('સંધિ')) return true;
+                if (activeItem.title.includes('કૃદંત') && m.q.includes('કૃદંત')) return true;
+                if (activeItem.title.includes('નિપાત') && m.q.includes('નિપાત')) return true;
+                if (activeItem.title.includes('વાક્ય') && (m.q.includes('કર્મણિ') || m.q.includes('વાક્ય') || m.q.includes('પ્રેરક'))) return true;
+                if (activeItem.title.includes('રૂઢિપ્રયોગ') && m.q.includes('રૂઢિપ્રયોગ')) return true;
+                if (activeItem.title.includes('કહેવત') && m.q.includes('કહેવત')) return true;
+                if (activeItem.title.includes('શબ્દસમૂહ') && m.q.includes('શબ્દસમૂહ')) return true;
+                if (activeItem.title.includes('સમાનાર્થી') && (m.q.includes('સમાનાર્થી') || m.q.includes('વિરોધી'))) return true;
+                if (activeItem.title.includes('સંયોજક') && m.q.includes('સંયોજક')) return true;
+                if (activeItem.title.includes('કાળ') && m.q.includes('કાળ')) return true;
+                if (activeItem.title.includes('વિભક્તિ') && (m.q.includes('અનુગ') || m.q.includes('વિભક્તિ'))) return true;
+                return false;
+              });
+              if (rel.length === 0) rel = gMCQs.slice(0, 3);
+              return rel.map((item, idx) => {
+                const userAnswer = quizAnswers[item.id];
+                const isAnswered = userAnswer !== undefined;
+                return `
+                  <div class="mcq-card ${isAnswered ? 'answered' : ''}" id="card-${item.id}">
+                    <div class="mcq-header">
+                      <div class="mcq-num">${idx + 1}</div>
+                      <div style="flex: 1;">
+                        ${item.isCustom ? `
+                          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px;">
+                            <span class="badge-custom-mcq">✨ વિદ્યાર્થી પ્રશ્ન (Self Added)</span>
+                            <button type="button" class="btn-delete-mcq" title="આ પ્રશ્ન ડિલીટ કરો" onclick="deleteCustomMCQ('${item.id}', event)">🗑️ ડિલીટ</button>
+                          </div>
+                        ` : ''}
+                        <div class="mcq-q-text">${item.q}</div>
+                      </div>
+                    </div>
+                    <div class="mcq-options">
+                      ${item.options.map((opt, optIdx) => {
+                        let btnClass = 'mcq-opt';
+                        let extraTag = '';
+                        if (isAnswered) {
+                          if (optIdx === item.correct) {
+                            btnClass += ' correct';
+                            extraTag = '<span>✅ સાચો</span>';
+                          } else if (optIdx === userAnswer) {
+                            btnClass += ' wrong';
+                            extraTag = '<span>❌ ખોટો</span>';
+                          }
+                        }
+                        return `
+                          <button class="${btnClass}" ${isAnswered ? 'disabled' : ''} onclick="handleMCQAnswer('${item.id}', ${optIdx})">
+                            <span>${String.fromCharCode(65 + optIdx)}. ${opt}</span>
+                            ${extraTag}
+                          </button>
+                        `;
+                      }).join('')}
+                    </div>
+                    <div class="mcq-explanation ${isAnswered ? 'show' : ''}">
+                      <strong style="color: var(--accent);">💡 સમજૂતી:</strong> ${item.exp}
+                    </div>
+                  </div>
+                `;
+              }).join('');
+            })()}
+          </div>
+        </div>
+      </div>
+    `;
+  } else if (isLekhan) {
+    // =======================================================
+    // 2. CLEAN LEKHAN SAJJATA (WRITING SKILLS) TEMPLATE
+    // =======================================================
+    detailContainer.innerHTML = `
+      <!-- Lekhan Detail Hero Card (No Author / No Literature Type) -->
+      <div class="detail-hero" style="border-color: rgba(168, 85, 247, 0.35);">
+        <div class="detail-tag-row">
+          <span class="brand-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border-color: #a855f7;">વિભાગ D • લેખન સજ્જતા</span>
+          <span class="tag-pill" style="color: var(--accent); border-color: var(--accent);">${activeItem.author || 'બોર્ડ ગુણભાર'}</span>
+          <span class="tag-pill" style="color: var(--emerald); border-color: var(--emerald);">સચોટ ફોર્મેટ</span>
+        </div>
+
+        <div class="detail-title" style="color: #fff; margin-bottom: 4px;">${activeItem.title}</div>
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-top: 4px;">${activeItem.summary}</p>
+
+        <button class="btn-audio" onclick="playAudioNarration()">
+          🔊 ઓડિયો સાંભળો (Audio Read-Aloud)
+        </button>
+      </div>
+
+      <!-- 3 Specific Lekhan Tabs -->
+      <div class="seg-tabs">
+        <button class="seg-tab active" onclick="switchSegment('sec-l-rules', this)">૧. નિયમો અને માળખું</button>
+        <button class="seg-tab" onclick="switchSegment('sec-l-examples', this)">૨. ઉદાહરણો</button>
+        <button class="seg-tab" onclick="switchSegment('sec-l-imp', this)">૩. બોર્ડના IMP વિષયો</button>
+      </div>
+
+      <!-- Tab 1: નિયમો અને માળખું (Rules & Format) -->
+      <div id="sec-l-rules" class="content-box active">
+        ${activeItem.childTrick ? `
+          <div class="trick-box" style="border-color: #a855f7; background: rgba(168, 85, 247, 0.1);">
+            <div class="trick-title" style="color: #c084fc;">⚡ સરળ લેખન પદ્ધતિ અને શોર્ટકટ (Step-by-Step Formula)</div>
+            <div class="trick-desc" style="white-space: pre-line;">${activeItem.childTrick}</div>
+          </div>
+        ` : ''}
+
+        <div class="info-card">
+          <div class="info-card-header" style="color: var(--accent);">
+            <span>📐 લેખન પદ્ધતિ, માળખું અને ગુણભાર</span>
+          </div>
+          <p class="info-card-p" style="white-space: pre-line; line-height: 1.7;">${activeItem.intro || activeItem.summary}</p>
+          
+          ${activeItem.grammarNotes && activeItem.grammarNotes.length > 0 ? `
+            <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border);">
+              <strong style="color: var(--amber); font-size: 12px; display: block; margin-bottom: 6px;">📌 બોર્ડ પરીક્ષામાં ધ્યાનમાં રાખવાના મુખ્ય મુદ્દા:</strong>
+              <ul class="bullet-list">
+                ${activeItem.grammarNotes.map(n => `<li>${n}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+        </div>
+      </div>
+
+      <!-- Tab 2: ઉદાહરણો (Solved Examples) -->
+      <div id="sec-l-examples" class="content-box">
+        <div class="info-card">
+          <div class="info-card-header" style="color: var(--emerald);">
+            <span>✍️ ઉકેલાયેલા આદર્શ નમૂનાઓ (Solved Model Examples)</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            ${activeItem.impQuestions && activeItem.impQuestions.length > 0 ? activeItem.impQuestions.map((item, idx) => `
+              <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 12px; padding: 14px;">
+                <div style="font-weight: 800; color: var(--accent); font-size: 13.5px; margin-bottom: 8px;">
+                  ઉદાહરણ ${idx + 1}: ${item.q}
+                </div>
+                <div style="font-size: 13px; color: #fff; line-height: 1.75; white-space: pre-line; background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px; border-left: 3px solid var(--emerald);">
+                  ${item.a}
+                </div>
+              </div>
+            `).join('') : ''}
+
+            ${activeItem.words && activeItem.words.length > 0 ? `
+              <div style="margin-top: 8px;">
+                <strong style="color: var(--purple); font-size: 12.5px; display: block; margin-bottom: 8px;">💡 મહત્વના વિષયોના મુખ્ય વિચારબિંદુ & કાવ્યપંક્તિઓ:</strong>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                  ${activeItem.words.map(w => `
+                    <div style="background: rgba(0,0,0,0.25); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px;">
+                      <div style="font-weight: 800; color: #fff; font-size: 13px; margin-bottom: 3px;">${w.w}</div>
+                      <div style="color: var(--text-muted); font-size: 12px; line-height: 1.5;">${w.m}</div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: બોર્ડના IMP વિષયો (Board IMP Topics) -->
+      <div id="sec-l-imp" class="content-box">
+        <div class="info-card">
+          <div class="info-card-header" style="color: var(--amber);">
+            <span>🎯 બોર્ડ પરીક્ષા મોસ્ટ IMP પ્રેક્ટિસ વિષયો (Board IMP Topics)</span>
+          </div>
+          <p class="info-card-p" style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+            નીચેના વિષયો બોર્ડ પરીક્ષા માટે સૌથી વધુ વારંવાર પૂછાતા હોવાથી તેની ખાસ પ્રેક્ટિસ કરવી:
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            ${(function() {
+              let impList = [];
+              if (activeItem.id === 'l-01') {
+                impList = [
+                  "૧. આવ નહીં આદર નહીં, નહિ નયનમાં નેહ; તે ઘર કદી ન જઈએ, ભલે કંચન વરસે મેહ.",
+                  "૨. સફળતા જિંદગીની હસ્તરેખામાં નથી હોતી, ચણાયેલી ઇમારત એના નકશામાં નથી હોતી.",
+                  "૩. મન હોય તો માળવે જવાય.",
+                  "૪. કડવાં હોય ઔષધ પણ દર્દને હણે, હિતકારી બોલ પણ કડવા સુણે.",
+                  "૫. વિદ્યા પુસ્તકમાં અને ધન પારકા હાથમાં હોય ત્યારે ખરા સમયે કામ આવતાં નથી."
+                ];
+              } else if (activeItem.id === 'l-02') {
+                impList = [
+                  "૧. આત્મનિર્ભરતા અને સ્વાવલંબનનું મહત્વ દર્શાવતો ગદ્યખંડ.",
+                  "૨. જીવનમાં સમયપાલન અને નિયમિતતા વિશેનો પરિચ્છેદ.",
+                  "૩. પુસ્તકાલય અને વાચન સંસ્કૃતિનું મૂલ્ય દર્શાવતો ફકરો.",
+                  "૪. પ્રકૃતિ અને પર્યાવરણનું રક્ષણ અંગેનો ગદ્યખંડ.",
+                  "૫. માનવજીવનમાં સચ્ચાઈ અને ચારિત્ર્યનું મહત્વ."
+                ];
+              } else if (activeItem.id === 'l-03') {
+                impList = [
+                  "૧. મા તે મા (માતૃપ્રેમ / જનનીની જોડ સખી)",
+                  "૨. પરિશ્રમ એ જ પારસમણિ (ઉદ્યમ અને મહેનત)",
+                  "૩. પ્રદૂષણ : એક ગંભીર વૈશ્વિક સમસ્યા (ગ્લોબલ વોર્મિંગ)",
+                  "૪. જીવનમાં પુસ્તકોનું મહત્વ (મારા પ્રિય પુસ્તકો)",
+                  "૫. વૃક્ષો વાવો, જીવન બચાવો",
+                  "૬. ભારતનો રાષ્ટ્રીય તહેવાર (૧૫મી ઓગસ્ટ / ૨૬મી જાન્યુઆરી)",
+                  "૭. જો હું શિક્ષણમંત્રી હોઉં તો..."
+                ];
+              } else {
+                impList = [
+                  "૧. તમારી શાળામાં યોજાયેલા 'સ્વચ્છતા પખવાડિયા' નો અહેવાલ.",
+                  "૨. 'વિશ્વ પર્યાવરણ દિન / વૃક્ષારોપણ' કાર્યક્રમનો અહેવાલ.",
+                  "૩. શાળામાં યોજાયેલ 'વાર્ષિક સ્નેહસંમેલન / રમોત્સવ' નો અહેવાલ.",
+                  "૪. તમારા વિસ્તારમાં અનિયમિત પાણી પુરવઠા અંગે નગરપાલિકાને પત્ર.",
+                  "૫. બોર્ડ પરીક્ષાની તૈયારીની વિગત આપતો પિતાજીને પત્ર."
+                ];
+              }
+              return impList.map(topic => `
+                <div style="background: rgba(0,0,0,0.25); border: 1px solid var(--border); border-radius: 8px; padding: 11px 14px; font-size: 13px; color: #fff; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+                  <span style="color: var(--accent);">📌</span>
+                  <span>${topic}</span>
+                </div>
+              `).join('');
+            })()}
+          </div>
+        </div>
+      </div>
+    `;
+  } else {
+    // =======================================================
+    // 3. EXISTING LITERATURE / CHAPTER TEMPLATE (KEPT INTACT)
+    // =======================================================
+    detailContainer.innerHTML = `
+      <!-- Detail Hero Card -->
+      <div class="detail-hero">
+        <div class="detail-tag-row">
+          <span class="brand-badge">${catLabel}</span>
+          <span class="tag-pill">${activeItem.genre}</span>
+          ${activeItem.source ? `<span class="tag-pill" style="color: var(--amber); border-color: var(--amber);">${activeItem.source}</span>` : ''}
+        </div>
+
+        <div class="detail-title">${activeItem.title}</div>
+
+        <div class="author-box">
+          <div class="author-item">
+            <span class="author-item-label">કર્તા / કવિ / લેખક:</span>
+            <span class="author-item-val">${activeItem.author}</span>
+          </div>
+          <div class="author-item">
+            <span class="author-item-label">સાહિત્ય પ્રકાર:</span>
+            <span class="author-item-val">${activeItem.genre}</span>
+          </div>
+        </div>
+
+        <button class="btn-audio" onclick="playAudioNarration()">
+          🔊 ઓડિયો સાંભળો (Audio Read-Aloud)
+        </button>
+      </div>
+
+      <!-- Inside Navigation Segments (5 to 6 Big Sections) -->
+      <div class="seg-tabs">
+        <button class="seg-tab active" onclick="switchSegment('sec-intro', this)">૧. પરિચય</button>
+        <button class="seg-tab" onclick="switchSegment('sec-summary', this)">૨. કથાસાર</button>
+        ${activeItem.characterSketch ? `<button class="seg-tab" onclick="switchSegment('sec-character', this)">૩. પાત્રાલેખન</button>` : ''}
+        <button class="seg-tab" onclick="switchSegment('sec-words', this)">${activeItem.characterSketch ? '૪' : '૩'}. શબ્દાર્થ</button>
+        <button class="seg-tab" onclick="switchSegment('sec-imp', this)">${activeItem.characterSketch ? '૫' : '૪'}. IMP પ્રશ્નો</button>
+        <button class="seg-tab" onclick="switchSegment('sec-mcq', this)">${activeItem.characterSketch ? '૬' : '૫'}. 🎯 MCQ ટેસ્ટ</button>
+        ${activeItem.grammarNotes && activeItem.grammarNotes.length > 0 ? `<button class="seg-tab" onclick="switchSegment('sec-grammar-special', this)">${activeItem.characterSketch ? '૭' : '૬'}. વ્યાકરણ</button>` : ''}
+      </div>
+
+      <!-- Segment 1: પરિચય & સરળ ટ્રીક -->
+      <div id="sec-intro" class="content-box active">
+        ${activeItem.childTrick ? `
+          <div class="trick-box">
+            <div class="trick-title">⚡ સરળ સમજૂતી શોર્ટકટ (Child-Friendly Formula)</div>
+            <div class="trick-desc" style="white-space: pre-line;">${activeItem.childTrick}</div>
+          </div>
+        ` : ''}
+
+        <div class="info-card">
+          <div class="info-card-header">
+            <span>✍️ કર્તા અને કૃતિ પરિચય</span>
+          </div>
+          <p class="info-card-p" style="white-space: pre-line;">${activeItem.intro || activeItem.summary}</p>
+        </div>
+
+        ${activeItem.analysis ? `
+          <div class="info-card">
+            <div class="info-card-header" style="color: var(--purple);">
+              <span>🔍 વિચારબિંદુ અને વિશ્લેષણ</span>
+            </div>
+            <p class="info-card-p" style="white-space: pre-line;">${activeItem.analysis}</p>
+          </div>
+        ` : ''}
+      </div>
+
+      <!-- Segment 2: કથાસાર & કાવ્યાર્થ -->
+      <div id="sec-summary" class="content-box">
+        <div class="info-card">
+          <div class="info-card-header">
+            <span>📖 સંપૂર્ણ કથાસાર / ભાવાર્થ (Core Narrative)</span>
+          </div>
+          <p class="info-card-p" style="font-size: 13.5px; line-height: 1.85;">${activeItem.summary}</p>
+        </div>
+      </div>
+
+      <!-- Segment 3: મુખ્ય પાત્રાલેખન (જો ઉપલબ્ધ હોય) -->
+      ${activeItem.characterSketch ? `
+        <div id="sec-character" class="content-box">
+          <div class="info-card">
+            <div class="info-card-header" style="color: var(--amber);">
+              <span>👤 મુખ્ય પાત્રાલેખન (Character Sketches)</span>
+            </div>
+            <p class="info-card-p" style="white-space: pre-line;">${activeItem.characterSketch}</p>
+          </div>
         </div>
       ` : ''}
-    </div>
 
-    <!-- Segment 2: કથાસાર & કાવ્યાર્થ -->
-    <div id="sec-summary" class="content-box">
-      <div class="info-card">
-        <div class="info-card-header">
-          <span>📖 સંપૂર્ણ કથાસાર / ભાવાર્થ (Core Narrative)</span>
-        </div>
-        <p class="info-card-p" style="font-size: 13.5px; line-height: 1.85;">${activeItem.summary}</p>
-      </div>
-    </div>
-
-    <!-- Segment 3: મુખ્ય પાત્રાલેખન (જો ઉપલબ્ધ હોય) -->
-    ${activeItem.characterSketch ? `
-      <div id="sec-character" class="content-box">
+      <!-- Segment 4: શબ્દાર્થ, વિરોધી & રૂઢિપ્રયોગો -->
+      <div id="sec-words" class="content-box">
         <div class="info-card">
-          <div class="info-card-header" style="color: var(--amber);">
-            <span>👤 મુખ્ય પાત્રાલેખન (Character Sketches)</span>
+          <div class="info-card-header">
+            <span>📚 મહત્વના શબ્દાર્થ, વિરોધી અને ઉદાહરણો</span>
           </div>
-          <p class="info-card-p" style="white-space: pre-line;">${activeItem.characterSketch}</p>
-        </div>
-      </div>
-    ` : ''}
-
-    <!-- Segment 4: શબ્દાર્થ, વિરોધી & રૂઢિપ્રયોગો -->
-    <div id="sec-words" class="content-box">
-      <div class="info-card">
-        <div class="info-card-header">
-          <span>📚 મહત્વના શબ્દાર્થ, વિરોધી અને ઉદાહરણો</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 8px;">
-          ${activeItem.words && activeItem.words.length > 0 ? activeItem.words.map(w => `
-            <div style="background: rgba(0,0,0,0.25); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; gap: 10px;">
-              <span style="font-weight: 800; color: #fff; font-size: 13px;">${w.w}</span>
-              <span style="color: var(--accent); font-size: 12px; font-weight: 600; text-align: right;">➔ ${w.m}</span>
-            </div>
-          `).join('') : '<div style="color: var(--text-muted); font-size: 12px;">આ મુદ્દા માટે સામાન્ય શબ્દો છે.</div>'}
-        </div>
-      </div>
-    </div>
-
-    <!-- Segment 5: બોર્ડ પરીક્ષા લક્ષી મોસ્ટ IMP પ્રશ્નોત્તરી -->
-    <div id="sec-imp" class="content-box">
-      <div class="info-card">
-        <div class="info-card-header" style="color: var(--emerald);">
-          <span>🎯 બોર્ડ પરીક્ષા મોસ્ટ IMP પ્રશ્નોત્તરી (૧, ૨ & ૪ ગુણ)</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          ${activeItem.impQuestions && activeItem.impQuestions.length > 0 ? activeItem.impQuestions.map((q, idx) => `
-            <div class="qa-item">
-              <div class="qa-header" onclick="toggleQA(this)">
-                <span><strong>પ્રશ્ન ${idx + 1}:</strong> ${q.q}</span>
-                <span style="font-size: 14px;">▼</span>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            ${activeItem.words && activeItem.words.length > 0 ? activeItem.words.map(w => `
+              <div style="background: rgba(0,0,0,0.25); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+                <span style="font-weight: 800; color: #fff; font-size: 13px;">${w.w}</span>
+                <span style="color: var(--accent); font-size: 12px; font-weight: 600; text-align: right;">➔ ${w.m}</span>
               </div>
-              <div class="qa-body">
-                <strong style="color: var(--emerald); display: block; margin-bottom: 2px;">ઉત્તર:</strong>
-                ${q.a}
-              </div>
-            </div>
-          `).join('') : '<div style="color: var(--text-muted); font-size: 12px;">પ્રશ્નોત્તરી ઉપલબ્ધ નથી.</div>'}
+            `).join('') : '<div style="color: var(--text-muted); font-size: 12px;">આ મુદ્દા માટે સામાન્ય શબ્દો છે.</div>'}
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Segment 6: પ્રકરણ આધારિત MCQ સેલ્ફ-ટેસ્ટ & ગણતરી -->
-    <div id="sec-mcq" class="content-box">
-      <div class="info-card">
-        <div class="info-card-header" style="color: var(--accent);">
-          <span>🎯 આ પ્રકરણનો MCQ સેલ્ફ-ટેસ્ટ & ગણતરી</span>
-        </div>
-        <p class="info-card-p" style="font-size: 12px; margin-bottom: 12px; color: var(--text-muted);">
-          સાચો વિકલ્પ પસંદ કરો અને તમારું જ્ઞાન ચકાસો (ઇન્સ્ટન્ટ ફીડબેક):
-        </p>
-        <div style="display: flex; flex-direction: column;">
-          ${(function() {
-            let rel = MCQ_BANK.filter(m => m.chNum === activeItem.num);
-            if (rel.length === 0) rel = MCQ_BANK.filter(m => m.cat === activeItem.cat).slice(0, 3);
-            if (rel.length === 0) rel = MCQ_BANK.slice(0, 3);
-            return rel.map((item, idx) => {
-              const userAnswer = quizAnswers[item.id];
-              const isAnswered = userAnswer !== undefined;
-              return `
-                <div class="mcq-card ${isAnswered ? 'answered' : ''}" id="card-${item.id}">
-                  <div class="mcq-header">
-                    <div class="mcq-num">${idx + 1}</div>
-                    <div class="mcq-q-text">${item.q}</div>
-                  </div>
-                  <div class="mcq-options">
-                    ${item.options.map((opt, optIdx) => {
-                      let btnClass = 'mcq-opt';
-                      let extraTag = '';
-                      if (isAnswered) {
-                        if (optIdx === item.correct) {
-                          btnClass += ' correct';
-                          extraTag = '<span>✅ સાચો</span>';
-                        } else if (optIdx === userAnswer) {
-                          btnClass += ' wrong';
-                          extraTag = '<span>❌ ખોટો</span>';
-                        }
-                      }
-                      return `
-                        <button class="${btnClass}" ${isAnswered ? 'disabled' : ''} onclick="handleMCQAnswer('${item.id}', ${optIdx})">
-                          <span>${String.fromCharCode(65 + optIdx)}. ${opt}</span>
-                          ${extraTag}
-                        </button>
-                      `;
-                    }).join('')}
-                  </div>
-                  <div class="mcq-explanation ${isAnswered ? 'show' : ''}">
-                    <strong style="color: var(--accent);">💡 સમજૂતી:</strong> ${item.exp}
-                  </div>
+      <!-- Segment 5: બોર્ડ પરીક્ષા લક્ષી મોસ્ટ IMP પ્રશ્નોત્તરી -->
+      <div id="sec-imp" class="content-box">
+        <div class="info-card">
+          <div class="info-card-header" style="color: var(--emerald);">
+            <span>🎯 બોર્ડ પરીક્ષા મોસ્ટ IMP પ્રશ્નોત્તરી (૧, ૨ & ૪ ગુણ)</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            ${activeItem.impQuestions && activeItem.impQuestions.length > 0 ? activeItem.impQuestions.map((q, idx) => `
+              <div class="qa-item">
+                <div class="qa-header" onclick="toggleQA(this)">
+                  <span><strong>પ્રશ્ન ${idx + 1}:</strong> ${q.q}</span>
+                  <span style="font-size: 14px;">▼</span>
                 </div>
-              `;
-            }).join('');
-          })()}
-        </div>
-      </div>
-    </div>
-
-    <!-- Segment 7: પાઠ આધારિત વ્યાકરણ વિશેષ -->
-    ${activeItem.grammarNotes && activeItem.grammarNotes.length > 0 ? `
-      <div id="sec-grammar-special" class="content-box">
-        <div class="info-card">
-          <div class="info-card-header" style="color: var(--amber);">
-            <span>⚡ આ પ્રકરણમાંથી બોર્ડમાં પૂછાતું વ્યાકરણ (Grammar Vault)</span>
+                <div class="qa-body">
+                  <strong style="color: var(--emerald); display: block; margin-bottom: 2px;">ઉત્તર:</strong>
+                  ${q.a}
+                </div>
+              </div>
+            `).join('') : '<div style="color: var(--text-muted); font-size: 12px;">પ્રશ્નોત્તરી ઉપલબ્ધ નથી.</div>'}
           </div>
-          <ul class="bullet-list">
-            ${activeItem.grammarNotes.map(n => `<li>${n}</li>`).join('')}
-          </ul>
         </div>
       </div>
-    ` : ''}
-  `;
+
+      <!-- Segment 6: પ્રકરણ આધારિત MCQ સેલ્ફ-ટેસ્ટ & ગણતરી -->
+      <div id="sec-mcq" class="content-box">
+        <div class="info-card">
+          <div class="info-card-header" style="color: var(--accent); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span>🎯 આ પ્રકરણનો MCQ સેલ્ફ-ટેસ્ટ & ગણતરી</span>
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <button type="button" class="btn-auto-generator" style="padding: 4px 10px; font-size: 11px; margin-bottom: 0; width: auto; box-shadow: none;" onclick="openAutoQuizModal('${activeItem.id}')">⚡ ઓટો ટેસ્ટ</button>
+              <button type="button" class="btn-add-mcq-inline" onclick="openAddMCQModal('${activeItem.id}')">➕ નવો પ્રશ્ન</button>
+            </div>
+          </div>
+          <p class="info-card-p" style="font-size: 12px; margin-bottom: 12px; color: var(--text-muted);">
+            સાચો વિકલ્પ પસંદ કરો અને તમારું જ્ઞાન ચકાસો (ઇન્સ્ટન્ટ ફીડબેક):
+          </p>
+          <div style="display: flex; flex-direction: column;">
+            ${(function() {
+              let rel = MCQ_BANK.filter(m => m.chNum === activeItem.num || m.topicId === activeItem.id);
+              if (rel.length === 0) rel = MCQ_BANK.filter(m => m.cat === activeItem.cat).slice(0, 3);
+              if (rel.length === 0) rel = MCQ_BANK.slice(0, 3);
+              return rel.map((item, idx) => {
+                const userAnswer = quizAnswers[item.id];
+                const isAnswered = userAnswer !== undefined;
+                return `
+                  <div class="mcq-card ${isAnswered ? 'answered' : ''}" id="card-${item.id}">
+                    <div class="mcq-header">
+                      <div class="mcq-num">${idx + 1}</div>
+                      <div style="flex: 1;">
+                        ${item.isCustom ? `
+                          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px;">
+                            <span class="badge-custom-mcq">✨ વિદ્યાર્થી પ્રશ્ન (Self Added)</span>
+                            <button type="button" class="btn-delete-mcq" title="આ પ્રશ્ન ડિલીટ કરો" onclick="deleteCustomMCQ('${item.id}', event)">🗑️ ડિલીટ</button>
+                          </div>
+                        ` : ''}
+                        <div class="mcq-q-text">${item.q}</div>
+                      </div>
+                    </div>
+                    <div class="mcq-options">
+                      ${item.options.map((opt, optIdx) => {
+                        let btnClass = 'mcq-opt';
+                        let extraTag = '';
+                        if (isAnswered) {
+                          if (optIdx === item.correct) {
+                            btnClass += ' correct';
+                            extraTag = '<span>✅ સાચો</span>';
+                          } else if (optIdx === userAnswer) {
+                            btnClass += ' wrong';
+                            extraTag = '<span>❌ ખોટો</span>';
+                          }
+                        }
+                        return `
+                          <button class="${btnClass}" ${isAnswered ? 'disabled' : ''} onclick="handleMCQAnswer('${item.id}', ${optIdx})">
+                            <span>${String.fromCharCode(65 + optIdx)}. ${opt}</span>
+                            ${extraTag}
+                          </button>
+                        `;
+                      }).join('')}
+                    </div>
+                    <div class="mcq-explanation ${isAnswered ? 'show' : ''}">
+                      <strong style="color: var(--accent);">💡 સમજૂતી:</strong> ${item.exp}
+                    </div>
+                  </div>
+                `;
+              }).join('');
+            })()}
+          </div>
+        </div>
+      </div>
+
+      <!-- Segment 7: પાઠ આધારિત વ્યાકરણ વિશેષ -->
+      ${activeItem.grammarNotes && activeItem.grammarNotes.length > 0 ? `
+        <div id="sec-grammar-special" class="content-box">
+          <div class="info-card">
+            <div class="info-card-header" style="color: var(--amber);">
+              <span>⚡ આ પ્રકરણમાંથી બોર્ડમાં પૂછાતું વ્યાકરણ (Grammar Vault)</span>
+            </div>
+            <ul class="bullet-list">
+              ${activeItem.grammarNotes.map(n => `<li>${n}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      ` : ''}
+    `;
+  }
 
   // Toggle View Visibility
   viewHome.classList.remove('active');
@@ -3492,7 +5032,15 @@ function playAudioNarration() {
     return;
   }
 
-  const narration = `${activeItem.title}. કર્તા: ${activeItem.author}. સાહિત્ય પ્રકાર: ${activeItem.genre}. સારાંશ: ${activeItem.summary}`;
+  let narration = '';
+  if (activeItem.cat === 'vyakaran') {
+    narration = `${activeItem.title}. વ્યાકરણ સારાંશ: ${activeItem.summary}. ${activeItem.intro || ''}`;
+  } else if (activeItem.cat === 'lekhan') {
+    narration = `${activeItem.title}. લેખન પદ્ધતિ: ${activeItem.summary}. ${activeItem.intro || ''}`;
+  } else {
+    narration = `${activeItem.title}. કર્તા: ${activeItem.author}. સાહિત્ય પ્રકાર: ${activeItem.genre}. સારાંશ: ${activeItem.summary}`;
+  }
+
   const utterance = new SpeechSynthesisUtterance(narration);
   utterance.lang = 'gu-IN';
   utterance.rate = 0.92;
